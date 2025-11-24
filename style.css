@@ -25,19 +25,20 @@ body {
     background: white;
     list-style: none;
     padding: 0;
-    min-width: 150px;
+    width: 167%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     opacity: 0;
     transform: translateY(10px);
     transition: 0.3s ease;
     pointer-events: none;
+    text-align: center;
 }
 
 .dropdown-menu li a {
     display: block; 
-    padding: 10px;
+    padding: 15%;
     color: black;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .dropdown-menu li a:hover {
