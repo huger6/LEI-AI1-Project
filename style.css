@@ -20,6 +20,33 @@ body {
     cursor: pointer;
 }
 
+.dropdown-menu {
+    position: absolute;
+    background: white;
+    list-style: none;
+    padding: 0;
+    min-width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.534);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.3s ease;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    color: black;
+    font-size: 14px;
+}
+
+.dropdown-menu li a:hover {
+    background: #ffffff;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 
 .flags span {
@@ -65,6 +92,10 @@ body {
     list-style: none;
     display: flex;
     gap: 30px;
+}
+
+.nav-links li{
+    position: relative;
 }
 
 .nav-links a {
