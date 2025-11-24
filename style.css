@@ -50,6 +50,67 @@ body {
     pointer-events: auto;
 }
 
+/* --- Seletor de Idiomas (Bandeiras) --- */
+
+.language-selector {
+    position: relative;
+    margin-left: 20px; /* Afasta um pouco do menu */
+    margin-right: 20px; /* Afasta um pouco dos botões de login */
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Tamanho das bandeiras */
+.language-selector img {
+    width: 30px;  /* Ajusta este valor se quiseres bandeiras maiores */
+    height: auto;
+    padding: 10px;
+    border-radius: 4px; /* Cantos arredondados */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    display: block;
+}
+
+/* Estilo do Dropdown de Idiomas */
+.lang-dropdown {
+    position: absolute;
+    top: 15px;       /* Aparece logo abaixo da bandeira atual */
+    left: 50%;       /* Centraliza em relação à bandeira de cima */
+    transform: translateX(-50%) translateY(10px); /* Ajuste fino da posição */
+    background: white;
+    list-style: none;
+    padding: 0;
+    border-radius: 5px;
+    
+    /* Escondido por defeito */
+    opacity: 0;
+    visibility: hidden; 
+    transition: all 0.3s ease;
+    min-width: 50px;
+    text-align: center;
+}
+
+/* Espaçamento entre as bandeiras do dropdown */
+.lang-dropdown li {
+    margin-bottom: 5px;
+}
+
+.lang-dropdown li:last-child {
+    margin-bottom: 0;
+}
+
+/* Efeito Hover: Quando passa o rato por cima do seletor */
+.language-selector:hover .lang-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(5px); /* Pequena animação de subida */
+}
+
+/* Efeito Hover nas bandeiras individuais */
+.lang-dropdown img:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente a bandeira ao passar o rato */
+    transition: transform 0.2s;
+}
+
 .flags span {
     margin: 0 5px;
 }
@@ -93,6 +154,7 @@ body {
     list-style: none;
     display: flex;
     gap: 30px;
+    padding-left: 0;
 }
 
 .nav-links li{
