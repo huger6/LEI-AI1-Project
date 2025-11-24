@@ -1,5 +1,10 @@
 body {
     margin: 0;
+    font-family: sans-serif;
+}
+
+header {
+    position: relative;
 }
 
 .top-bar {
@@ -9,6 +14,20 @@ body {
     padding: 10px 40px;
     background: #ffffff;
     border-bottom: 1px solid #ddd;
+}
+
+.logotipo {
+    height: 60px;          /* Define a altura fixa para não deformar o cabeçalho */
+    width: auto;           /* A largura ajusta-se automaticamente */
+    display: block;        /* Remove espaços extra indesejados abaixo da imagem */
+    object-fit: contain;   /* Garante que a imagem inteira aparece sem cortes */
+    cursor: pointer;       /* Mostra a "mãozinha" ao passar o rato */
+    transition: transform 0.3s ease; /* Suaviza a animação de hover */
+    margin-right: 20px;    /* Dá um pequeno espaço caso o menu se aproxime muito */
+}
+
+.logotipo:hover {
+    transform: scale(1.05);
 }
 
 .donate-btn {
@@ -58,6 +77,11 @@ body {
     margin-right: 20px; /* Afasta um pouco dos botões de login */
     cursor: pointer;
     z-index: 1000;
+}
+
+.language-selector:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente a bandeira ao passar o rato */
+    transition: transform 0.2s;
 }
 
 /* Tamanho das bandeiras */
@@ -111,21 +135,11 @@ body {
     transition: transform 0.2s;
 }
 
-.flags span {
-    margin: 0 5px;
+.donate-btn:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s;
 }
 
-.flags img {
-    width: 40px;
-    height: auto;
-    border-radius: 3px;
-}
-
-.flags button{
-    cursor: pointer;
-    background: none;
-    border: none;
-}
 
 .auth button {
     margin-left: 10px;

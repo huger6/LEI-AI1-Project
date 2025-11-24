@@ -1,0 +1,99 @@
+/* --- Estilos para as Listas (Gatos/Cães) --- */
+
+.lista-animais-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 40px; /* Alinhado com o padding do header */
+}
+
+.titulo-pagina {
+    font-size: 2.5rem;
+    color: #1d2a52;
+    margin-bottom: 30px;
+    text-align: left;     /* Garante que fica à esquerda */
+    border-bottom: 2px solid #e6e6e6;
+    padding-bottom: 10px;
+}
+
+/* Container Flex da Grelha */
+.grelha-animais {
+    display: flex;
+    flex-wrap: wrap;      /* Permite que os itens passem para a linha seguinte */
+    gap: 30px;            /* Espaço entre os cartões */
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+}
+
+/* Cartão Individual */
+.animal-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    
+    /* Lógica para 3 por linha: 
+       Aproximadamente 33% menos o espaço do gap. 
+       Usei 30% como base segura para flexibilidade. */
+    flex: 1 1 300px; 
+    max-width: 32%; /* Força o limite de 3 por linha */
+}
+
+/* Responsividade: Em ecrãs pequenos, fica 2 ou 1 por linha */
+@media (max-width: 900px) {
+    .animal-card {
+        max-width: 48%; /* 2 por linha em tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .animal-card {
+        max-width: 100%; /* 1 por linha em telemóveis */
+    }
+}
+
+.animal-card:hover {
+    transform: translateY(-5px); /* Efeito de subir ao passar o rato */
+}
+
+.card-img {
+    height: 250px; /* Altura fixa para as imagens ficarem iguais */
+    width: 100%;
+    background-color: #ddd;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Corta a imagem para preencher sem distorcer */
+}
+
+.card-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-info h3 {
+    margin: 0 0 10px 0;
+    color: #1d2a52;
+}
+
+.card-info p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn-detalhes {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 1px solid #d46c53;
+    color: #d46c53;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-detalhes:hover {
+    background-color: #d46c53;
+    color: white;
+}
