@@ -3,11 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doações</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Title -->
+    <title data-i18n="home_title">PetBond - Centro de Adoção Animal</title>
+    <!-- Meta tags -->
+    <meta name="description" content="A PetBond conecta animais abandonados a lares amorosos. Adote cães, gatos e outros animais. Seja voluntário ou faça uma doação para ajudar a nossa causa.">
+    <meta name="keywords" content="adoção animais, adotar cão, adotar gato, voluntariado animal, abrigo animais, petbond, doar para animais">
+    <meta name="author" content="PetBond - Hugo Afonso, Mateus Silva, Rodrigo Martins">
+    <meta name="robots" content="follow">
+    <meta name="copyright" content="© 2025 PetBond">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="static/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="static/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="static/favicon/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" href="static/favicon/apple-touch-icon.png">
+    <!-- Web Manifest -->
+    <link rel="manifest" href="static/site.webmanifest">
+
+    <!-- Core CSS -->
     <link rel="stylesheet" href="static/css/styles.css">
     <link rel="stylesheet" href="static/css/donations.css">
+    <!-- Boostrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 <body>
+    <!-- Header -->
     <header class="navbar">
         <div class="container nav-container">
             <!-- Logo -->
@@ -19,17 +42,20 @@
                 <ul class="nav-list">
                     <li class="nav-item dropdown" id="adopt-dropdown">
                         <a href="#" class="nav-link dropdown-toggle">
-                            Adote<i class="bi bi-chevron-down arrow"></i>
+                            <span data-i18n="nav_adopt_dropdown">
+                                Adote
+                            </span>
+                            <i class="bi bi-chevron-down arrow"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Cães</a></li>
-                            <li><a href="#">Gatos</a></li>
-                            <li><a href="#">Outros</a></li>
+                            <li><a href="#" data-i18n="nav_adopt_dropdown_dogs">Cães</a></li>
+                            <li><a href="#" data-i18n="nav_adopt_dropdown_cats">Gatos</a></li>
+                            <li><a href="#" data-i18n="nav_adopt_dropdown_others">Outros</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="#" class="nav-link">Voluntariado</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Contactos</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Sobre nós</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" data-i18n="nav_volunteering">Voluntariado</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" data-i18n="nav_contacts">Contactos</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" data-i18n="nav_about_us">Sobre nós</a></li>
                 </ul>
                 <!-- Side action for mobile -->
                 <div class="nav-actions" style="display: none;">
@@ -42,19 +68,19 @@
                             <i class="bi bi-chevron-down arrow"></i>
                         </div>
                         <ul class="options-list">
-                            <li data-value="pt">
+                            <li data-lang="pt">
                                 <span class="flag">
                                     <img src="static/img/flags/flag_portugal.png" alt="Bandeira Portugal">
                                 </span>
                                 <span class="text">PT</span>
                             </li>
-                            <li data-value="uk">
+                            <li data-lang="uk">
                                 <span class="flag">
                                     <img src="static/img/flags/flag_uk.png" alt="Bandeira Reino Unido">
                                 </span>
                                 <span class="text">EN</span>
                             </li>
-                            <li data-value="es">
+                            <li data-lang="es">
                                 <span class="flag">
                                     <img src="static/img/flags/flag_spain.png" alt="Bandeira Espanha">
                                 </span>
@@ -62,7 +88,7 @@
                             </li>
                         </ul>
                     </div>
-                    <a href="donations.html" class="btn btn-donate">Faça uma doação</a>
+                    <a href="donations.html" class="btn btn-donate" data-i18n="nav_donation_btn">Faça uma doação</a>
                 </div>
             </nav>  
             <!-- Right part of the navbar -->
@@ -78,19 +104,19 @@
                             <i class="bi bi-chevron-down arrow"></i>
                         </div>
                         <ul class="options-list">
-                            <li data-value="pt">
+                            <li data-lang="pt">
                                 <span class="flag">
                                     <img src="static/img/flags/flag_portugal.png" alt="Bandeira Portugal">
                                 </span>
                                 <span class="text">PT</span>
                             </li>
-                            <li data-value="uk">
+                            <li data-lang="uk">
                                 <span class="flag">
                                     <img src="static/img/flags/flag_uk.png" alt="Bandeira Reino Unido">
                                 </span>
                                 <span class="text">EN</span>
                             </li>
-                            <li data-value="es">
+                            <li data-lang="es">
                                 <span class="flag">
                                     <img src="static/img/flags/flag_spain.png" alt="Bandeira Espanha">
                                 </span>
@@ -98,7 +124,7 @@
                             </li>
                         </ul>
                     </div>
-                    <a href="donations.html" class="btn btn-donate">Faça uma doação</a>
+                    <a href="donations.html" class="btn btn-donate" data-i18n="nav_donation_btn">Faça uma doação</a>
                 </div>
                 <!-- Hamburger menu -->
                 <div class="hamburger" id="hamburger">
@@ -109,48 +135,152 @@
             </div>
         </div>
     </header>
-    <main class="background-wrap">
-        <section class="donations-section">
-
-            <h1 class="title">Doações</h1>
-
-            <p class="intro">
-                Cada doação, por mais pequena que seja, faz toda a diferença na felicidade destes patudos peludinhos.
-            </p>
-
-            <div class="donations-container">
-                <article class="donation-box">
-                    <div class="icon-placeholder"><img src="static/img/depositphotos_260583774-stock-photo-bank-transfer-glyph-icon-flat.jpg" alt="Ícone Transferência Bancária"></div>
-                    <h2>Transferência Bancária</h2>
-                    <p><strong>Associação Apets - Adoção de Animais</strong></p>
-                    <p>
-                        IBAN: <strong>PT54003506517919582337187</strong><br>
-                        BIC/SWIFT: <strong>HJJMQAK6</strong>
-                    </p>
-                </article>
-                <article class="donation-box">
-                    <div class="icon-placeholder"><img src="static/img/mbway-logo-png_seeklogo-389533.png" alt="Logo MB WAY"></div>
-
-                    <h2>MB WAY</h2>
-
-                    <p>Pode fazer uma doação através do MB Way utilizando o número:</p>
-
-                    <p><strong>+351 948043300</strong></p>
-
-                </article>
-                <article class="donation-box">
-                    <div class="icon-placeholder"><img src="static/img/Paypal_2014_logo.png" alt="Logo PayPal"></div>
-
-                    <h2>PayPal</h2>
-
-                    <p>Donativos via PayPal podem ser enviados para:</p>
-
-                    <p><strong>petbondportugal@gmail.com</strong></p>
-
-                </article>
+    <!-- Content -->
+    <main>
+        <!-- Hero section -->
+        <section class="hero" style="background-color: var(--background-soft);">
+            <div class="container hero-content">
+                <h1 data-i18n="donate_title">A tua ajuda salva vidas</h1>
+                <p data-i18n="donate_desc">A PetBond sobrevive graças à generosidade de pessoas como tu. 100% das doações vão para alimentação, veterinário e abrigo.</p>
             </div>
         </section>
+        <!-- Donation section -->
+        <section class="donation-section">
+            <div class="container">
+                <!-- Donation Cards -->
+                <div class="donation-grid">
+                    <!-- MB Way -->
+                    <div class="donation-card featured-card">
+                        <div class="badge-top" data-i18n="badge_popular">Mais Popular</div>
+                        <div class="icon-wrapper">
+                            <i class="bi bi-phone"></i>
+                        </div>
+                        <h3 class="method-title">MB Way</h3>
+                        <p data-i18n="donate_mbway_text">Envie o valor para o nosso número:</p>
+                        
+                        <div class="copy-box" onclick="copyText('992345678')">
+                            <span class="number">+351 992 345 678</span>
+                            <i class="bi bi-clipboard"></i>
+                        </div>
+                        <small data-i18n="click_to_copy">Clique para copiar</small>
+                    </div>
+                    <!-- MB -->
+                    <div class="donation-card">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-credit-card"></i>
+                        </div>
+                        <h3 class="method-title">Multibanco</h3>
+                        <p data-i18n="donate_mb_text">Pagamento de Serviços:</p>
+                        
+                        <div class="mb-details">
+                            <div class="mb-row">
+                                <span data-i18n="mb_entity">Entidade:</span>
+                                <strong onclick="copyText('12345')" class="copy-trigger">12345 <i class="bi bi-clipboard"></i></strong>
+                            </div>
+                            <div class="mb-row">
+                                <span data-i18n="mb_ref">Referência:</span>
+                                <strong onclick="copyText('123 456 789')" class="copy-trigger">123 456 789 <i class="bi bi-clipboard"></i></strong>
+                            </div>
+                        </div>
+                        <small data-i18n="donate_mb_note">Válido para qualquer montante.</small>
+                    </div>
+                    <!-- PayPal -->
+                    <div class="donation-card">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-paypal"></i>
+                        </div>
+                        <h3 class="method-title">PayPal</h3>
+                        <p data-i18n="donate_paypal_text">Doe de forma segura com a sua conta PayPal ou Cartão de Crédito.</p>
+                        
+                        <a href="https://paypal.com" target="_blank" class="btn btn-primary" id="paypal-btn" data-i18n="btn_donate_paypal">
+                            Doar via PayPal
+                        </a>
+                    </div>
+                </div>
+                <!-- Donations impact -->
+                <div class="impact-info">
+                    <h3 data-i18n="impact_title">Para onde vai o dinheiro?</h3>
+                    <div class="impact-grid">
+                        <div class="impact-item">
+                            <i class="bi bi-bandaid"></i>
+                            <span data-i18n="impact_vet">Despesas Veterinárias</span>
+                        </div>
+                        <div class="impact-item">
+                            <i class="bi bi-basket"></i>
+                            <span data-i18n="impact_food">Alimentação</span>
+                        </div>
+                        <div class="impact-item">
+                            <i class="bi bi-house-heart"></i>
+                            <span data-i18n="impact_shelter">Manutenção do Abrigo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Toast notification -->
+        <div id="toast" class="toast">Copiado!</div>
     </main>
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h4>PetBond</h4>
+                <p data-i18n="footer_brand_desc">A conectar famílias carinhosas com animais desde 2023.</p>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_col_1">Adota</h4>
+                <ul>
+                    <li><a href="#" data-i18n="footer_col_1_dogs">Cães</a></li>
+                    <li><a href="#" data-i18n="footer_col_1_cats">Gatos</a></li>
+                    <li><a href="#" data-i18n="footer_col_1_others">Outros animais</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_col_2">Ajuda-nos</h4>
+                <ul>
+                    <li><a href="#" data-i18n="footer_col_2_donate">Faça uma doação</a></li>
+                    <li><a href="#" data-i18n="footer_col_2_volunteer">Voluntaria-te</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_col_3">Contactos</h4>
+                <ul>
+                    <li><p><a href="https://maps.google.com/?q=Av.+Cidade+Politécnica,+Viseu" target="_blank">Av. Cidade Politécnica, Viseu</a></p></li>
+                    <li><p><a href="mailto:geral@petbond.com">geral@petbond.com</a></p></li>
+                    <li><p><a href="tel:+351123456789">+351 123 456 789</a></p></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_col_4">Ajuda</h4>
+                <ul>
+                    <li><a href="#" data-i18n="footer_col_4_policy">Política de privacidade</a></li>
+                    <li><a href="#" data-i18n="footer_col_4_faq">Perguntas frequentes</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container bottom-flex">
+                <p>
+                    &copy; 2025 PetBond. 
+                    <span data-i18n="footer_copyright">All rights reserved.</span>
+                </p>
+                <div class="live-clock" id="liveClock">--:--:--</div>
+            </div>
+        </div>
+    </footer>
 
+    <!-- Main scripts -->
+    <script src="static/js/translations.js"></script>
+    <script src="static/js/scripts.js"></script>
+    <!-- Additional scripts -->
+    <script src="static/js/donations.js"></script>
 </body>
 </html>

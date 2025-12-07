@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     navbarHamburguer();
     langSelector();
-    slider();
+    startLiveClock();
 });
 
 /**
@@ -32,24 +32,25 @@ function navbarHamburguer() {
     }));
 
     // Mobile Dropdown Click Handler
-    dropdowns.forEach(dropdown => {
-        const toggleBtn = dropdown.querySelector('.dropdown-toggle');
+    // If we want to activate dropdown by click
+    // dropdowns.forEach(dropdown => {
+    //     const toggleBtn = dropdown.querySelector('.dropdown-toggle');
         
-        toggleBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation(); // Prevent click from bubbling to document
+    //     toggleBtn.addEventListener('click', (e) => {
+    //         e.preventDefault();
+    //         e.stopPropagation(); // Prevent click from bubbling to document
 
-            // Close other open dropdowns
-            dropdowns.forEach(other => {
-                if (other !== dropdown) {
-                    other.classList.remove('active');
-                }
-            });
+    //         // Close other open dropdowns
+    //         dropdowns.forEach(other => {
+    //             if (other !== dropdown) {
+    //                 other.classList.remove('active');
+    //             }
+    //         });
 
-            // Toggle current dropdown
-            dropdown.classList.toggle('active');
-        });
-    });
+    //         // Toggle current dropdown
+    //         dropdown.classList.toggle('active');
+    //     });
+    // });
 
     // Close Dropdowns when clicking outside
     document.addEventListener('click', (e) => {
@@ -126,78 +127,24 @@ function langSelector() {
 }
 
 /**
- * Handle Hero's slider logic
+ * Initiates and handles footer clock
  */
-function slider() {
-    const slides = document.querySelectorAll('.slide');
-    const nextBtn = document.querySelector('.next-btn');
-    const prevBtn = document.querySelector('.prev-btn');
-    const dotsContainer = document.querySelector('.slider-dots');
+function startLiveClock() {
+    const clockElement = document.getElementById('liveClock');
     
-    let currentSlide = 0;
-    let slideInterval;
-    const autoPlayTime = 6000;
+    if (clockElement) {
+        function updateTime() {
+            const now = new Date();
+            // Format time as HH:MM:SS
+            const timeString = now.toLocaleTimeString(); 
+            clockElement.textContent = timeString;
+        }
 
-    // Create Dots based on number of slides
-    slides.forEach((_, index) => {
-        const dot = document.createElement('div');
-        dot.classList.add('dot');
-        if (index === 0) dot.classList.add('active');
-
-        dot.addEventListener('click', () => {
-            goToSlide(index);
-            resetTimer();
-        });
-        dotsContainer.appendChild(dot);
-    });
-
-    const dots = document.querySelectorAll('.dot');
-
-    // Function to change slide
-    function goToSlide(n) {
-        // Remove active class from current
-        slides[currentSlide].classList.remove('active');
-        dots[currentSlide].classList.remove('active');
-
-        // Update Index
-        currentSlide = (n + slides.length) % slides.length;
-
-        // Add active class to new
-        slides[currentSlide].classList.add('active');
-        dots[currentSlide].classList.add('active');
+        // Run immediately so we don't wait 1 second for first update
+        updateTime();
+        
+        // Update every second
+        setInterval(updateTime, 1000);
     }
-
-    // Button Functions
-    function nextSlide() {
-        goToSlide(currentSlide + 1);
-    }
-
-    function prevSlide() {
-        goToSlide(currentSlide - 1);
-    }
-
-    // Button event listeners
-    nextBtn.addEventListener('click', () => {
-        nextSlide();
-        resetTimer();
-    });
-
-    prevBtn.addEventListener('click', () => {
-        prevSlide();
-        resetTimer();
-    });
-
-    // Auto play 
-    function startTimer() {
-        slideInterval = setInterval(nextSlide, autoPlayTime);
-    }
-
-    function resetTimer() {
-        clearInterval(slideInterval);
-        startTimer();
-    }
-
-    // Start the slider
-    startTimer();
 }
 

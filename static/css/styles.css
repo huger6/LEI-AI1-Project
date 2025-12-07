@@ -107,6 +107,7 @@ ul {
 }
 
 .btn-primary {
+    border: 2px solid var(--secondary-color); /* Make this btn same height as btn-outline */
     background-color: var(--secondary-color);
     color: #fff;
 }
@@ -118,6 +119,7 @@ ul {
 .btn-outline {
     border: 2px solid var(--secondary-color);
     color: var(--secondary-color);
+    box-sizing: border-box;
 }
 
 .btn-outline:hover {
@@ -393,7 +395,6 @@ ul {
     transition: all 0.3s ease-in-out;
 }
 
-/* --- FOOTER --- */
 footer {
     background-color: var(--primary-color);
     color: var(--text-color);
@@ -437,6 +438,63 @@ footer {
     text-align: center;
     padding: 1.5rem;
     font-size: 0.9rem;
+}
+
+.bottom-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on mobile */
+    gap: 1rem;
+}
+
+.bottom-flex p {
+    margin: 0;
+}
+
+.live-clock {
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    background-color: rgba(0,0,0,0.1);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+/* Mobile Adjustment */
+@media (max-width: 600px) {
+    .bottom-flex {
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.social-links {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: inherit;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.social-links a:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateY(-3px);
 }
 
 /* --- MOBILE RESPONSIVE --- */

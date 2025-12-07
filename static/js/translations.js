@@ -26,9 +26,14 @@ const translations = {
 
         footer_col_3: "Contactos",
 
+        footer_col_4: "Ajuda",
+        footer_col_4_policy: "Política de privacidade",
+        footer_col_4_faq: "Perguntas frequentes",
+
         footer_copyright: "Todos os direitos reservados",
 
         /* Homepage */
+        home_title: "PetBond - Centro de Adoção Animal",
 
         // Hero
         hero_title_1: "Encontra o teu novo melhor amigo",
@@ -75,8 +80,25 @@ const translations = {
 
         // See more
         see_more_title: "Ver todos os animais",
-        see_more_desc: "Temos muitos mais amigos à espera de uma família."
+        see_more_desc: "Temos muitos mais amigos à espera de uma família.",
 
+        /* Donations page */
+        donate_title: "A tua ajuda salva vidas",
+        
+        donate_desc: "A PetBond sobrevive graças à generosidade de pessoas como tu. 100% das doações vão para alimentação, veterinário e abrigo.",
+        badge_popular: "Mais Popular",
+        donate_mbway_text: "Envie o valor para o número:",
+        click_to_copy: "Clique para copiar",
+        donate_mb_text: "Pagamento de Serviços:",
+        mb_entity: "Entidade:",
+        mb_ref: "Referência:",
+        donate_mb_note: "Válido para qualquer montante.",
+        donate_paypal_text: "Doe de forma segura com a sua conta PayPal ou Cartão.",
+        btn_donate_paypal: "Doar via PayPal",
+        impact_title: "Para onde vai o dinheiro?",
+        impact_vet: "Despesas Veterinárias",
+        impact_food: "Alimentação",
+        impact_shelter: "Manutenção do Abrigo"
     },
     uk: {
         /* Global */
@@ -104,9 +126,14 @@ const translations = {
 
         footer_col_3: "Contacts",
 
+        footer_col_4: "Help",
+        footer_col_4_policy: "Privacy policy",
+        footer_col_4_faq: "FAQ",
+
         footer_copyright: "All rights reserved",
 
         /* Homepage */
+        home_title: "PetBond - Animal Adoption Centre",
 
         // Hero
         hero_title_1: "Find your new best friend",
@@ -180,9 +207,14 @@ const translations = {
 
         footer_col_3: "Contactos",
 
+        footer_col_4: "Ayuda",
+        footer_col_4_policy: "Política de privacidad",
+        footer_col_4_faq: "Preguntas frecuentes",
+
         footer_copyright: "Todos los derechos reservados",
 
         /* Homepage */
+        home_title: "PetBond - Centro de Adopción Animal",
 
         // Hero
         hero_title_1: "Encuentra a tu nuevo mejor amigo",
@@ -249,6 +281,10 @@ function updatePageLanguage(lang, force = false) {
     
     // Save to LocalStorage
     localStorage.setItem('petbond_lang', lang);
+
+    // Update <html> tag lang
+    const htmlLang = (lang === 'uk') ? 'en' : lang;
+    document.documentElement.lang = htmlLang;
 
     // Update Text 
     const elements = document.querySelectorAll('[data-i18n]');

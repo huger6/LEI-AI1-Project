@@ -352,6 +352,22 @@
     }
 }
 
+#card-1 {
+    object-position: center;
+}
+
+#card-2 {
+    object-position: 50% 20%;
+}
+
+#card-3 {
+    object-position: 50% 60%;
+}
+
+#card-4 {
+    object-position: center;
+}
+
 /* See more card */
 .see-more-card {
     background-color: var(--primary-color);
