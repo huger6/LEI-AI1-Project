@@ -33,7 +33,15 @@
     --box-shadowRGB: 0, 0, 0;
     --box-shadow-accentRGB: 255,155,122;
     --box-shadow-secondaryRGB: 48, 192, 189;
+
+    /* Forms */
+    --form-error-text: #c62828;
+    --form-success-text: #155724;
+    --form-success-bg: #d4edda;
+    --form-success-border: #c3e6cb;
 }
+
+
 
 @media (prefers-color-scheme: dark) {
     :root {
