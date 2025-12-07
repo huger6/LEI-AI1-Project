@@ -1,7 +1,4 @@
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
+/* Body styles removed - inherited from styles.css */
 
 .background-wrap {
     background: #e7e5d8; 
@@ -11,7 +8,7 @@ body {
 
 .donations-section {
     max-width: 1100px;
-    background: white;
+    background: var(--background-color, white);
     margin: auto;
     padding: 40px 40px;
     border-radius: 10px;
@@ -20,7 +17,7 @@ body {
 .title {
     font-size: 2.6rem;
     margin-bottom: 15px;
-    color: #d46c53;
+    color: var(--accent-color, #d46c53);
     text-align: center;
     font-weight: 700;
 }
@@ -28,7 +25,7 @@ body {
 .intro {
     text-align: center;
     line-height: 1.6;
-    color: #444;
+    color: var(--text-color, #444);
     font-size: 1.1rem;
     margin-bottom: 60px;
 }
@@ -49,7 +46,7 @@ body {
     min-width: 260px;
     padding: 10px;
     text-align: center;
-    background-color: #d4d4d4;
+    background-color: var(--gray-300, #d4d4d4);
     border-radius: 4%;
 }
 
@@ -65,16 +62,17 @@ body {
     color: #333;
 }
 
-img {
+.donation-box img {
     width: 120px;
     height: 120px;
     margin: 0 auto 0px auto;
-    display: flex;
+    display: block;
+    object-fit: contain;
 }
 
-img:hover{
+.donation-box img:hover{
     cursor: pointer;
-    scale: calc(1.1);
+    transform: scale(1.1);
     transition: 0.3s ease;
 }
 
@@ -88,7 +86,7 @@ img:hover{
 .donate-btn {
     margin-top: 15px;
     padding: 12px 22px;
-    background: #d46c53;
+    background: var(--accent-color, #d46c53);
     color: white;
     border: none;
     border-radius: 10px;

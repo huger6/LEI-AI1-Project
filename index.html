@@ -3,63 +3,325 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto — Página Inicial</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Title -->
+    <title>PetBond - Centro de Adoção Animal</title>
+    <!-- Meta tags -->
+    <meta name="description" content="A PetBond conecta animais abandonados a lares amorosos. Adote cães, gatos e outros animais. Seja voluntário ou faça uma doação para ajudar a nossa causa.">
+    <meta name="keywords" content="adoção animais, adotar cão, adotar gato, voluntariado animal, abrigo animais, petbond, doar para animais">
+    <meta name="author" content="PetBond - Hugo Afonso, Mateus Silva, Rodrigo Martins">
+    <meta name="robots" content="follow">
+    <meta name="copyright" content="© 2025 PetBond">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="static/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="static/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="static/favicon/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" href="static/favicon/apple-touch-icon.png">
+    <!-- Web Manifest -->
+    <link rel="manifest" href="static/site.webmanifest">
+
+    <!-- Core CSS -->
     <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="static/css/home.css">
+    <!-- Boostrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 <body>
-
-    <header class="top-bar">
-
-        <a href="index.html"><img class="logotipo" src="static/logos/petbond_logo.jpg"></a>
-        <nav class="navbar">
-            <ul class="nav-links">
-
-                <li class="dropdown"><a href="#" class="hover_estilo">Adote</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="lista_animais/cachorros.html">Cães</a></li>
-                        <li><a href="lista_animais/gatos.html">Gatos</a></li> 
-                        <li><a href="lista_animais/outros.html">Outros</a></li>
-                    </ul>
-                </li>
-                
-                <li><a href="#" class="hover_estilo">Voluntariado</a></li>
-                <li><a href="#" class="hover_estilo">Contactos</a></li>
-                <li><a href="#" class="hover_estilo">Ajuda</a></li>
-                <li><a href="#" class="hover_estilo">Sobre nós</a></li>
-                <li><a href="#" class="hover_estilo">Saiba mais</a></li>
-            </ul>
-        </nav>
-        
-        <div class="language-selector">
-            <div class="current-lang">
-                <img src="../static/img/header/Flag_of_Portugal.svg.webp" alt="Português">
+    <header class="navbar">
+        <div class="container nav-container">
+            <!-- Logo -->
+            <a href="index.html">
+                <img src="static/logos/petbond_logo.jpg" alt="PetBond Logo" class="logo">
+            </a>
+            <!-- Menu -->
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item dropdown" id="adopt-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            <span data-i18n="nav_adopt_dropdown">
+                                Adote
+                            </span>
+                            <i class="bi bi-chevron-down arrow"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" data-i18n="nav_adopt_dropdown_dogs">Cães</a></li>
+                            <li><a href="#" data-i18n="nav_adopt_dropdown_cats">Gatos</a></li>
+                            <li><a href="#" data-i18n="nav_adopt_dropdown_others">Outros</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link" data-i18n="nav_volunteering">Voluntariado</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" data-i18n="nav_contacts">Contactos</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" data-i18n="nav_about_us">Sobre nós</a></li>
+                </ul>
+                <!-- Side action for mobile -->
+                <div class="nav-actions" style="display: none;">
+                    <div class="custom-select">
+                        <div class="selected-option">
+                            <span class="flag">
+                                <img src="static/img/flags/flag_portugal.png" alt="Bandeira Portugal">
+                            </span>
+                            <span class="text">PT</span>
+                            <i class="bi bi-chevron-down arrow"></i>
+                        </div>
+                        <ul class="options-list">
+                            <li data-lang="pt">
+                                <span class="flag">
+                                    <img src="static/img/flags/flag_portugal.png" alt="Bandeira Portugal">
+                                </span>
+                                <span class="text">PT</span>
+                            </li>
+                            <li data-lang="uk">
+                                <span class="flag">
+                                    <img src="static/img/flags/flag_uk.png" alt="Bandeira Reino Unido">
+                                </span>
+                                <span class="text">EN</span>
+                            </li>
+                            <li data-lang="es">
+                                <span class="flag">
+                                    <img src="static/img/flags/flag_spain.png" alt="Bandeira Espanha">
+                                </span>
+                                <span class="text">ES</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="donations.html" class="btn btn-donate" data-i18n="nav_donation_btn">Faça uma doação</a>
+                </div>
+            </nav>  
+            <!-- Right part of the navbar -->
+            <div class="nav-right">
+                <!-- Side actions -->
+                <div class="nav-actions">
+                    <div class="custom-select">
+                        <div class="selected-option">
+                            <span class="flag">
+                                <img src="static/img/flags/flag_portugal.png" alt="Bandeira Portugal">
+                            </span>
+                            <span class="text">PT</span>
+                            <i class="bi bi-chevron-down arrow"></i>
+                        </div>
+                        <ul class="options-list">
+                            <li data-lang="pt">
+                                <span class="flag">
+                                    <img src="static/img/flags/flag_portugal.png" alt="Bandeira Portugal">
+                                </span>
+                                <span class="text">PT</span>
+                            </li>
+                            <li data-lang="uk">
+                                <span class="flag">
+                                    <img src="static/img/flags/flag_uk.png" alt="Bandeira Reino Unido">
+                                </span>
+                                <span class="text">EN</span>
+                            </li>
+                            <li data-lang="es">
+                                <span class="flag">
+                                    <img src="static/img/flags/flag_spain.png" alt="Bandeira Espanha">
+                                </span>
+                                <span class="text">ES</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="donations.html" class="btn btn-donate" data-i18n="nav_donation_btn">Faça uma doação</a>
+                </div>
+                <!-- Hamburger menu -->
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
-            
-            <ul class="lang-dropdown">
-                <li><a href="#"><img src="../static/img/header/Flag_of_the_United_Kingdom_(3-5).svg.png" alt="English"></a></li>
-                <li><a href="#"><img src="../static/img/header/Flag_of_Spain.svg.png" alt="Español"></a></li>
-            </ul>
         </div>
-        <a href="doacao.html"><button class="donate-btn">Faça uma doação</button></a>
     </header>
-    <section class="inspiracional">
-        <h1>Mais de 10 mil animais já encontraram um lar</h1>
-        <p>
-            Parágrafo inspiracional
-        </p>
-    </section>
-    <section class="adotar">
-        <div class="slide">
-            <div class="slide-left">
-                <h2>Adotar</h2>
-                <p>Um pequeno gesto pode mudar tudo</p>
+    <main>
+        <!-- Hero section -->
+        <section class="hero-slider" id="heroSlider">
+            <!-- Slide 3 -->
+            <div class="slide active">
+                <div class="slide-bg" id="slide-1"></div>
+                <div class="container hero-content">
+                    <h1 data-i18n="hero_title_1">Encontra o teu novo melhor amigo</h1>
+                    <p data-i18n="hero_desc_1">Há milhares de animais à espera de uma casa. Adota hoje e muda uma vida para sempre.</p>
+                    <div class="hero-buttons">
+                        <a href="#featured" class="btn btn-primary" data-i18n="hero_btn_adopt">Adotar agora</a>
+                        <a href="#" class="btn btn-outline" data-i18n="hero_btn_more">Sabe mais</a>
+                    </div>
+                </div>
             </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+                <div class="slide-bg" id="slide-2"></div>
+                <div class="container hero-content">
+                    <h1 data-i18n="hero_title_2">Torna-te Voluntário</h1>
+                    <p data-i18n="hero_desc_2">Tens tempo livre e amor para dar? Ajuda-nos a cuidar de quem mais precisa.</p>
+                    <div class="hero-buttons">
+                        <a href="volunteer.html" class="btn btn-primary" data-i18n="hero_btn_volunteer">Ser Voluntário</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+                <div class="slide-bg" id="slide-3"></div>
+                <div class="container hero-content">
+                    <h1 data-i18n="hero_title_3">A tua ajuda faz a diferença</h1>
+                    <p data-i18n="hero_desc_3">Pequenos gestos salvam vidas. Contribui para a alimentação e cuidados veterinários.</p>
+                    <div class="hero-buttons">
+                        <a href="donations.html" class="btn btn-primary" data-i18n="hero_btn_donate">Fazer Doação</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Nav Buttons -->
+            <button class="slider-btn prev-btn"><i class="bi bi-chevron-left"></i></button>
+            <button class="slider-btn next-btn"><i class="bi bi-chevron-right"></i></button>
+            <!-- Dots -->
+            <div class="slider-dots"></div>
+        </section>
+        <!-- Info section -->
+        <section class="info-bar">
+            <div class="container info-grid">
+                <div class="info-item">
+                    <h3 data-i18n="info_number_animals_rescued">1,200+</h3>
+                    <p data-i18n="info_animals_rescued">Animais resgatados</p>
+                </div>
+                <div class="info-item">
+                    <h3 data-i18n="info_number_adoptions">850+</h3>
+                    <p data-i18n="info_adoptions">Adoções</p>
+                </div>
+                <div class="info-item">
+                    <h3 data-i18n="info_number_volunteers">300+</h3>
+                    <p data-i18n="info_volunteers">Voluntários ativos</p>
+                </div>
+            </div>
+        </section>
+        <!-- Featured animals -->
+        <section class="featured-section" id="featured">
+            <div class="container">
+                <h2 class="section-title" data-i18n="ft_title">À espera de uma nova casa</h2>
+                <div class="pet-flex-container">
+                    <a href="#" class="pet-card">
+                        <div class="pet-image-wrapper">
+                            <img src="/static/img/animals/dogs/boxer.jpeg" alt="Buddy" loading="lazy">
+                            <span class="badge" data-i18n="badge_dog">Cão</span>
+                        </div>
+                        <div class="pet-content">
+                            <div class="pet-header">
+                                <h3>Buddy</h3>
+                                <span class="action-icon"><i class="bi bi-arrow-right"></i></span>
+                            </div>
+                            <ul class="pet-specs">
+                                <li><i class="bi bi-gender-male"></i> <span data-i18n="gender_male">Macho</span></li>
+                                <li><i class="bi bi-calendar3"></i> 2 <span data-i18n="unit_years">Anos</span></li>
+                                <li><i class="bi bi-tag"></i> Boxer</li>
+                            </ul>
+                            <p class="pet-desc" data-i18n="ft_pet_1_desc">Buddy é muito energético e adora jogar ao 'Busca'. É ótimo com crianças!</p>
+                        </div>
+                    </a>
+                    <a href="#" class="pet-card">
+                        <div class="pet-image-wrapper">
+                            <img src="static/img/animals/cats/gato2.jpg" alt="Imenso" loading="lazy">
+                            <span class="badge" data-i18n="badge_cat">Gato</span>
+                        </div>
+                        <div class="pet-content">
+                            <div class="pet-header">
+                                <h3>Imenso</h3>
+                                <span class="action-icon"><i class="bi bi-arrow-right"></i></span>
+                            </div>
+                            <ul class="pet-specs">
+                                <li><i class="bi bi-gender-female"></i> <span data-i18n="gender_male">Macho</span></li>
+                                <li><i class="bi bi-calendar3"></i> 3 <span data-i18n="unit_years">Ano</span></li>
+                                <li><i class="bi bi-tag"></i> <span data-i18n="ft_pet_2_race">Laranja</span></li>
+                            </ul>
+                            <p class="pet-desc" data-i18n="ft_pet_2_desc">O Imenso adora comida e sestas prolongadas em colos quentes.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="pet-card">
+                        <div class="pet-image-wrapper">
+                            <img src="static/img/animals/dogs/maguie.jpg" alt="Maguie" loading="lazy">
+                            <span class="badge" data-i18n="badge_dog">Cão</span>
+                        </div>
+                        <div class="pet-content">
+                            <div class="pet-header">
+                                <h3>Maguie</h3>
+                                <span class="action-icon"><i class="bi bi-arrow-right"></i></span>
+                            </div>
+                            <ul class="pet-specs">
+                                <li><i class="bi bi-gender-male"></i> <span data-i18n="gender_female">Fêmea</span></li>
+                                <li><i class="bi bi-calendar3"></i> 2 <span data-i18n="unit_years">Anos</span></li>
+                                <li><i class="bi bi-tag"></i> *****</li>
+                            </ul>
+                            <p class="pet-desc" data-i18n="ft_pet_3_desc">Um gigante peludo e fofo à procura de um sofá para relaxar.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="pet-card">
+                        <div class="pet-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=600" alt="Daisy" loading="lazy">
+                            <span class="badge" data-i18n="badge_dog">Cão</span>
+                        </div>
+                        <div class="pet-content">
+                            <div class="pet-header">
+                                <h3>Daisy</h3>
+                                <span class="action-icon"><i class="bi bi-arrow-right"></i></span>
+                            </div>
+                            <ul class="pet-specs">
+                                <li><i class="bi bi-gender-female"></i> <span data-i18n="gender_female">Fêmea</span></li>
+                                <li><i class="bi bi-calendar3"></i> 6 <span data-i18n="unit_months">Meses</span></li>
+                                <li><i class="bi bi-tag"></i> <span data-i18n="ft_pet_4_race">Misturado</span></li>
+                            </ul>
+                            <p class="pet-desc" data-i18n="ft_pet_4_desc">Puppy energy! Daisy needs training but has so much love to give.</p>
+                        </div>
+                    </a>
+                    <!-- See more animals card -->
+                    <a href="#" class="pet-card see-more-card">
+                        <div class="see-more-content">
+                            <div class="icon-wrapper">
+                                <i class="bi bi-arrow-right"></i>
+                            </div>
+                            <h3 data-i18n="see_more_title">Ver todos os animais</h3>
+                            <p data-i18n="see_more_desc">Temos muitos mais amigos à espera de uma família.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-            <div class="slide-right">
-                <div class="foto"><img class="animais" src="static/img/visao-dos-caes.jpeg"></div>
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h4>PetBond</h4>
+                <p data-i18n="footer_brand_desc">A conectar famílias carinhosas com animais desde 2023.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_col_1">Adota</h4>
+                <ul>
+                    <li><a href="#" data-i18n="footer_col_1_dogs">Cães</a></li>
+                    <li><a href="#" data-i18n="footer_col_1_cats">Gatos</a></li>
+                    <li><a href="#" data-i18n="footer_col_1_others">Outros animais</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_col_2">Ajuda-nos</h4>
+                <ul>
+                    <li><a href="#" data-i18n="footer_col_2_donate">Faça uma doação</a></li>
+                    <li><a href="#" data-i18n="footer_col_2_volunteer">Voluntaria-te</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_col_3">Contactos</h4>
+                <p>Av. Cidade Politécnica, Viseu</p>
+                <p>geral@petbond.com</p>
+                <p>+351 123 456 789</p>
             </div>
         </div>
-    </section>
+        <div class="footer-bottom">
+            <p>&copy; 2025 PetBond Organization. <span data-i18n="footer_copyright">All rights reserved.</span></p>
+        </div>
+    </footer>
 
+    <!-- Main scripts -->
+    <script src="static/js/translations.js"></script>
+    <script src="static/js/scripts.js"></script>
+    <!-- Additional scripts -->
 </body>
 </html>
