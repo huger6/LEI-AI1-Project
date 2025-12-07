@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navbarHamburguer();
     langSelector();
     startLiveClock();
+    scrollTopBtn();
 });
 
 /**
@@ -145,6 +146,30 @@ function startLiveClock() {
         
         // Update every second
         setInterval(updateTime, 1000);
+    }
+}
+
+/**
+ * Handle button to return to the top of the screen
+ */
+function scrollTopBtn() {
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+    if (scrollTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+                scrollTopBtn.classList.add("show");
+            } else {
+                scrollTopBtn.classList.remove("show");
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
     }
 }
 

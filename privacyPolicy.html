@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Title -->
-    <title data-i18n="home_title">PetBond - Centro de Adoção Animal</title>
+    <title data-i18n="pp_title">PetBond - Política de Privacidade</title>
     <!-- Meta tags -->
     <meta name="description" content="A PetBond conecta animais abandonados a lares amorosos. Adote cães, gatos e outros animais. Seja voluntário ou faça uma doação para ajudar a nossa causa.">
     <meta name="keywords" content="adoção animais, adotar cão, adotar gato, voluntariado animal, abrigo animais, petbond, doar para animais">
@@ -25,7 +25,7 @@
 
     <!-- Core CSS -->
     <link rel="stylesheet" href="static/css/styles.css">
-    <link rel="stylesheet" href="static/css/home.css">
+    <link rel="stylesheet" href="static/css/privacyPolicy.css">
     <!-- Boostrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
@@ -138,151 +138,60 @@
     <!-- Content -->
     <main>
         <!-- Hero section -->
-        <section class="hero-slider" id="heroSlider">
-            <!-- Slide 1 -->
-            <div class="slide active">
-                <div class="slide-bg" id="slide-1"></div>
-                <div class="container hero-content">
-                    <h1 data-i18n="hero_title_1">Encontra o teu novo melhor amigo</h1>
-                    <p data-i18n="hero_desc_1">Há milhares de animais à espera de uma casa. Adota hoje e muda uma vida para sempre.</p>
-                    <div class="hero-buttons">
-                        <a href="#featured" class="btn btn-primary" data-i18n="hero_btn_adopt">Adotar agora</a>
-                        <a href="#" class="btn btn-outline" data-i18n="hero_btn_more">Sabe mais</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Slide 2 -->
-            <div class="slide">
-                <div class="slide-bg" id="slide-2"></div>
-                <div class="container hero-content">
-                    <h1 data-i18n="hero_title_2">Torna-te Voluntário</h1>
-                    <p data-i18n="hero_desc_2">Tens tempo livre e amor para dar? Ajuda-nos a cuidar de quem mais precisa.</p>
-                    <div class="hero-buttons">
-                        <a href="volunteer.html" class="btn btn-primary" data-i18n="hero_btn_volunteer">Ser Voluntário</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Slide 3 -->
-            <div class="slide">
-                <div class="slide-bg" id="slide-3"></div>
-                <div class="container hero-content">
-                    <h1 data-i18n="hero_title_3">A tua ajuda faz a diferença</h1>
-                    <p data-i18n="hero_desc_3">Pequenos gestos salvam vidas. Contribui para a alimentação e cuidados veterinários.</p>
-                    <div class="hero-buttons">
-                        <a href="donations.html" class="btn btn-primary" data-i18n="hero_btn_donate">Fazer Doação</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Nav Buttons -->
-            <button class="slider-btn prev-btn"><i class="bi bi-chevron-left"></i></button>
-            <button class="slider-btn next-btn"><i class="bi bi-chevron-right"></i></button>
-            <!-- Dots -->
-            <div class="slider-dots"></div>
-        </section>
-        <!-- Info section -->
-        <section class="info-bar">
-            <div class="container info-grid">
-                <div class="info-item">
-                    <h3 data-i18n="info_number_animals_rescued">1,200+</h3>
-                    <p data-i18n="info_animals_rescued">Animais resgatados</p>
-                </div>
-                <div class="info-item">
-                    <h3 data-i18n="info_number_adoptions">850+</h3>
-                    <p data-i18n="info_adoptions">Adoções</p>
-                </div>
-                <div class="info-item">
-                    <h3 data-i18n="info_number_volunteers">300+</h3>
-                    <p data-i18n="info_volunteers">Voluntários ativos</p>
-                </div>
+        <section class="hero">
+            <div class="container hero-content">
+                <h1 data-i18n="pp_hero_title">Política de Privacidade</h1>
+                <p data-i18n="pp_last_updated">Última atualização: 07 de Dezembro de 2025</p>
             </div>
         </section>
-        <!-- Featured animals -->
-        <section class="featured-section" id="featured">
-            <div class="container">
-                <h2 class="section-title" data-i18n="ft_title">À espera de uma nova casa</h2>
-                <div class="pet-flex-container">
-                    <a href="#" class="pet-card">
-                        <div class="pet-image-wrapper">
-                            <img src="/static/img/animals/dogs/boxer.jpeg" id="card-1" alt="Buddy" loading="lazy">
-                            <span class="badge" data-i18n="badge_dog">Cão</span>
-                        </div>
-                        <div class="pet-content">
-                            <div class="pet-header">
-                                <h3>Buddy</h3>
-                                <span class="action-icon"><i class="bi bi-arrow-right"></i></span>
-                            </div>
-                            <ul class="pet-specs">
-                                <li><i class="bi bi-gender-male"></i> <span data-i18n="gender_male">Macho</span></li>
-                                <li><i class="bi bi-calendar3"></i> 2 <span data-i18n="unit_years">Anos</span></li>
-                                <li><i class="bi bi-tag"></i> Boxer</li>
-                            </ul>
-                            <p class="pet-desc" data-i18n="ft_pet_1_desc">Buddy é muito energético e adora jogar ao 'Busca'. É ótimo com crianças!</p>
-                        </div>
-                    </a>
-                    <a href="#" class="pet-card">
-                        <div class="pet-image-wrapper">
-                            <img src="static/img/animals/cats/gato2.jpg" id="card-2" alt="Imenso" loading="lazy">
-                            <span class="badge" data-i18n="badge_cat">Gato</span>
-                        </div>
-                        <div class="pet-content">
-                            <div class="pet-header">
-                                <h3>Imenso</h3>
-                                <span class="action-icon"><i class="bi bi-arrow-right"></i></span>
-                            </div>
-                            <ul class="pet-specs">
-                                <li><i class="bi bi-gender-female"></i> <span data-i18n="gender_male">Macho</span></li>
-                                <li><i class="bi bi-calendar3"></i> 3 <span data-i18n="unit_years">Ano</span></li>
-                                <li><i class="bi bi-tag"></i> <span data-i18n="ft_pet_2_race">Laranja</span></li>
-                            </ul>
-                            <p class="pet-desc" data-i18n="ft_pet_2_desc">O Imenso adora comida e sestas prolongadas em colos quentes.</p>
-                        </div>
-                    </a>
-                    <a href="#" class="pet-card">
-                        <div class="pet-image-wrapper">
-                            <img src="static/img/animals/dogs/maguie.jpg" id="card-3" alt="Maguie" loading="lazy">
-                            <span class="badge" data-i18n="badge_dog">Cão</span>
-                        </div>
-                        <div class="pet-content">
-                            <div class="pet-header">
-                                <h3>Maguie</h3>
-                                <span class="action-icon"><i class="bi bi-arrow-right"></i></span>
-                            </div>
-                            <ul class="pet-specs">
-                                <li><i class="bi bi-gender-male"></i> <span data-i18n="gender_female">Fêmea</span></li>
-                                <li><i class="bi bi-calendar3"></i> 2 <span data-i18n="unit_years">Anos</span></li>
-                                <li><i class="bi bi-tag"></i> *****</li>
-                            </ul>
-                            <p class="pet-desc" data-i18n="ft_pet_3_desc">Um gigante peludo e fofo à procura de um sofá para relaxar.</p>
-                        </div>
-                    </a>
-                    <a href="#" class="pet-card">
-                        <div class="pet-image-wrapper">
-                            <img src="static/img/animals/dogs/daisy.jpg" id="card-4" alt="Daisy" loading="lazy">
-                            <span class="badge" data-i18n="badge_dog">Cão</span>
-                        </div>
-                        <div class="pet-content">
-                            <div class="pet-header">
-                                <h3>Daisy</h3>
-                                <span class="action-icon"><i class="bi bi-arrow-right"></i></span>
-                            </div>
-                            <ul class="pet-specs">
-                                <li><i class="bi bi-gender-female"></i> <span data-i18n="gender_female">Fêmea</span></li>
-                                <li><i class="bi bi-calendar3"></i> 6 <span data-i18n="unit_months">Meses</span></li>
-                                <li><i class="bi bi-tag"></i> <span data-i18n="ft_pet_4_race">Misturado</span></li>
-                            </ul>
-                            <p class="pet-desc" data-i18n="ft_pet_4_desc">Puppy energy! Daisy needs training but has so much love to give.</p>
-                        </div>
-                    </a>
-                    <!-- See more animals card -->
-                    <a href="#" class="pet-card see-more-card">
-                        <div class="see-more-content">
-                            <div class="icon-wrapper">
-                                <i class="bi bi-arrow-right"></i>
-                            </div>
-                            <h3 data-i18n="see_more_title">Ver todos os animais</h3>
-                            <p data-i18n="see_more_desc">Temos muitos mais amigos à espera de uma família.</p>
-                        </div>
-                    </a>
+        <!-- Policy -->
+        <section class="pp-section-wrapper">
+            <div class="container pp-container">
+                <div class="pp-content">
+                    <div class="pp-block">
+                        <p data-i18n="pp_intro_text">Na PetBond, a privacidade dos nossos visitantes, doadores e adotantes é de extrema importância. Este documento descreve os tipos de informações pessoais que recebemos e recolhemos e como as utilizamos.</p>
+                    </div>
+                    <div class="pp-block">
+                        <h2 data-i18n="pp_sec1_title">1. Recolha de Informação</h2>
+                        <p data-i18n="pp_sec1_desc">Podemos recolher informações pessoais identificáveis quando interage connosco, tais como:</p>
+                        <ul class="pp-list">
+                            <li data-i18n="pp_sec1_li_1">Nome, endereço de e-mail e número de telefone (em formulários de contacto ou adoção).</li>
+                            <li data-i18n="pp_sec1_li_2">Dados de pagamento e morada (apenas em caso de doações).</li>
+                            <li data-i18n="pp_sec1_li_3">Informações sobre o seu animal de estimação atual e condições de habitação.</li>
+                        </ul>
+                    </div>
+                    <div class="pp-block">
+                        <h2 data-i18n="pp_sec2_title">2. Uso da Informação</h2>
+                        <p data-i18n="pp_sec2_desc">As informações que recolhemos são utilizadas para:</p>
+                        <ul class="pp-list">
+                            <li data-i18n="pp_sec2_li_1">Processar o seu pedido de adoção e verificar a compatibilidade.</li>
+                            <li data-i18n="pp_sec2_li_2">Enviar recibos de doações para efeitos fiscais.</li>
+                            <li data-i18n="pp_sec2_li_3">Melhorar a experiência do utilizador no nosso website.</li>
+                            <li data-i18n="pp_sec2_li_4">Enviar newsletters ou atualizações (apenas se consentido).</li>
+                        </ul>
+                    </div>
+                    <div class="pp-block">
+                        <h2 data-i18n="pp_sec3_title">3. Cookies e Tecnologias de Rastreio</h2>
+                        <p data-i18n="pp_sec3_desc">Utilizamos cookies para armazenar informações sobre as preferências dos visitantes e para registar informações específicas sobre as páginas que o utilizador acede ou visita.</p>
+                        <p data-i18n="pp_sec3_note">Pode optar por desativar os cookies através das opções do seu navegador individual.</p>
+                    </div>
+                    <div class="pp-block">
+                        <h2 data-i18n="pp_sec4_title">4. Partilha de Dados</h2>
+                        <p data-i18n="pp_sec4_desc">Não vendemos, trocamos ou transferimos as suas informações pessoais para terceiros, exceto:</p>
+                        <ul class="pp-list">
+                            <li data-i18n="pp_sec4_li_1">Parceiros de confiança que nos ajudam a operar o nosso website.</li>
+                            <li data-i18n="pp_sec4_li_2">Quando exigido por lei ou para proteger os nossos direitos.</li>
+                        </ul>
+                    </div>
+                    <div class="pp-block">
+                        <h2 data-i18n="pp_sec5_title">5. Os Seus Direitos</h2>
+                        <p data-i18n="pp_sec5_desc">De acordo com o RGPD, tem o direito de aceder, retificar ou solicitar a eliminação dos seus dados pessoais a qualquer momento.</p>
+                    </div>
+                    <div class="pp-contact-box">
+                        <h3 data-i18n="pp_contact_title">Dúvidas sobre Privacidade?</h3>
+                        <p data-i18n="pp_contact_desc">Se tiver alguma questão sobre esta política, entre em contacto connosco.</p>
+                        <a href="mailto:privacidade@petbond.com" class="btn btn-outline" data-i18n="pp_btn_contact">Contacte-nos</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -349,6 +258,5 @@
     <script src="static/js/translations.js"></script>
     <script src="static/js/scripts.js"></script>
     <!-- Additional scripts -->
-    <script src="static/js/home.js"></script>
 </body>
 </html>
