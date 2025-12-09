@@ -3,55 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto — Adote</title>
-    <link rel="stylesheet" href="../static/css/styles.css">
-    <link rel="stylesheet" href="../static/css/animals.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Title -->
+    <title data-i18n="home_title">PetBond - Centro de Adoção Animal</title>
+    <!-- Meta tags -->
+    <meta name="description" content="A PetBond conecta animais abandonados a lares amorosos. Adote cães, gatos e outros animais. Seja voluntário ou faça uma doação para ajudar a nossa causa.">
+    <meta name="keywords" content="adoção animais, adotar cão, adotar gato, voluntariado animal, abrigo animais, petbond, doar para animais">
+    <meta name="author" content="PetBond - Hugo Afonso, Mateus Silva, Rodrigo Martins">
+    <meta name="robots" content="index, follow">
+    <meta name="copyright" content="© 2025 PetBond">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/static/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/static/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/static/favicon/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" href="/static/favicon/apple-touch-icon.png">
+    <!-- Web Manifest -->
+    <link rel="manifest" href="/static/site.webmanifest">
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/animals.css">
+    <!-- Boostrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 <body>
-
-    <header class="top-bar">
-
-        <a href="../index.html"><img class="logotipo" src="../static/logos/petbond_logo.jpg"></a>
-
-        <nav class="navbar">
-            <ul class="nav-links">
-
-                <li class="dropdown"><a href="adote.html" class="hover_estilo">Adote</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="cachorros.html">Cães</a></li>
-                        <li><a href="gatos.html">Gatos</a></li> 
-                        <li><a href="outros.html">Outros</a></li>
-                    </ul>
-                </li>
-                
-                <li><a href="#" class="hover_estilo">Voluntariado</a></li>
-                <li><a href="#" class="hover_estilo">Contactos</a></li>
-                <li><a href="#" class="hover_estilo">Ajuda</a></li>
-                <li><a href="#" class="hover_estilo">Sobre nós</a></li>
-                <li><a href="#" class="hover_estilo">Saiba mais</a></li>
-            </ul>
-        </nav>
-        
-        <div class="language-selector">
-            <div class="current-lang">
-                <img src="../static/img/header/Flag_of_Portugal.svg.webp" alt="Português">
+    <!-- Header -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <!-- Logo -->
+            <a href="/index.html">
+                <img src="/static/logos/petbond_logo.jpg" alt="PetBond Logo" class="logo">
+            </a>
+            <!-- Menu -->
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item dropdown" id="adopt-dropdown">
+                        <a href="/animals/adopt.html" class="nav-link dropdown-toggle">
+                            <span data-i18n="nav_adopt_dropdown">
+                                Adote
+                            </span>
+                            <i class="bi bi-chevron-down arrow"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/animals/dogs.html" data-i18n="nav_adopt_dropdown_dogs">Cães</a></li>
+                            <li><a href="/animals/cats.html" data-i18n="nav_adopt_dropdown_cats">Gatos</a></li>
+                            <li><a href="/animals/otherAnimals.html" data-i18n="nav_adopt_dropdown_others">Outros</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="/volunteering.html" class="nav-link" data-i18n="nav_volunteering">Voluntariado</a></li>
+                    <li class="nav-item"><a href="/contacts.html" class="nav-link" data-i18n="nav_contacts">Contactos</a></li>
+                    <li class="nav-item"><a href="/aboutUs.html" class="nav-link" data-i18n="nav_about_us">Sobre nós</a></li>
+                </ul>
+                <!-- Side action for mobile -->
+                <div class="nav-actions" style="display: none;">
+                    <div class="custom-select">
+                        <div class="selected-option">
+                            <span class="flag">
+                                <img src="/static/img/flags/flag_portugal.png" alt="Bandeira Portugal">
+                            </span>
+                            <span class="text">PT</span>
+                            <i class="bi bi-chevron-down arrow"></i>
+                        </div>
+                        <ul class="options-list">
+                            <li data-lang="pt">
+                                <span class="flag">
+                                    <img src="/static/img/flags/flag_portugal.png" alt="Bandeira Portugal">
+                                </span>
+                                <span class="text">PT</span>
+                            </li>
+                            <li data-lang="uk">
+                                <span class="flag">
+                                    <img src="/static/img/flags/flag_uk.png" alt="Bandeira Reino Unido">
+                                </span>
+                                <span class="text">EN</span>
+                            </li>
+                            <li data-lang="es">
+                                <span class="flag">
+                                    <img src="/static/img/flags/flag_spain.png" alt="Bandeira Espanha">
+                                </span>
+                                <span class="text">ES</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="/donations.html" class="btn btn-donate" data-i18n="nav_donation_btn">Faça uma doação</a>
+                </div>
+            </nav>  
+            <!-- Right part of the navbar -->
+            <div class="nav-right">
+                <!-- Side actions -->
+                <div class="nav-actions">
+                    <div class="custom-select">
+                        <div class="selected-option">
+                            <span class="flag">
+                                <img src="/static/img/flags/flag_portugal.png" alt="Bandeira Portugal">
+                            </span>
+                            <span class="text">PT</span>
+                            <i class="bi bi-chevron-down arrow"></i>
+                        </div>
+                        <ul class="options-list">
+                            <li data-lang="pt">
+                                <span class="flag">
+                                    <img src="/static/img/flags/flag_portugal.png" alt="Bandeira Portugal">
+                                </span>
+                                <span class="text">PT</span>
+                            </li>
+                            <li data-lang="uk">
+                                <span class="flag">
+                                    <img src="/static/img/flags/flag_uk.png" alt="Bandeira Reino Unido">
+                                </span>
+                                <span class="text">EN</span>
+                            </li>
+                            <li data-lang="es">
+                                <span class="flag">
+                                    <img src="/static/img/flags/flag_spain.png" alt="Bandeira Espanha">
+                                </span>
+                                <span class="text">ES</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="/donations.html" class="btn btn-donate" data-i18n="nav_donation_btn">Faça uma doação</a>
+                </div>
+                <!-- Hamburger menu -->
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
-            
-            <ul class="lang-dropdown">
-                <li><a href="#"><img src="../static/img/header/Flag_of_the_United_Kingdom_(3-5).svg.png" alt="English"></a></li>
-                <li><a href="#"><img src="../static/img/header/Flag_of_Spain.svg.png" alt="Español"></a></li>
-            </ul>
         </div>
-
-        <a href="../doação.html"><button class="donate-btn">Faça uma doação</button></a>
-
-        
-        <!--
-        <div class="auth">
-            <button class="login">Entrar</button>
-            <button class="register">Criar conta</button>
-        </div>
-        -->
     </header>
     
     <main class="lista-animais-container">
