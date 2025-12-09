@@ -8,37 +8,39 @@
 
 .titulo-pagina {
     font-size: 2.5rem;
-    color: #1d2a52;
+    /* Alterado de var(--text-alt) para var(--text-color) para garantir contraste no modo claro */
+    color: var(--text-color); 
     margin-bottom: 30px;
-    text-align: left;     /* Garante que fica à esquerda */
-    border-bottom: 2px solid #e6e6e6;
+    text-align: left;
+    /* Alterado de #e6e6e6 para a variável de borda */
+    border-bottom: 2px solid var(--border-color); 
     padding-bottom: 10px;
 }
 
 /* Container Flex da Grelha */
 .grelha-animais {
     display: flex;
-    flex-wrap: wrap;      /* Permite que os itens passem para a linha seguinte */
-    gap: 30px;            /* Espaço entre os cartões */
-    justify-content: flex-start; /* Alinha os itens à esquerda */
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: flex-start;
 }
 
 /* Cartão Individual */
 .animal-card {
-    background: white;
+    /* Alterado de white para surface-color (suporta Dark Mode) */
+    background: var(--surface-color); 
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    /* Alterado para usar a variável RGB de sombra */
+    box-shadow: 0 4px 10px rgba(var(--box-shadowRGB), 0.1); 
     transition: transform 0.3s ease;
     
-    /* Lógica para 3 por linha: 
-       Aproximadamente 33% menos o espaço do gap. 
-       Usei 30% como base segura para flexibilidade. */
+    /* Lógica para 3 por linha */
     flex: 1 1 300px; 
-    max-width: 32%; /* Força o limite de 3 por linha */
+    max-width: 32%;
 }
 
-/* Responsividade: Em ecrãs pequenos, fica 2 ou 1 por linha */
+/* Responsividade */
 @media (max-width: 900px) {
     .animal-card {
         max-width: 48%; /* 2 por linha em tablets */
@@ -52,19 +54,20 @@
 }
 
 .animal-card:hover {
-    transform: translateY(-5px); /* Efeito de subir ao passar o rato */
+    transform: translateY(-5px);
 }
 
 .card-img {
-    height: 250px; /* Altura fixa para as imagens ficarem iguais */
+    height: 250px;
     width: 100%;
-    background-color: #ddd;
+    /* Alterado de #ddd para variável */
+    background-color: var(--gray-300); 
 }
 
 .card-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Corta a imagem para preencher sem distorcer */
+    object-fit: cover;
 }
 
 .card-info {
@@ -74,19 +77,31 @@
 
 .card-info h3 {
     margin: 0 0 10px 0;
-    color: #1d2a52;
+    /* Alterado de #1d2a52 para primary-color */
+    color: var(--primary-color); 
+}
+
+/* Ajuste para Dark Mode específico para títulos se necessário, 
+   mas var(--primary-color) deve funcionar se configurado corretamente no root */
+@media (prefers-color-scheme: dark) {
+    .card-info h3 {
+        color: var(--text-color); /* Garante leitura no fundo escuro */
+    }
 }
 
 .card-info p {
-    color: #666;
+    /* Alterado de #666 para text-color com opacidade ou var(--gray-*) */
+    color: var(--text-color);
+    opacity: 0.8; /* Ligeiramente mais suave que o título */
     margin-bottom: 20px;
 }
 
 .btn-detalhes {
     display: inline-block;
     padding: 8px 20px;
-    border: 1px solid #d46c53;
-    color: #d46c53;
+    /* Alterado de #d46c53 para accent-color */
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
@@ -94,6 +109,329 @@
 }
 
 .btn-detalhes:hover {
-    background-color: #d46c53;
+    /* Alterado de #d46c53 para accent-color */
+    background-color: var(--accent-color);
+    color: var(--text-light); /* Garante texto branco no hover */
+}
+
+.featured-section {
+    padding: 3rem 0;
+    background-color: var(--background-color);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 0rem;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color);
+    margin: 16px auto 0;
+}
+
+.pet-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.pet-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 280px; 
+    max-width: 350px;
+    
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
+    position: relative;
+}
+
+.pet-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(var(--box-shadow-secondaryRGB), 0.2);
+    border-color: var(--secondary-color);
+}
+
+.pet-image-wrapper {
+    position: relative;
+    height: 220px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.pet-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.pet-card:hover .pet-image-wrapper img {
+    transform: scale(1.05);
+}
+
+.badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    backdrop-filter: blur(4px);
+    z-index: 2;
+}
+
+.pet-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.pet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pet-header h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.action-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--hover-bg);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.pet-card:hover .action-icon {
+    background-color: var(--secondary-color);
     color: white;
+    transform: translateX(5px);
+}
+
+.pet-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pet-specs li {
+    font-size: 0.8rem;
+    color: var(--text-color);
+    background-color: var(--hover-bg);
+    padding: 6px 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+
+.pet-specs li i {
+    color: var(--secondary-color);
+}
+
+.pet-desc {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    opacity: 0.9;
+    margin: 0;
+    line-height: 1.5;
+    
+    /* Limit to 3 lines with ellipsis ... */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+    .pet-specs li {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+    .pet-header h3 {
+        color: var(--secondary-color);
+    }
+}
+
+#card-1 {
+    object-position: center;
+}
+
+#card-2 {
+    object-position: 50% 20%;
+}
+
+#card-3 {
+    object-position: 50% 60%;
+}
+
+#card-4 {
+    object-position: center;
+}
+
+/* See more card */
+.see-more-card {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    min-height: 350px;
+}
+
+.see-more-card:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(var(--box-shadowRGB), 0.2);
+}
+
+.see-more-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.see-more-card .icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    transition: transform 0.3s ease, background-color 0.3s;
+}
+
+.see-more-card:hover .icon-wrapper {
+    background-color: white;
+    color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+.see-more-card h3 {
+    color: white;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.see-more-card p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* MEDIA QUERIES */
+
+/* Slider adjustments */
+@media (max-width: 768px) {
+    .hero-slider { 
+        height: 500px;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .slider-btn {
+        padding: 0.5rem;
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+}
+
+/* --- PAGINAÇÃO --- */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.page-numbers {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.page-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border-color);
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    border-radius: 8px; /* Cantos arredondados */
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.page-btn:hover:not(:disabled) {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.page-btn.active {
+    background-color: var(--secondary-color);
+    color: white;
+    border-color: var(--secondary-color);
+}
+
+.page-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: var(--gray-200);
+}
+
+/* Ajuste para Dark Mode */
+@media (prefers-color-scheme: dark) {
+    .page-btn:disabled {
+        background-color: var(--gray-300);
+        color: var(--text-alt);
+    }
 }
