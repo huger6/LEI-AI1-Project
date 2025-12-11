@@ -1,0 +1,224 @@
+/* --- 1. VARIÁVEIS DE COR (FORNECIDAS PELO UTILIZADOR) --- */
+:root {
+    /* Primary colors */
+    --primary-color: #0b354b;
+    --secondary-color: #30bfbd;
+    --accent-color: #d46c53;
+
+    /* Background and surfaces */
+    --background-color: #ffffff;
+    --background-color-alt: #0e111e;
+    --background-3: #d9e8f2;
+    --background-soft: #f4f9fc; /* Usado para secções claras */
+    --background-soft-2: #e5f7f6;
+    --background-soft-3: #f7e4df;
+    --surface-color: #f0ede6;
+    --surface-alt: #eeeeeef3;
+
+    /* Text */
+    --text-color: #1d2a52; /* Cor principal do texto (Dark Blue) */
+    --text-alt: #f1f1f1;
+    --text-light: #ffffff;
+
+    /* Borders and hovers */
+    --border-color: #ddd;
+    --hover-bg: #e9e9e9;
+
+    /* Box shadow */
+    --box-shadowRGB: 0, 0, 0;
+    --box-shadow-accentRGB: 255,155,122;
+    --box-shadow-secondaryRGB: 48, 192, 189;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* ... Variáveis de Dark Mode ... */
+        --background-color: #0e111e;
+        --background-soft: #0a1a24;
+        --text-color: #ffffff;
+        --text-light: #ffffff;
+    }
+}
+
+/* --- 2. ESTILOS GERAIS/BASE --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+h1 { font-size: 3em; }
+h2 { font-size: 2.5em; }
+h3 { font-size: 1.8em; }
+p { margin-bottom: 1em; }
+
+/* Botões base */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+}
+
+/* Botão de ação principal (Adotar) */
+.btn-primary-cta {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    border: 2px solid var(--secondary-color);
+}
+.btn-primary-cta:hover {
+    background-color: #2ab2b0; /* Ligeiramente mais escuro */
+    transform: translateY(-2px);
+}
+
+/* Botão secundário (Voluntariar, Contactar) */
+.btn-secondary, .btn-secondary-cta {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+.btn-secondary:hover, .btn-secondary-cta:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+}
+
+/* --- 3. ESTILOS ESPECÍFICOS PARA O "SOBRE NÓS" --- */
+
+/* Secção Hero/Título */
+.about-hero {
+    background-color: var(--background-soft); /* Fundo suave para o título */
+    padding: 80px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.about-hero h1 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 3.5em;
+}
+.about-hero .subtitle {
+    font-size: 1.25em;
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Layout de Duas Colunas (Missão e História) */
+.mission-story {
+    padding: 40px 0 60px 0;
+}
+.two-col-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+.mission-story h2 {
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 10px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.image-block img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(var(--box-shadowRGB), 0.15);
+}
+
+/* Secção Pilares/Valores */
+.pillars-section {
+    background-color: var(--background-soft-2); /* Fundo de contraste (Teal soft) */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.pillars-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.pillar-card {
+    background-color: var(--background-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(var(--box-shadow-secondaryRGB), 0.1); /* Sombra suave com Secondary Color */
+    transition: transform 0.3s;
+    border-top: 5px solid var(--secondary-color);
+}
+.pillar-card:hover {
+    transform: translateY(-5px);
+}
+
+.pillar-card i {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: var(--accent-color); /* Usando Accent Color para os ícones */
+}
+.pillar-card h4 {
+    color: var(--text-color);
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+/* Secção CTA de Fundo */
+.cta-section-bottom {
+    background-color: var(--primary-color); /* Fundo escuro como o seu navbar */
+    color: var(--text-light);
+    padding: 80px 0;
+    text-align: center;
+}
+.cta-section-bottom h2 {
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .two-col-grid {
+        grid-template-columns: 1fr;
+    }
+    .image-block {
+        order: -1; /* Coloca a imagem no topo no mobile */
+    }
+    .about-hero h1 {
+        font-size: 2.5em;
+    }
+    .cta-buttons {
+        flex-direction: column;
+    }
+}

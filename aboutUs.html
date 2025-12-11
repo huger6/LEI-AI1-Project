@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - PET BOND</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/aboutUs.css">
+    <link rel="stylesheet" href="/static/css/home.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <!-- Logo -->
+            <a href="/index.html">
+                <img src="/static/logos/petbond_logo.jpg" alt="PetBond Logo" class="logo">
+            </a>
+            <!-- Menu -->
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item dropdown" id="adopt-dropdown">
+                        <a href="/animals/adopt.html" class="nav-link dropdown-toggle">
+                            <span data-i18n="nav_adopt_dropdown">
+                                Adote
+                            </span>
+                            <i class="bi bi-chevron-down arrow"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/animals/dogs.html" data-i18n="nav_adopt_dropdown_dogs">Cães</a></li>
+                            <li><a href="/animals/cats.html" data-i18n="nav_adopt_dropdown_cats">Gatos</a></li>
+                            <li><a href="/animals/otherAnimals.html" data-i18n="nav_adopt_dropdown_others">Outros</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="/volunteering.html" class="nav-link" data-i18n="nav_volunteering">Voluntariado</a></li>
+                    <li class="nav-item"><a href="/contacts.html" class="nav-link" data-i18n="nav_contacts">Contactos</a></li>
+                    <li class="nav-item"><a href="/aboutUs.html" class="nav-link" data-i18n="nav_about_us">Sobre nós</a></li>
+                </ul>
+                <!-- Side action for mobile -->
+                <div class="nav-actions" style="display: none;">
+                    <div class="custom-select">
+                        <div class="selected-option">
+                            <span class="flag">
+                                <img src="/static/img/flags/flag_portugal.png" alt="Bandeira Portugal">
+                            </span>
+                            <span class="text">PT</span>
+                            <i class="bi bi-chevron-down arrow"></i>
+                        </div>
+                        <ul class="options-list">
+                            <li data-lang="pt">
+                                <span class="flag">
+                                    <img src="/static/img/flags/flag_portugal.png" alt="Bandeira Portugal">
+                                </span>
+                                <span class="text">PT</span>
+                            </li>
+                            <li data-lang="uk">
+                                <span class="flag">
+                                    <img src="/static/img/flags/flag_uk.png" alt="Bandeira Reino Unido">
+                                </span>
+                                <span class="text">EN</span>
+                            </li>
+                            <li data-lang="es">
+                                <span class="flag">
+                                    <img src="/static/img/flags/flag_spain.png" alt="Bandeira Espanha">
+                                </span>
+                                <span class="text">ES</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="/donations.html" class="btn btn-donate" data-i18n="nav_donation_btn">Faça uma doação</a>
+                </div>
+            </nav>  
+            <!-- Right part of the navbar -->
+            <div class="nav-right">
+                <!-- Side actions -->
+                <div class="nav-actions">
+                    <div class="custom-select">
+                        <div class="selected-option">
+                            <span class="flag">
+                                <img src="/static/img/flags/flag_portugal.png" alt="Bandeira Portugal">
+                            </span>
+                            <span class="text">PT</span>
+                            <i class="bi bi-chevron-down arrow"></i>
+                        </div>
+                        <ul class="options-list">
+                            <li data-lang="pt">
+                                <span class="flag">
+                                    <img src="/static/img/flags/flag_portugal.png" alt="Bandeira Portugal">
+                                </span>
+                                <span class="text">PT</span>
+                            </li>
+                            <li data-lang="uk">
+                                <span class="flag">
+                                    <img src="/static/img/flags/flag_uk.png" alt="Bandeira Reino Unido">
+                                </span>
+                                <span class="text">EN</span>
+                            </li>
+                            <li data-lang="es">
+                                <span class="flag">
+                                    <img src="/static/img/flags/flag_spain.png" alt="Bandeira Espanha">
+                                </span>
+                                <span class="text">ES</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="/donations.html" class="btn btn-donate" data-i18n="nav_donation_btn">Faça uma doação</a>
+                </div>
+                <!-- Hamburger menu -->
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-hero">
+            <div class="container">
+                <h1>A Nossa Missão</h1>
+                <p class="subtitle">Conectamos corações e lares. Juntos, damos uma segunda chance aos animais mais necessitados de Portugal.</p>
+            </div>
+        </section>
+
+        <section class="mission-story">
+            <div class="container two-col-grid">
+                <div class="content-block">
+                    <h2>Quem Somos?</h2>
+                    <p>A Pet Bond nasceu do amor incondicional pelos animais e da necessidade de criar uma ponte eficiente entre abrigos, protetores e famílias dispostas a adotar. Somos uma plataforma colaborativa que centraliza a divulgação de animais disponíveis para adoção em todo o país.</p>
+                    <p>O nosso foco é a adoção responsável. Garantimos que cada "patudo" seja registado com a máxima transparência e que os potenciais adotantes recebam todas as informações necessárias para tomar uma decisão informada e amorosa.</p>
+                    <a href="contactos.html" class="btn btn-secondary">Contacte-nos</a>
+                </div>
+                <div class="image-block">
+                    <img src="images/about_us_pet_team.jpg" alt="Equipa PET BOND e animais">
+                </div>
+            </div>
+        </section>
+
+        <section class="pillars-section">
+            <div class="container">
+                <h3>Os Nossos Valores</h3>
+                <div class="pillars-grid">
+                    <div class="pillar-card">
+                        <i class="fas fa-hand-holding-heart icon-accent"></i>
+                        <h4>Adoção Responsável</h4>
+                        <p>Priorizamos o bem-estar dos animais, garantindo que o processo de adoção seja transparente, seguro e duradouro.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <i class="fas fa-network-wired icon-accent"></i>
+                        <h4>Rede Colaborativa</h4>
+                        <p>Trabalhamos lado a lado com ONGs, abrigos e protetores independentes para maximizar as oportunidades de adoção.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <i class="fas fa-shield-alt icon-accent"></i>
+                        <h4>Transparência e Ética</h4>
+                        <p>O nosso site é exclusivo para a adoção. A venda de animais é estritamente proibida, mantendo a integridade da nossa missão.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section-bottom">
+            <div class="container">
+                <h2>Pronto para fazer parte da mudança?</h2>
+                <div class="cta-buttons">
+                    <a href="adocao.html" class="btn btn-primary-cta">Encontrar o Meu Amigo</a>
+                    <a href="voluntariado.html" class="btn btn-secondary-cta">Quero ser Voluntário</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    </body>
+</html>
