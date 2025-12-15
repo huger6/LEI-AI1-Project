@@ -1,0 +1,282 @@
+/* --- PÁGINA DE DETALHE (ESTILO E-COMMERCE) --- */
+
+.details-page-wrapper {
+    padding: 2rem 0;
+    background-color: var(--background-soft); /* Fundo suave para destacar o card branco */
+}
+
+.breadcrumb-area {
+    margin-bottom: 20px;
+}
+
+.back-link {
+    color: var(--text-color);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.back-link:hover {
+    opacity: 1;
+    color: var(--secondary-color);
+}
+
+/* O CARD PRINCIPAL */
+.product-card {
+    display: flex; /* Cria o layout lado a lado */
+    flex-direction: row;
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(var(--box-shadowRGB), 0.1);
+    overflow: hidden; /* Para a imagem não sair dos cantos */
+    min-height: 500px;
+    margin-bottom: 4rem;
+    border: 1px solid var(--border-color);
+}
+
+/* Coluna da Imagem (Esquerda) */
+.product-image {
+    flex: 1; /* Ocupa 50% do espaço disponível */
+    position: relative;
+    background-color: var(--gray-300);
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preenche tudo sem deformar */
+    display: block;
+}
+
+.badge-status {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--form-success-text); /* Verde */
+    color: white;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Coluna da Info (Direita) */
+.product-details {
+    flex: 1;
+    padding: 40px; /* Este padding define o espaço uniforme à esquerda e direita */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box; /* Garante que o padding não expande o card */
+}
+
+.details-header {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.pet-title {
+    font-size: 2.8rem;
+    color: var(--secondary-color);
+    margin: 0 0 5px 0;
+    line-height: 1.1;
+}
+
+.pet-category {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Ícones de especificações */
+.specs-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.spec-box {
+    background-color: var(--background-soft);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.spec-box i {
+    color: var(--secondary-color);
+}
+
+.description-block h3 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: var(--text-color);
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.description-block p {
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+/* Área do Botão "Comprar/Adotar" */
+.action-footer {
+    margin-top: auto;
+    width: 100%;
+}
+
+.btn-adopt-now {
+    display: block;
+    width: 100%; /* Ocupa 100% do espaço disponível dentro do padding */
+    box-sizing: border-box; /* Garante que o botão não ultrapassa o limite do pai */
+    background-color: var(--accent-color);
+    color: white;
+    text-align: center;
+    padding: 15px 20px; /* Altura confortável */
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: none; /* Remove bordas padrão */
+    cursor: pointer;
+}
+
+.btn-adopt-now:hover {
+    background-color: #c0553e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(var(--box-shadow-accentRGB), 0.4);
+}
+
+.small-note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-color);
+    opacity: 0.6;
+    margin-top: 12px;
+}
+
+/* --- CARROSSEL / SUGESTÕES --- */
+.suggestions-section {
+    padding-bottom: 3rem;
+}
+
+.suggestions-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.carousel-container-relative {
+    position: relative;
+    width: auto; /* Deixa de ser 100% fixo para respeitar as margens */
+    margin: 0 50px; /* CRÍTICO: Cria 50px de espaço vazio de cada lado para as setas */
+    overflow: visible; /* CRÍTICO: Permite que as setas apareçam fora da caixa */
+}
+
+/* O Wrapper mantém o scroll, mas não afeta as setas */
+.carousel-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 20px 5px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+/* Esconder barra no Chrome/Safari/Opera */
+.carousel-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-track {
+    display: flex; /* OBRIGATÓRIO: Coloca os filhos lado a lado */
+    flex-wrap: nowrap; /* OBRIGATÓRIO: Impede que quebrem para a linha de baixo */
+    gap: 20px; /* Espaço entre cards */
+    width: max-content; /* Garante que a pista tem o tamanho de todos os itens juntos */
+}
+
+.carousel-item {
+    /* Tamanho fixo para garantir que cabem 4 visíveis em ecrãs grandes */
+    width: 280px; 
+    flex: 0 0 auto; /* OBRIGATÓRIO: Impede o card de encolher */
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--surface-color); /* Fundo do botão */
+    color: var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Posiciona as setas fora da área dos cards */
+.btn-prev {
+    left: -60px; /* Empurra para a esquerda (no espaço criado pela margem) */
+}
+
+.btn-next {
+    right: -60px; /* Empurra para a direita */
+}
+
+/* Mobile: esconde setas */
+@media (max-width: 768px) {
+    .carousel-container-relative {
+        margin: 0; /* Remove a margem lateral em mobile */
+    }
+    .carousel-btn {
+        display: none; /* Esconde setas em mobile */
+    }
+}
+
+/* ESTILO RESPONSIVO (MOBILE) */
+@media (max-width: 900px) {
+    .product-card {
+        flex-direction: column; /* Empilha: Imagem em cima, info em baixo */
+        min-height: auto;
+    }
+
+    .product-image {
+        height: 300px; /* Altura fixa para imagem em mobile */
+        flex: none;
+    }
+
+    .product-details {
+        padding: 25px;
+    }
+
+    .pet-title {
+        font-size: 2rem;
+    }
+}

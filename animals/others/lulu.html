@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Title -->
+    <title data-i18n="home_title">PetBond - Adote</title>
+    <!-- Meta tags -->
+    <meta name="description" content="A PetBond conecta animais abandonados a lares amorosos. Adote cães, gatos e outros animais. Seja voluntário ou faça uma doação para ajudar a nossa causa.">
+    <meta name="keywords" content="adoção animais, adotar cão, adotar gato, voluntariado animal, abrigo animais, petbond, doar para animais">
+    <meta name="author" content="PetBond - Hugo Afonso, Mateus Silva, Rodrigo Martins">
+    <meta name="robots" content="index, follow">
+    <meta name="copyright" content="© 2025 PetBond">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/static/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/static/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/static/favicon/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" href="/static/favicon/apple-touch-icon.png">
+    <!-- Web Manifest -->
+    <link rel="manifest" href="/static/site.webmanifest">
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/animals.css">
+    <link rel="stylesheet" href="/static/css/animal.css">
+    <!-- Boostrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <!-- Logo -->
+            <a href="/index.html">
+                <img src="/static/logos/petbond_logo.jpg" alt="PetBond Logo" class="logo">
+            </a>
+            <!-- Menu -->
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item dropdown" id="adopt-dropdown">
+                        <a href="/animals/adopt.html" class="nav-link dropdown-toggle">
+                            <span data-i18n="nav_adopt_dropdown">
+                                Adote
+                            </span>
+                            <i class="bi bi-chevron-down arrow"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/animals/dogs.html" data-i18n="nav_adopt_dropdown_dogs">Cães</a></li>
+                            <li><a href="/animals/cats.html" data-i18n="nav_adopt_dropdown_cats">Gatos</a></li>
+                            <li><a href="/animals/otherAnimals.html" data-i18n="nav_adopt_dropdown_others">Outros</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="/volunteering.html" class="nav-link" data-i18n="nav_volunteering">Voluntariado</a></li>
+                    <li class="nav-item"><a href="/contacts.html" class="nav-link" data-i18n="nav_contacts">Contactos</a></li>
+                    <li class="nav-item"><a href="/aboutUs.html" class="nav-link" data-i18n="nav_about_us">Sobre nós</a></li>
+                </ul>
+                <!-- Side action for mobile -->
+                <div class="nav-actions" style="display: none;">
+                    <div class="custom-select">
+                        <div class="selected-option">
+                            <span class="flag">
+                                <img src="/static/img/flags/flag_portugal.png" alt="Bandeira Portugal">
+                            </span>
+                            <span class="text">PT</span>
+                            <i class="bi bi-chevron-down arrow"></i>
+                        </div>
+                        <ul class="options-list">
+                            <li data-lang="pt">
+                                <span class="flag">
+                                    <img src="/static/img/flags/flag_portugal.png" alt="Bandeira Portugal">
+                                </span>
+                                <span class="text">PT</span>
+                            </li>
+                            <li data-lang="uk">
+                                <span class="flag">
+                                    <img src="/static/img/flags/flag_uk.png" alt="Bandeira Reino Unido">
+                                </span>
+                                <span class="text">EN</span>
+                            </li>
+                            <li data-lang="es">
+                                <span class="flag">
+                                    <img src="/static/img/flags/flag_spain.png" alt="Bandeira Espanha">
+                                </span>
+                                <span class="text">ES</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="/donations.html" class="btn btn-donate" data-i18n="nav_donation_btn">Faça uma doação</a>
+                </div>
+            </nav>  
+            <!-- Right part of the navbar -->
+            <div class="nav-right">
+                <!-- Side actions -->
+                <div class="nav-actions">
+                    <div class="custom-select">
+                        <div class="selected-option">
+                            <span class="flag">
+                                <img src="/static/img/flags/flag_portugal.png" alt="Bandeira Portugal">
+                            </span>
+                            <span class="text">PT</span>
+                            <i class="bi bi-chevron-down arrow"></i>
+                        </div>
+                        <ul class="options-list">
+                            <li data-lang="pt">
+                                <span class="flag">
+                                    <img src="/static/img/flags/flag_portugal.png" alt="Bandeira Portugal">
+                                </span>
+                                <span class="text">PT</span>
+                            </li>
+                            <li data-lang="uk">
+                                <span class="flag">
+                                    <img src="/static/img/flags/flag_uk.png" alt="Bandeira Reino Unido">
+                                </span>
+                                <span class="text">EN</span>
+                            </li>
+                            <li data-lang="es">
+                                <span class="flag">
+                                    <img src="/static/img/flags/flag_spain.png" alt="Bandeira Espanha">
+                                </span>
+                                <span class="text">ES</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="/donations.html" class="btn btn-donate" data-i18n="nav_donation_btn">Faça uma doação</a>
+                </div>
+                <!-- Hamburger menu -->
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Content -->
+    <main class="details-page-wrapper">
+        
+        <div class="container">
+            <div class="breadcrumb-area">
+                <a href="/animals/adopt.html" class="back-link"><i class="bi bi-arrow-left"></i> Voltar à lista de animais</a>
+            </div>
+
+            <section class="product-card">
+                <div class="product-image">
+                    <img src="/static/img/animals/others/cabra.jpeg" alt="Lulu">
+                    <span class="badge-status">Disponível</span>
+                </div>
+
+                <div class="product-details">
+                    <div class="details-header">
+                        <h1 class="pet-title">Lulu</h1>
+                        <span class="pet-category">Cabra | 6 Meses</span>
+                    </div>
+
+                    <div class="specs-row">
+                        <div class="spec-box"><i class="bi bi-gender-male"></i> Fêmea</div>
+                        <div class="spec-box"><i class="bi bi-geo-alt"></i> Viseu</div>
+                        <div class="spec-box"><i class="bi bi-shield-check"></i> Vacinado</div>
+                    </div>
+
+                    <div class="description-block">
+                        <h3>Sobre</h3>
+                        <p>O Lulu é um companheiro leal e energético. Adora crianças e longas caminhadas. Está à procura de uma família ativa que lhe dê o amor que ele merece. Já sabe comandos básicos e é muito asseado.</p>
+                    </div>
+
+                    <div class="action-footer">
+                        <a href="/adoption-form.html" class="btn-adopt-now">
+                            Adotar o Lulu
+                        </a>
+                        <p class="small-note"><i class="bi bi-info-circle"></i> Processo de adoção simples e rápido.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="suggestions-section">
+            <div class="container">
+                <h2 class="suggestions-title">Outros amigos à procura de casa</h2>
+                
+                <div class="carousel-container-relative">
+                    <button class="carousel-btn btn-prev"><i class="bi bi-chevron-left"></i></button>
+                    <button class="carousel-btn btn-next"><i class="bi bi-chevron-right"></i></button>
+                    
+                    <div class="carousel-wrapper" id="relatedCarousel">
+                        <div class="carousel-track">
+                            
+                            <a href="../cats/imenso.html" class="pet-card carousel-item">
+                                <div class="pet-image-wrapper">
+                                    <img src="/static/img/animals/cats/gato2.jpg" alt="Imenso" loading="lazy">
+                                    <span class="badge">Gato</span>
+                                </div>
+                                <div class="pet-content">
+                                    <div class="pet-header">
+                                        <h3>Imenso</h3>
+                                        <span class="action-icon"><i class="bi bi-arrow-right"></i></span>
+                                    </div>
+                                    <ul class="pet-specs">
+                                        <li><i class="bi bi-gender-male"></i> Macho</li>
+                                        <li><i class="bi bi-calendar3"></i> 3 Anos</li>
+                                    </ul>
+                                </div>
+                            </a>
+
+                            <a href="../dogs/maguie.html" class="pet-card carousel-item">
+                                <div class="pet-image-wrapper">
+                                    <img src="/static/img/animals/dogs/maguie.jpg" alt="Maguie" loading="lazy">
+                                    <span class="badge">Cão</span>
+                                </div>
+                                <div class="pet-content">
+                                    <div class="pet-header">
+                                        <h3>Maguie</h3>
+                                        <span class="action-icon"><i class="bi bi-arrow-right"></i></span>
+                                    </div>
+                                    <ul class="pet-specs">
+                                        <li><i class="bi bi-gender-female"></i> Fêmea</li>
+                                        <li><i class="bi bi-calendar3"></i> 2 Anos</li>
+                                    </ul>
+                                </div>
+                            </a>
+
+                            <a href="../dogs/daisy.html" class="pet-card carousel-item">
+                                <div class="pet-image-wrapper">
+                                    <img src="/static/img/animals/dogs/daisy.jpg" alt="Daisy" loading="lazy">
+                                    <span class="badge">Cão</span>
+                                </div>
+                                <div class="pet-content">
+                                    <div class="pet-header">
+                                        <h3>Daisy</h3>
+                                        <span class="action-icon"><i class="bi bi-arrow-right"></i></span>
+                                    </div>
+                                    <ul class="pet-specs">
+                                        <li><i class="bi bi-gender-female"></i> Fêmea</li>
+                                        <li><i class="bi bi-calendar3"></i> 6 Meses</li>
+                                    </ul>
+                                </div>
+                            </a>
+
+                            <a href="../dogs/oscar.html" class="pet-card carousel-item">
+                                <div class="pet-image-wrapper">
+                                    <img src="/static/img/animals/dogs/palemao.jpeg" alt="Oscar" loading="lazy">
+                                    <span class="badge">Cão</span>
+                                </div>
+                                <div class="pet-content">
+                                    <div class="pet-header">
+                                        <h3>Óscar</h3>
+                                        <span class="action-icon"><i class="bi bi-arrow-right"></i></span>
+                                    </div>
+                                    <ul class="pet-specs">
+                                        <li><i class="bi bi-gender-male"></i> Macho</li>
+                                        <li><i class="bi bi-calendar3"></i> 6 Meses</li>
+                                    </ul>
+                                </div>
+                            </a>
+
+                            <a href="../others/tiquinho.html" class="pet-card carousel-item">
+                                <div class="pet-image-wrapper">
+                                    <img src="/static/img/animals/others/papagaio.jpeg" alt="Tiquinho" loading="lazy">
+                                    <span class="badge">Outros</span>
+                                </div>
+                                <div class="pet-content">
+                                    <div class="pet-header">
+                                        <h3>Tiquinho</h3>
+                                        <span class="action-icon"><i class="bi bi-arrow-right"></i></span>
+                                    </div>
+                                    <ul class="pet-specs">
+                                        <li><i class="bi bi-gender-male"></i> Macho</li>
+                                        <li><i class="bi bi-calendar3"></i> 7 Anos</li>
+                                    </ul>
+                                </div>
+                            </a>
+
+                            <a href="../cats/calhau.html" class="pet-card carousel-item">
+                                <div class="pet-image-wrapper">
+                                    <img src="/static/img/animals/cats/gato1.jpg" alt="Calhau" loading="lazy">
+                                    <span class="badge">Gato</span>
+                                </div>
+                                <div class="pet-content">
+                                    <div class="pet-header">
+                                        <h3>Calhau</h3>
+                                        <span class="action-icon"><i class="bi bi-arrow-right"></i></span>
+                                    </div>
+                                    <ul class="pet-specs">
+                                        <li><i class="bi bi-gender-male"></i> Macho</li>
+                                        <li><i class="bi bi-calendar3"></i> 3 Anos</li>
+                                    </ul>
+                                </div>
+                            </a>
+
+                            <a href="../dogs/cuca.html" class="pet-card carousel-item">
+                                <div class="pet-image-wrapper">
+                                    <img src="/static/img/animals/dogs/pinscher.jpeg" alt="Cuca" loading="lazy">
+                                    <span class="badge">Cão</span>
+                                </div>
+                                <div class="pet-content">
+                                    <div class="pet-header">
+                                        <h3>Cuca</h3>
+                                        <span class="action-icon"><i class="bi bi-arrow-right"></i></span>
+                                    </div>
+                                    <ul class="pet-specs">
+                                        <li><i class="bi bi-gender-female"></i> Fêmea</li>
+                                        <li><i class="bi bi-calendar3"></i> 6 Anos</li>
+                                    </ul>
+                                </div>
+                            </a>
+
+                            <a href="../others/oscarjr.html" class="pet-card carousel-item">
+                                <div class="pet-image-wrapper">
+                                    <img src="/static/img/animals/others/porco.jpeg" alt="Oscar Jr" loading="lazy">
+                                    <span class="badge">Outros</span>
+                                </div>
+                                <div class="pet-content">
+                                    <div class="pet-header">
+                                        <h3>Óscar Jr.</h3>
+                                        <span class="action-icon"><i class="bi bi-arrow-right"></i></span>
+                                    </div>
+                                    <ul class="pet-specs">
+                                        <li><i class="bi bi-gender-male"></i> Macho</li>
+                                        <li><i class="bi bi-calendar3"></i> 2 Meses</li>
+                                    </ul>
+                                </div>
+                            </a>
+
+                            <a href="../dogs/aboubakar.html" class="pet-card carousel-item">
+                                <div class="pet-image-wrapper">
+                                    <img src="/static/img/animals/dogs/palemao.jpeg" alt="Aboubakar" loading="lazy">
+                                    <span class="badge">Cão</span>
+                                </div>
+                                <div class="pet-content">
+                                    <div class="pet-header">
+                                        <h3>Aboubakar</h3>
+                                        <span class="action-icon"><i class="bi bi-arrow-right"></i></span>
+                                    </div>
+                                    <ul class="pet-specs">
+                                        <li><i class="bi bi-gender-male"></i> Macho</li>
+                                        <li><i class="bi bi-calendar3"></i> 1 Ano</li>
+                                    </ul>
+                                </div>
+                            </a>
+
+                            <a href="../cats/luna.html" class="pet-card carousel-item">
+                                <div class="pet-image-wrapper">
+                                    <img src="/static/img/animals/cats/gato4.jpg" alt="Luna" loading="lazy">
+                                    <span class="badge">Gato</span>
+                                </div>
+                                <div class="pet-content">
+                                    <div class="pet-header">
+                                        <h3>Luna</h3>
+                                        <span class="action-icon"><i class="bi bi-arrow-right"></i></span>
+                                    </div>
+                                    <ul class="pet-specs">
+                                        <li><i class="bi bi-gender-female"></i> Fêmea</li>
+                                        <li><i class="bi bi-calendar3"></i> 6 Meses</li>
+                                    </ul>
+                                </div>
+                            </a>
+
+                            <a href="../cats/simba.html" class="pet-card carousel-item">
+                                <div class="pet-image-wrapper">
+                                    <img src="/static/img/animals/cats/gato3.jpg" alt="Simba" loading="lazy">
+                                    <span class="badge">Gato</span>
+                                </div>
+                                <div class="pet-content">
+                                    <div class="pet-header">
+                                        <h3>Simba</h3>
+                                        <span class="action-icon"><i class="bi bi-arrow-right"></i></span>
+                                    </div>
+                                    <ul class="pet-specs">
+                                        <li><i class="bi bi-gender-male"></i> Macho</li>
+                                        <li><i class="bi bi-calendar3"></i> 2 Meses</li>
+                                    </ul>
+                                </div>
+                            </a>
+
+                            <a href="../others/jojo.html" class="pet-card carousel-item">
+                                <div class="pet-image-wrapper">
+                                    <img src="/static/img/animals/others/macaco.jpeg" alt="Jojo" loading="lazy">
+                                    <span class="badge">Outros</span>
+                                </div>
+                                <div class="pet-content">
+                                    <div class="pet-header">
+                                        <h3>Jójó</h3>
+                                        <span class="action-icon"><i class="bi bi-arrow-right"></i></span>
+                                    </div>
+                                    <ul class="pet-specs">
+                                        <li><i class="bi bi-gender-male"></i> Macho</li>
+                                        <li><i class="bi bi-calendar3"></i> 6 Meses</li>
+                                    </ul>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h4>PetBond</h4>
+                <p data-i18n="footer_brand_desc">A conectar famílias carinhosas com animais desde 2023.</p>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_col_1">Adota</h4>
+                <ul>
+                    <li><a href="/animals/dogs.html" data-i18n="footer_col_1_dogs">Cães</a></li>
+                    <li><a href="/animals/cats.html" data-i18n="footer_col_1_cats">Gatos</a></li>
+                    <li><a href="/animals/otherAnimals.html" data-i18n="footer_col_1_others">Outros animais</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_col_2">Ajuda-nos</h4>
+                <ul>
+                    <li><a href="/donations.html" data-i18n="footer_col_2_donate">Faça uma doação</a></li>
+                    <li><a href="/volunteering.html" data-i18n="footer_col_2_volunteer">Voluntaria-te</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_col_3">Contactos</h4>
+                <ul>
+                    <li><p><a href="https://maps.google.com/?q=Av.+Cidade+Politécnica,+Viseu" target="_blank">Av. Cidade Politécnica, Viseu</a></p></li>
+                    <li><p><a href="mailto:geral@petbond.com">geral@petbond.com</a></p></li>
+                    <li><p><a href="tel:+351123456789">+351 123 456 789</a></p></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_col_4">Ajuda</h4>
+                <ul>
+                    <li><a href="/privacyPolicy.html" data-i18n="footer_col_4_policy">Política de privacidade</a></li>
+                    <li><a href="/faq.html" data-i18n="footer_col_4_faq">Perguntas frequentes</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container bottom-flex">
+                <p>
+                    &copy; 2025 PetBond. 
+                    <span data-i18n="footer_copyright">All rights reserved.</span>
+                </p>
+                <div class="live-clock" id="liveClock">--:--:--</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main scripts -->
+    <script src="/static/js/translations.js"></script>
+    <script src="/static/js/scripts.js"></script>
+    <!-- Additional scripts -->
+    <script src="/static/js/home.js"></script>
+    <script src="/static/js/navigation.js"></script>
+    <script src="/static/js/carousel.js"></script>
+</body>
+</html>
