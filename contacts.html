@@ -138,8 +138,8 @@
     <main>
         <section class="contact-hero">
             <div class="container">
-                <h1>Fale Connosco</h1>
-                <p class="subtitle">Seja para adoção, voluntariado ou parcerias, a sua mensagem é importante.</p>
+                <h1 data-i18n="contacts_hero_title">Fale Connosco</h1>
+                <p data-i18n="contacts_hero_desc" class="subtitle">Seja para adoção, voluntariado ou parcerias, a sua mensagem é importante.</p>
             </div>
         </section>
 
@@ -147,36 +147,36 @@
             <div class="container contact-grid">
 
                 <div class="contact-info-block">
-                    <h2>Informações Úteis</h2>
+                    <h2 data-i18n="contacts_hero_title2">Informações Úteis</h2>
 
                     <div class="info-item">
                         <i class="fas fa-phone-alt icon-secondary"></i>
                         <div>
-                            <h4>Telefone de Apoio</h4>
+                            <h4 data-i18n="contacts_phone_title">Telefone de Apoio</h4>
                             <p>(+351) 992 345 678</p>
-                            <span class="small-text">Disponível em dias úteis das 10h às 18h.</span>
+                            <span class="small-text" data-i18n="contacts_phone_hours">Disponível em dias úteis das 10h às 18h.</span>
                         </div>
                     </div>
 
                     <div class="info-item">
                         <i class="fas fa-envelope icon-secondary"></i>
                         <div>
-                            <h4>Email Geral</h4>
+                            <h4 data-i18n="contacts_email_title">Email Geral</h4>
                             <p>geral@petbond.pt</p>
-                            <span class="small-text">Respostas num prazo médio de 48 horas.</span>
+                            <span class="small-text" data-i18n="contacts_email_note">Respostas num prazo médio de 48 horas.</span>
                         </div>
                     </div>
 
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt icon-secondary"></i>
                         <div>
-                            <h4>Escritório Principal</h4>
+                            <h4 data-i18n="contacts_office_title">Escritório Principal</h4>
                             <p>Rua da Adoção Responsável, 10</p>
                             <p>1000-000 Lisboa, Portugal</p>
                         </div>
                     </div>
 
-                    <h4 class="social-title">Siga-nos nas Redes Sociais</h4>
+                    <h4 class="social-title" data-i18n="contacts_social_title">Siga-nos nas Redes Sociais</h4>
                     <div class="social-links">
                         <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -185,31 +185,31 @@
                 </div>
 
                 <div class="contact-form-block">
-                    <h2>Envie-nos uma Mensagem</h2>
+                    <h2 data-i18n="contacts_form_title">Envie-nos uma Mensagem</h2>
                     <form action="#" method="POST" class="contact-form">
                         <div class="form-group">
-                            <label for="name">Nome Completo</label>
+                            <label for="name" data-i18n="contacts_form_label_name">Nome Completo</label>
                             <input type="text" id="name" name="name" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
+                            <label for="email" data-i18n="contacts_form_label_email">Email</label>
                             <input type="email" id="email" name="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="subject">Assunto</label>
+                            <label for="subject" data-i18n="contacts_form_label_subject">Assunto</label>
                             <select id="subject" name="subject" required>
-                                <option value="" disabled selected>Selecione um Assunto</option>
-                                <option value="adocao">Questão sobre Adoção</option>
-                                <option value="voluntariado">Candidatura a Voluntário</option>
-                                <option value="parceria">Proposta de Parceria</option>
-                                <option value="geral">Outro Assunto / Geral</option>
+                                <option value="" disabled selected data-i18n="contacts_form_select_placeholder">Selecione um Assunto</option>
+                                <option value="adocao" data-i18n="contacts_form_option_adocao">Questão sobre Adoção</option>
+                                <option value="voluntariado" data-i18n="contacts_form_option_voluntariado">Candidatura a Voluntário</option>
+                                <option value="parceria" data-i18n="contacts_form_option_parceria">Proposta de Parceria</option>
+                                <option value="geral" data-i18n="contacts_form_option_geral">Outro Assunto / Geral</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="message">Mensagem</label>
+                            <label for="message" data-i18n="contacts_form_label_message">Mensagem</label>
                             <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary-cta">Enviar Mensagem</button>
+                        <button type="submit" class="btn btn-primary-cta" data-i18n="contacts_form_button_send">Enviar Mensagem</button>
                     </form>
                 </div>
 
@@ -218,7 +218,7 @@
 
         <section class="map-section">
             <div class="container">
-                <h2>Onde Estamos</h2>
+                <h2 data-i18n="contacts_map_title">Onde Estamos</h2>
                 <div class="map-placeholder">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12450.728956973347!2d-9.135245199999999!3d38.722252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1933c16260f81d%3A0xf639a036c841804b!2sLisboa!5e0!3m2!1spt-PT!4spt!5e0!3m2!1sen!2sus!4v1703000000000!5m2!1spt-PT!2spt" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>

@@ -82,6 +82,32 @@ const translations = {
         see_more_title: "Ver todos os animais",
         see_more_desc: "Temos muitos mais amigos à espera de uma família.",
 
+        /* Contacts page */
+
+        contacts_hero_title: "Fale Conosco",
+        contacts_hero_desc: "Seja para adoção, voluntariado ou parcerias, a sua mensagem é importante.",
+        contacts_hero_title2: "Informações Úteis",
+        contacts_phone_title: "Telefone de Apoio",
+        contacts_phone_hours: "Disponível em dias úteis das 10h às 18h.",
+        contacts_email_title: "Email Geral",
+        contacts_email_note: "Respostas num prazo médio de 48 horas.",
+        contacts_office_title: "Escritório Principal",
+        contacts_social_title: "Siga-nos nas Redes Sociais",
+
+        contacts_form_title: "Envie-nos uma Mensagem",
+        contacts_form_label_name: "Nome Completo",
+        contacts_form_label_email: "Email",
+        contacts_form_label_subject: "Assunto",
+        contacts_form_select_placeholder: "Selecione um Assunto",
+        contacts_form_option_adocao: "Questão sobre Adoção",
+        contacts_form_option_voluntariado: "Candidatura a Voluntário",
+        contacts_form_option_parceria: "Proposta de Parceria",
+        contacts_form_option_geral: "Outro Assunto / Geral",
+        contacts_form_label_message: "Mensagem",
+        contacts_form_button_send: "Enviar Mensagem",
+
+        contacts_map_title: "Onde Estamos",
+
         /* Donations page */
         donations_title: "PetBond - A tua ajuda salva vidas",
 
@@ -232,6 +258,31 @@ const translations = {
         see_more_title: "See all animals",
         see_more_desc: "We have many more friends waiting for a family.",
 
+        /* Contacts page */
+        contacts_hero_title: "Talk With Us",
+        contacts_hero_desc: "Whether it's for adoption, volunteering, or partnerships, your message matters.",
+        contacts_hero_title2: "Useful Information",
+        contacts_phone_title: "Support Phone",
+        contacts_phone_hours: "Available on weekdays from 10:00 to 18:00.",
+        contacts_email_title: "General Email",
+        contacts_email_note: "Responses within an average of 48 hours.",
+        contacts_office_title: "Main Office",
+        contacts_social_title: "Follow us on Social Media",
+
+        contacts_form_title: "Send us a Message",
+        contacts_form_label_name: "Full Name",
+        contacts_form_label_email: "Email",
+        contacts_form_label_subject: "Subject",
+        contacts_form_select_placeholder: "Select a Subject",
+        contacts_form_option_adocao: "Adoption inquiry",
+        contacts_form_option_voluntariado: "Volunteer application",
+        contacts_form_option_parceria: "Partnership proposal",
+        contacts_form_option_geral: "Other / General",
+        contacts_form_label_message: "Message",
+        contacts_form_button_send: "Send Message",
+
+        contacts_map_title: "Where We Are",
+
         /* Donations page */
         donations_title: "PetBond - Your help saves lives",
 
@@ -380,6 +431,31 @@ const translations = {
         // See more
         see_more_title: "Ver todos los animales",
         see_more_desc: "Tenemos muchos más amigos esperando una familia.",
+
+        /* Contacts page */
+        contacts_hero_title: "Habla con nosotros",
+        contacts_hero_desc: "Ya sea para adopción, voluntariado o asociaciones, su mensaje importa.",
+        contacts_hero_title2: "Información útil",
+        contacts_phone_title: "Teléfono de apoyo",
+        contacts_phone_hours: "Disponible en días laborables de 10:00 a 18:00.",
+        contacts_email_title: "Correo general",
+        contacts_email_note: "Respuestas en un plazo medio de 48 horas.",
+        contacts_office_title: "Oficina principal",
+        contacts_social_title: "Síguenos en las redes sociales",
+
+        contacts_form_title: "Envíanos un mensaje",
+        contacts_form_label_name: "Nombre completo",
+        contacts_form_label_email: "Correo electrónico",
+        contacts_form_label_subject: "Asunto",
+        contacts_form_select_placeholder: "Seleccione un asunto",
+        contacts_form_option_adocao: "Consulta sobre adopción",
+        contacts_form_option_voluntariado: "Solicitud de voluntariado",
+        contacts_form_option_parceria: "Propuesta de colaboración",
+        contacts_form_option_geral: "Otro / General",
+        contacts_form_label_message: "Mensaje",
+        contacts_form_button_send: "Enviar mensaje",
+
+        contacts_map_title: "Dónde estamos",
 
         /* Donations page */
         donations_title: "PetBond - Tu ayuda salva vidas",
