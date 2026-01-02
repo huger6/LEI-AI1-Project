@@ -134,6 +134,22 @@ const translations = {
         pp_contact_desc: "Se tiver alguma questão sobre esta política, entre em contacto connosco.",
         pp_btn_contact: "Contacte-nos",
 
+        /* About Us page */
+        us_title: "PetBond - Sobre Nós",
+
+        us_hero_title: "A Nossa Missão",
+        us_hero_subtitle: "Conectamos corações e lares. Juntos, damos uma segunda chance aos animais mais necessitados de Portugal.",
+        us_hero_title_2: "Quem Somos?",
+        us_hero_desc_1: "A Pet Bond nasceu do amor incondicional pelos animais e da necessidade de criar uma ponte eficiente entre abrigos, protetores e famílias dispostas a adotar. Somos uma plataforma colaborativa que centraliza a divulgação de animais disponíveis para adoção em todo o país.",
+        us_hero_desc_2: "O nosso foco é a adoção responsável. Garantimos que cada 'patudo' seja registado com a máxima transparência e que os potenciais adotantes recebam todas as informações necessárias para tomar uma decisão informada e amorosa.",
+        us_hero_title_3: "Os Nossos Valores",
+        us_hero_title_4: "Adoção Responsável",
+        us_hero_desc_3: "Priorizamos o bem-estar dos animais, garantindo que o processo de adoção seja transparente, seguro e duradouro.",
+        us_hero_title_5: "Rede Colaborativa",
+        us_hero_desc_4: "Trabalhamos lado a lado com ONGs, abrigos e protetores independentes para maximizar as oportunidades de adoção.",
+        us_hero_title_6: "Transparência e Ética",
+        us_hero_desc_5: "O nosso site é exclusivo para a adoção. A venda de animais é estritamente proibida, mantendo a integridade da nossa missão.",
+
     },
     uk: {
         /* Global */
@@ -267,6 +283,22 @@ const translations = {
         pp_contact_title: "Questions about privacy?",
         pp_contact_desc: "If you have any questions about this policy, contact us.",
         pp_btn_contact: "Contact us",
+
+        /* About Us page */
+        us_title: "PetBond - About Us",
+
+        us_hero_title: "Our Mission",
+        us_hero_subtitle: "We connect hearts and homes. Together, we give a second chance to Portugal's most needy animals.",
+        us_hero_title_2: "Who We Are?",
+        us_hero_desc_1: "Pet Bond was born out of unconditional love for animals and the need to create an efficient bridge between shelters, protectors and families willing to adopt. We are a collaborative platform that centralizes the dissemination of animals available for adoption throughout the country.",
+        us_hero_desc_2: "Our focus is responsible adoption. We ensure that each 'pet' is registered with maximum transparency and that potential adopters receive all the necessary information to make an informed and loving decision.",
+        us_hero_title_3: "Our Values",
+        us_hero_title_4: "Responsible Adoption",
+        us_hero_desc_3: "We prioritize the well-being of animals, ensuring that the adoption process is transparent, safe and lasting.",
+        us_hero_title_5: "Collaborative Network",
+        us_hero_desc_4: "We work hand in hand with NGOs, shelters and independent protectors to maximize adoption opportunities.",
+        us_hero_title_6: "Transparency and Ethics",
+        us_hero_desc_5: "Our site is exclusive to adoption. The sale of animals is strictly prohibited, maintaining the integrity of our mission.",
     },
     es: {
         /* Global */
@@ -400,6 +432,22 @@ const translations = {
         pp_contact_title: "¿Dudas sobre privacidad?",
         pp_contact_desc: "Si tienes alguna pregunta sobre esta política, ponte en contacto con nosotros.",
         pp_btn_contact: "Contáctanos",
+
+        /* About Us page */
+        us_title: "PetBond - Sobre Nosotros",
+
+        us_hero_title: "Nuestra Misión",
+        us_hero_subtitle: "Conectamos corazones y hogares. Juntos, damos una segunda oportunidad a los animales más necesitados de Portugal.",
+        us_hero_title_2: "¿Quiénes somos?",
+        us_hero_desc_1: "Pet Bond nació del amor incondicional por los animales y la necesidad de crear un puente eficiente entre refugios, protectores y familias dispuestas a adoptar. Somos una plataforma colaborativa que centraliza la difusión de animales disponibles para adopción en todo el país.",
+        us_hero_desc_2: "Nuestro enfoque es la adopción responsable. Nos aseguramos de que cada 'mascota' esté registrada con la máxima transparencia y que los posibles adoptantes reciban toda la información necesaria para tomar una decisión informada y amorosa.",
+        us_hero_title_3: "Nuestros Valores",
+        us_hero_title_4: "Adopción Responsable",
+        us_hero_desc_3: "Priorizamos el bienestar de los animales, asegurando que el proceso de adopción sea transparente, seguro y duradero.",
+        us_hero_title_5: "Red Colaborativa",
+        us_hero_desc_4: "Trabajamos mano a mano con ONG, refugios y protectores independientes para maximizar las oportunidades de adopción.",
+        us_hero_title_6: "Transparencia y Ética",
+        us_hero_desc_5: "Nuestro sitio es exclusivo para la adopción. La venta de animales está estrictamente prohibida, manteniendo la integridad de nuestra misión.",
     }
 }
 

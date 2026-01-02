@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Title -->
+    <title data-i18n="home_title">PetBond - Centro de Adoção Animal</title>
+    <!-- Meta tags -->
+    <meta name="description" content="A PetBond conecta animais abandonados a lares amorosos. Adote cães, gatos e outros animais. Seja voluntário ou faça uma doação para ajudar a nossa causa.">
+    <meta name="keywords" content="adoção animais, adotar cão, adotar gato, voluntariado animal, abrigo animais, petbond, doar para animais">
+    <meta name="author" content="PetBond - Hugo Afonso, Mateus Silva, Rodrigo Martins">
+    <meta name="robots" content="index, follow">
+    <meta name="copyright" content="© 2025 PetBond">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/static/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/static/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/static/favicon/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" href="/static/favicon/apple-touch-icon.png">
+    <!-- Web Manifest -->
+    <link rel="manifest" href="/static/site.webmanifest">
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/contacts.css">
+    <!-- Boostrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <!-- Logo -->
+            <a href="/index.html">
+                <img src="/static/logos/petbond_logo.jpg" alt="PetBond Logo" class="logo">
+            </a>
+            <!-- Menu -->
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item dropdown" id="adopt-dropdown">
+                        <a href="/animals/adopt.html" class="nav-link dropdown-toggle">
+                            <span data-i18n="nav_adopt_dropdown">
+                                Adote
+                            </span>
+                            <i class="bi bi-chevron-down arrow"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/animals/dogs.html" data-i18n="nav_adopt_dropdown_dogs">Cães</a></li>
+                            <li><a href="/animals/cats.html" data-i18n="nav_adopt_dropdown_cats">Gatos</a></li>
+                            <li><a href="/animals/otherAnimals.html" data-i18n="nav_adopt_dropdown_others">Outros</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="/volunteering.html" class="nav-link" data-i18n="nav_volunteering">Voluntariado</a></li>
+                    <li class="nav-item"><a href="/contacts.html" class="nav-link" data-i18n="nav_contacts">Contactos</a></li>
+                    <li class="nav-item"><a href="/aboutUs.html" class="nav-link" data-i18n="nav_about_us">Sobre nós</a></li>
+                </ul>
+                <!-- Side action for mobile -->
+                <div class="nav-actions" style="display: none;">
+                    <div class="custom-select">
+                        <div class="selected-option">
+                            <span class="flag">
+                                <img src="/static/img/flags/flag_portugal.png" alt="Bandeira Portugal">
+                            </span>
+                            <span class="text">PT</span>
+                            <i class="bi bi-chevron-down arrow"></i>
+                        </div>
+                        <ul class="options-list">
+                            <li data-lang="pt">
+                                <span class="flag">
+                                    <img src="/static/img/flags/flag_portugal.png" alt="Bandeira Portugal">
+                                </span>
+                                <span class="text">PT</span>
+                            </li>
+                            <li data-lang="uk">
+                                <span class="flag">
+                                    <img src="/static/img/flags/flag_uk.png" alt="Bandeira Reino Unido">
+                                </span>
+                                <span class="text">EN</span>
+                            </li>
+                            <li data-lang="es">
+                                <span class="flag">
+                                    <img src="/static/img/flags/flag_spain.png" alt="Bandeira Espanha">
+                                </span>
+                                <span class="text">ES</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="/donations.html" class="btn btn-donate" data-i18n="nav_donation_btn">Faça uma doação</a>
+                </div>
+            </nav>  
+            <!-- Right part of the navbar -->
+            <div class="nav-right">
+                <!-- Side actions -->
+                <div class="nav-actions">
+                    <div class="custom-select">
+                        <div class="selected-option">
+                            <span class="flag">
+                                <img src="/static/img/flags/flag_portugal.png" alt="Bandeira Portugal">
+                            </span>
+                            <span class="text">PT</span>
+                            <i class="bi bi-chevron-down arrow"></i>
+                        </div>
+                        <ul class="options-list">
+                            <li data-lang="pt">
+                                <span class="flag">
+                                    <img src="/static/img/flags/flag_portugal.png" alt="Bandeira Portugal">
+                                </span>
+                                <span class="text">PT</span>
+                            </li>
+                            <li data-lang="uk">
+                                <span class="flag">
+                                    <img src="/static/img/flags/flag_uk.png" alt="Bandeira Reino Unido">
+                                </span>
+                                <span class="text">EN</span>
+                            </li>
+                            <li data-lang="es">
+                                <span class="flag">
+                                    <img src="/static/img/flags/flag_spain.png" alt="Bandeira Espanha">
+                                </span>
+                                <span class="text">ES</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="/donations.html" class="btn btn-donate" data-i18n="nav_donation_btn">Faça uma doação</a>
+                </div>
+                <!-- Hamburger menu -->
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="contact-hero">
+            <div class="container">
+                <h1>Fale Connosco</h1>
+                <p class="subtitle">Seja para adoção, voluntariado ou parcerias, a sua mensagem é importante.</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container contact-grid">
+
+                <div class="contact-info-block">
+                    <h2>Informações Úteis</h2>
+
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt icon-secondary"></i>
+                        <div>
+                            <h4>Telefone de Apoio</h4>
+                            <p>(+351) 992 345 678</p>
+                            <span class="small-text">Disponível em dias úteis das 10h às 18h.</span>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-envelope icon-secondary"></i>
+                        <div>
+                            <h4>Email Geral</h4>
+                            <p>geral@petbond.pt</p>
+                            <span class="small-text">Respostas num prazo médio de 48 horas.</span>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt icon-secondary"></i>
+                        <div>
+                            <h4>Escritório Principal</h4>
+                            <p>Rua da Adoção Responsável, 10</p>
+                            <p>1000-000 Lisboa, Portugal</p>
+                        </div>
+                    </div>
+
+                    <h4 class="social-title">Siga-nos nas Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form-block">
+                    <h2>Envie-nos uma Mensagem</h2>
+                    <form action="#" method="POST" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected>Selecione um Assunto</option>
+                                <option value="adocao">Questão sobre Adoção</option>
+                                <option value="voluntariado">Candidatura a Voluntário</option>
+                                <option value="parceria">Proposta de Parceria</option>
+                                <option value="geral">Outro Assunto / Geral</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary-cta">Enviar Mensagem</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="container">
+                <h2>Onde Estamos</h2>
+                <div class="map-placeholder">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12450.728956973347!2d-9.135245199999999!3d38.722252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1933c16260f81d%3A0xf639a036c841804b!2sLisboa!5e0!3m2!1spt-PT!4spt!5e0!3m2!1sen!2sus!4v1703000000000!5m2!1spt-PT!2spt" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+        <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h4>PetBond</h4>
+                <p data-i18n="footer_brand_desc">A conectar famílias carinhosas com animais desde 2023.</p>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_col_1">Adota</h4>
+                <ul>
+                    <li><a href="/animals/dogs.html" data-i18n="footer_col_1_dogs">Cães</a></li>
+                    <li><a href="/animals/cats.html" data-i18n="footer_col_1_cats">Gatos</a></li>
+                    <li><a href="/animals/otherAnimals.html" data-i18n="footer_col_1_others">Outros animais</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_col_2">Ajuda-nos</h4>
+                <ul>
+                    <li><a href="/donations.html" data-i18n="footer_col_2_donate">Faça uma doação</a></li>
+                    <li><a href="/volunteering.html" data-i18n="footer_col_2_volunteer">Voluntaria-te</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_col_3">Contactos</h4>
+                <ul>
+                    <li><p><a href="https://maps.google.com/?q=Av.+Cidade+Politécnica,+Viseu" target="_blank">Av. Cidade Politécnica, Viseu</a></p></li>
+                    <li><p><a href="mailto:geral@petbond.com">geral@petbond.com</a></p></li>
+                    <li><p><a href="tel:+351123456789">+351 123 456 789</a></p></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_col_4">Ajuda</h4>
+                <ul>
+                    <li><a href="/privacyPolicy.html" data-i18n="footer_col_4_policy">Política de privacidade</a></li>
+                    <li><a href="/faq.html" data-i18n="footer_col_4_faq">Perguntas frequentes</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container bottom-flex">
+                <p>
+                    &copy; 2025 PetBond. 
+                    <span data-i18n="footer_copyright">All rights reserved.</span>
+                </p>
+                <div class="live-clock" id="liveClock">--:--:--</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main scripts -->
+    <script src="/static/js/translations.js"></script>
+    <script src="/static/js/scripts.js"></script>
+    <!-- Additional scripts -->
+
+    </body>
+</html>
