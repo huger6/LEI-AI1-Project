@@ -1,0 +1,115 @@
+/* Secção Hero/Título */
+.about-hero {
+    background-color: var(--background-soft);
+    padding: 80px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.about-hero h1 {
+    color: var(--text-color);
+    margin-bottom: 15px;
+    font-size: 3.5em;
+}
+.about-hero .subtitle {
+    font-size: 1.25em;
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Layout de Duas Colunas (Missão e História) */
+.mission-story {
+    padding: 40px 0 60px 0;
+}
+.two-col-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+.mission-story h2 {
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 10px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.image-block img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(var(--box-shadowRGB), 0.15);
+}
+
+/* Secção Pilares/Valores */
+.pillars-section {
+    background-color: var(--background-soft-2);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.pillars-section h3 {
+    color: var(--text-color);
+    margin-bottom: 40px;
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.pillar-card {
+    background-color: var(--surface-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(var(--box-shadow-secondaryRGB), 0.1);
+    transition: transform 0.3s;
+    border-top: 5px solid var(--secondary-color);
+}
+.pillar-card:hover {
+    transform: translateY(-5px);
+}
+
+.pillar-card i {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+.pillar-card h4 {
+    color: var(--text-color);
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+/* Secção CTA de Fundo */
+.cta-section-bottom {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 80px 0;
+    text-align: center;
+}
+.cta-section-bottom h2 {
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .two-col-grid {
+        grid-template-columns: 1fr;
+    }
+    .image-block {
+        order: -1;
+    }
+    .about-hero h1 {
+        font-size: 2.5em;
+    }
+    .cta-buttons {
+        flex-direction: column;
+    }
+}
