@@ -1,0 +1,161 @@
+/* --- VOLUNTEER BENEFITS --- */
+.vol-benefits-section {
+    padding: 4rem 0;
+    background-color: var(--background-color);
+}
+
+.vol-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+.vol-intro h2 { color: var(--primary-color); margin-bottom: 1rem; }
+
+.benefits-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.benefit-card {
+    flex: 1 1 280px;
+    max-width: 350px;
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s;
+}
+
+.benefit-card:hover { transform: translateY(-5px); }
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background-color: var(--background-soft);
+    color: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin: 0 auto 1.5rem;
+}
+
+/* --- ROLES --- */
+.vol-roles-section {
+    padding: 4rem 0;
+    background-color: var(--background-soft);
+}
+
+.roles-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.role-card {
+    flex: 1 1 300px;
+    background-color: var(--surface-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--secondary-color);
+    box-shadow: 0 4px 6px rgba(var(--box-shadowRGB), 0.05);
+}
+
+.role-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.role-header i { font-size: 1.5rem; }
+
+.role-card .tag {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+/* --- REACT FORM STYLING --- */
+.vol-form-section {
+    padding: 4rem 0;
+    background-color: var(--background-color);
+}
+
+.form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--surface-color);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(var(--box-shadowRGB), 0.1);
+    border: 1px solid var(--border-color);
+}
+
+.form-text { text-align: center; margin-bottom: 2rem; }
+.form-text h2 { color: var(--primary-color); }
+
+/* Styles for React Elements */
+.react-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(48, 191, 189, 0.1);
+}
+
+.error-msg {
+    color: var(--accent-color);
+    font-size: 0.85rem;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+    border: 1px solid #c3e6cb;
+}
