@@ -1,0 +1,108 @@
+/* --- ESTILOS ESPECÍFICOS FAQ --- */
+
+.faq-page {
+    background-color: var(--background-color);
+    min-height: 100vh;
+    padding: 60px 20px;
+    color: var(--text-color);
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.faq-header h1 {
+    color: var(--secondary-color); /* Teal */
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.faq-header p {
+    color: var(--text-light);
+    opacity: 0.8;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* O "Cartão" da pergunta */
+.faq-item {
+    background-color: var(--surface-color); /* Azul ligeiramente mais claro/cinza */
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.faq-item[open] {
+    border-color: var(--secondary-color);
+    box-shadow: 0 4px 15px rgba(var(--box-shadow-secondaryRGB), 0.2);
+}
+
+summary {
+    padding: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
+}
+
+/* Remove a seta padrão do navegador */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary i {
+    color: var(--secondary-color);
+    transition: transform 0.3s ease;
+}
+
+/* Roda o ícone quando aberto */
+.faq-item[open] summary i {
+    transform: rotate(45deg);
+    color: var(--accent-color); /* Muda para coral ao abrir para dar feedback */
+}
+
+.faq-content {
+    padding: 0 20px 20px 20px;
+    color: var(--text-color);
+    line-height: 1.6;
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+}
+
+/* Botão de Contacto no fundo */
+.faq-cta {
+    margin-top: 50px;
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid var(--border-color);
+}
+
+.btn-faq {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn-faq:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
