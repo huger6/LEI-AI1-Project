@@ -13,6 +13,13 @@ const translations = {
         nav_about_us: "Sobre nós",
         nav_donation_btn: "Faça uma doação",
 
+        // Alt texts (Accessibility)
+        alt_logo: "Logo PetBond",
+        alt_flag_portugal: "Bandeira Portugal",
+        alt_flag_uk: "Bandeira Reino Unido",
+        alt_flag_spain: "Bandeira Espanha",
+        alt_team_photo: "Equipa PetBond e animais",
+
         // Footer
         footer_brand_desc: "A conectar famílias carinhosas com animais desde 2023.",
         footer_col_1: "Adota",
@@ -176,6 +183,30 @@ const translations = {
         us_hero_title_6: "Transparência e Ética",
         us_hero_desc_5: "O nosso site é exclusivo para a adoção. A venda de animais é estritamente proibida, mantendo a integridade da nossa missão.",
 
+        /* Volunteering page */
+        vol_hero_title: "Junta-te à nossa Matilha",
+        vol_hero_desc: "O teu tempo pode salvar vidas. Torna-te voluntário e ajuda-nos a dar uma segunda oportunidade a quem mais precisa.",
+        vol_why_title: "Porquê ser voluntário?",
+        vol_why_desc: "Não precisas de ter experiência, apenas vontade de ajudar.",
+        
+        ben_1_title: "Impacto Real",
+        ben_1_desc: "Vê a transformação direta nos animais que ajudas a socializar e cuidar.",
+        ben_2_title: "Comunidade",
+        ben_2_desc: "Conhece pessoas incríveis que partilham a mesma paixão pelos animais.",
+        ben_3_title: "Bem-estar",
+        ben_3_desc: "Está provado que conviver com animais reduz o stress e aumenta a felicidade.",
+        
+        roles_title: "Funções Disponíveis",
+        role_1_title: "Passeadores",
+        role_1_desc: "Garanta que os nossos cães fazem exercício e recebem carinho.",
+        role_2_title: "Apoio no Abrigo",
+        role_2_desc: "Ajuda na limpeza, alimentação e organização do espaço.",
+        role_3_title: "Fotografia",
+        role_3_desc: "Tira as melhores fotos para aumentar as hipóteses de adoção.",
+        
+        form_title: "Inscreve-te agora",
+        form_desc: "Preenche o formulário e entraremos em contacto brevemente.",
+
     },
     uk: {
         /* Global */
@@ -189,6 +220,13 @@ const translations = {
         nav_contacts: "Contacts",
         nav_about_us: "About us",
         nav_donation_btn: "Make a donation",
+
+        // Alt texts (Accessibility)
+        alt_logo: "PetBond Logo",
+        alt_flag_portugal: "Portugal Flag",
+        alt_flag_uk: "United Kingdom Flag",
+        alt_flag_spain: "Spain Flag",
+        alt_team_photo: "PetBond Team and animals",
 
         // Footer
         footer_brand_desc: "Connecting loving families with animals since 2023.",
@@ -350,6 +388,31 @@ const translations = {
         us_hero_desc_4: "We work hand in hand with NGOs, shelters and independent protectors to maximize adoption opportunities.",
         us_hero_title_6: "Transparency and Ethics",
         us_hero_desc_5: "Our site is exclusive to adoption. The sale of animals is strictly prohibited, maintaining the integrity of our mission.",
+
+        /* Volunteering page */
+        vol_hero_title: "Join our Pack",
+        vol_hero_desc: "Your time can save lives. Become a volunteer and help us give a second chance to those who need it most.",
+        vol_why_title: "Why volunteer?",
+        vol_why_desc: "You don't need experience, just the will to help.",
+        
+        ben_1_title: "Real Impact",
+        ben_1_desc: "See the direct transformation in the animals you help socialize and care for.",
+        ben_2_title: "Community",
+        ben_2_desc: "Meet amazing people who share the same passion for animals.",
+        ben_3_title: "Well-being",
+        ben_3_desc: "It's proven that spending time with animals reduces stress and increases happiness.",
+        
+        roles_title: "Available Roles",
+        role_1_title: "Dog Walkers",
+        role_1_desc: "Ensure our dogs get exercise and receive affection.",
+        role_2_title: "Shelter Support",
+        role_2_desc: "Help with cleaning, feeding and organizing the space.",
+        role_3_title: "Photography",
+        role_3_desc: "Take the best photos to increase adoption chances.",
+        
+        form_title: "Sign up now",
+        form_desc: "Fill in the form and we'll get in touch shortly.",
+
     },
     es: {
         /* Global */
@@ -363,6 +426,13 @@ const translations = {
         nav_contacts: "Contactos",
         nav_about_us: "Sobre nosotros",
         nav_donation_btn: "Haz una donación",
+
+        // Alt texts (Accessibility)
+        alt_logo: "Logo PetBond",
+        alt_flag_portugal: "Bandera de Portugal",
+        alt_flag_uk: "Bandera del Reino Unido",
+        alt_flag_spain: "Bandera de España",
+        alt_team_photo: "Equipo PetBond y animales",
 
         // Footer
         footer_brand_desc: "Uniendo familias cariñosas con animales desde 2023.",
@@ -524,6 +594,31 @@ const translations = {
         us_hero_desc_4: "Trabajamos mano a mano con ONG, refugios y protectores independientes para maximizar las oportunidades de adopción.",
         us_hero_title_6: "Transparencia y Ética",
         us_hero_desc_5: "Nuestro sitio es exclusivo para la adopción. La venta de animales está estrictamente prohibida, manteniendo la integridad de nuestra misión.",
+
+        /* Volunteering page */
+        vol_hero_title: "Únete a nuestra Manada",
+        vol_hero_desc: "Tu tiempo puede salvar vidas. Hazte voluntario y ayúdanos a dar una segunda oportunidad a quienes más lo necesitan.",
+        vol_why_title: "¿Por qué ser voluntario?",
+        vol_why_desc: "No necesitas experiencia, solo ganas de ayudar.",
+        
+        ben_1_title: "Impacto Real",
+        ben_1_desc: "Ve la transformación directa en los animales que ayudas a socializar y cuidar.",
+        ben_2_title: "Comunidad",
+        ben_2_desc: "Conoce personas increíbles que comparten la misma pasión por los animales.",
+        ben_3_title: "Bienestar",
+        ben_3_desc: "Está demostrado que convivir con animales reduce el estrés y aumenta la felicidad.",
+        
+        roles_title: "Funciones Disponibles",
+        role_1_title: "Paseadores",
+        role_1_desc: "Asegúrate de que nuestros perros hagan ejercicio y reciban cariño.",
+        role_2_title: "Apoyo en el Refugio",
+        role_2_desc: "Ayuda con la limpieza, alimentación y organización del espacio.",
+        role_3_title: "Fotografía",
+        role_3_desc: "Toma las mejores fotos para aumentar las posibilidades de adopción.",
+        
+        form_title: "Inscríbete ahora",
+        form_desc: "Rellena el formulario y nos pondremos en contacto contigo pronto.",
+
     }
 }
 
@@ -549,7 +644,7 @@ function updatePageLanguage(lang, force = false) {
     const htmlLang = (lang === 'uk') ? 'en' : lang;
     document.documentElement.lang = htmlLang;
 
-    // Update Text 
+    // Update Text Content
     const elements = document.querySelectorAll('[data-i18n]');
     
     elements.forEach(element => {
@@ -562,5 +657,39 @@ function updatePageLanguage(lang, force = false) {
         }
     });
 
-    // Visuals are already updated upon dropdown selection
+    // Update alt attributes (accessibility)
+    const altElements = document.querySelectorAll('[data-i18n-alt]');
+    altElements.forEach(element => {
+        const key = element.getAttribute('data-i18n-alt');
+        if (translations[lang] && translations[lang][key]) {
+            element.setAttribute('alt', translations[lang][key]);
+        }
+    });
+
+    // Update placeholder attributes
+    const placeholderElements = document.querySelectorAll('[data-i18n-placeholder]');
+    placeholderElements.forEach(element => {
+        const key = element.getAttribute('data-i18n-placeholder');
+        if (translations[lang] && translations[lang][key]) {
+            element.setAttribute('placeholder', translations[lang][key]);
+        }
+    });
+
+    // Update title attributes
+    const titleElements = document.querySelectorAll('[data-i18n-title]');
+    titleElements.forEach(element => {
+        const key = element.getAttribute('data-i18n-title');
+        if (translations[lang] && translations[lang][key]) {
+            element.setAttribute('title', translations[lang][key]);
+        }
+    });
+
+    // Update aria-label attributes (accessibility)
+    const ariaLabelElements = document.querySelectorAll('[data-i18n-aria]');
+    ariaLabelElements.forEach(element => {
+        const key = element.getAttribute('data-i18n-aria');
+        if (translations[lang] && translations[lang][key]) {
+            element.setAttribute('aria-label', translations[lang][key]);
+        }
+    });
 }

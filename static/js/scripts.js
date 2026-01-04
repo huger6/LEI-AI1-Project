@@ -1,14 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
-    currentLang = sessionStorage.getItem('petbond_lang') || "pt";
+    // Get saved language from localStorage (persists across sessions)
+    currentLang = localStorage.getItem('petbond_lang') || "pt";
+    
     if (typeof updatePageLanguage === 'function') {
         updatePageLanguage(currentLang, true);
     }
+    
+    // Update language selector visual to match saved language
+    updateLanguageSelectorVisual(currentLang);
 
     navbarHamburguer();
     langSelector();
     startLiveClock();
     scrollTopBtn();
 });
+
+/**
+ * Update the language selector dropdown to show the correct flag/text
+ * @param {string} lang - The language code (pt, uk, es)
+ */
+function updateLanguageSelectorVisual(lang) {
+    const customSelects = document.querySelectorAll('.custom-select');
+    
+    customSelects.forEach(select => {
+        const selectedOption = select.querySelector('.selected-option');
+        const optionsList = select.querySelector('.options-list');
+        const matchingOption = optionsList.querySelector(`li[data-lang="${lang}"]`);
+        
+        if (matchingOption && selectedOption) {
+            const content = matchingOption.innerHTML;
+            selectedOption.innerHTML = `${content} <i class="bi bi-chevron-down arrow"></i>`;
+        }
+    });
+}
 
 /**
  * Handle responsiveness of the navbar

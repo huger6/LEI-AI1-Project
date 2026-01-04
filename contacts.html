@@ -28,6 +28,10 @@
     <link rel="stylesheet" href="/static/css/contacts.css">
     <!-- Boostrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- React -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -35,7 +39,7 @@
         <div class="container nav-container">
             <!-- Logo -->
             <a href="/index.html">
-                <img src="/static/logos/petbond_logo.jpg" alt="PetBond Logo" class="logo">
+                <img src="/static/logos/petbond_logo.jpg" alt="PetBond Logo" class="logo" data-i18n-alt="alt_logo">
             </a>
             <!-- Menu -->
             <nav class="nav-menu" id="nav-menu">
@@ -62,7 +66,7 @@
                     <div class="custom-select">
                         <div class="selected-option">
                             <span class="flag">
-                                <img src="/static/img/flags/flag_portugal.png" alt="Bandeira Portugal">
+                                <img src="/static/img/flags/flag_portugal.png" alt="Bandeira Portugal" data-i18n-alt="alt_flag_portugal">
                             </span>
                             <span class="text">PT</span>
                             <i class="bi bi-chevron-down arrow"></i>
@@ -70,19 +74,19 @@
                         <ul class="options-list">
                             <li data-lang="pt">
                                 <span class="flag">
-                                    <img src="/static/img/flags/flag_portugal.png" alt="Bandeira Portugal">
+                                    <img src="/static/img/flags/flag_portugal.png" alt="Bandeira Portugal" data-i18n-alt="alt_flag_portugal">
                                 </span>
                                 <span class="text">PT</span>
                             </li>
                             <li data-lang="uk">
                                 <span class="flag">
-                                    <img src="/static/img/flags/flag_uk.png" alt="Bandeira Reino Unido">
+                                    <img src="/static/img/flags/flag_uk.png" alt="Bandeira Reino Unido" data-i18n-alt="alt_flag_uk">
                                 </span>
                                 <span class="text">EN</span>
                             </li>
                             <li data-lang="es">
                                 <span class="flag">
-                                    <img src="/static/img/flags/flag_spain.png" alt="Bandeira Espanha">
+                                    <img src="/static/img/flags/flag_spain.png" alt="Bandeira Espanha" data-i18n-alt="alt_flag_spain">
                                 </span>
                                 <span class="text">ES</span>
                             </li>
@@ -98,7 +102,7 @@
                     <div class="custom-select">
                         <div class="selected-option">
                             <span class="flag">
-                                <img src="/static/img/flags/flag_portugal.png" alt="Bandeira Portugal">
+                                <img src="/static/img/flags/flag_portugal.png" alt="Bandeira Portugal" data-i18n-alt="alt_flag_portugal">
                             </span>
                             <span class="text">PT</span>
                             <i class="bi bi-chevron-down arrow"></i>
@@ -106,19 +110,19 @@
                         <ul class="options-list">
                             <li data-lang="pt">
                                 <span class="flag">
-                                    <img src="/static/img/flags/flag_portugal.png" alt="Bandeira Portugal">
+                                    <img src="/static/img/flags/flag_portugal.png" alt="Bandeira Portugal" data-i18n-alt="alt_flag_portugal">
                                 </span>
                                 <span class="text">PT</span>
                             </li>
                             <li data-lang="uk">
                                 <span class="flag">
-                                    <img src="/static/img/flags/flag_uk.png" alt="Bandeira Reino Unido">
+                                    <img src="/static/img/flags/flag_uk.png" alt="Bandeira Reino Unido" data-i18n-alt="alt_flag_uk">
                                 </span>
                                 <span class="text">EN</span>
                             </li>
                             <li data-lang="es">
                                 <span class="flag">
-                                    <img src="/static/img/flags/flag_spain.png" alt="Bandeira Espanha">
+                                    <img src="/static/img/flags/flag_spain.png" alt="Bandeira Espanha" data-i18n-alt="alt_flag_spain">
                                 </span>
                                 <span class="text">ES</span>
                             </li>
@@ -150,7 +154,7 @@
                     <h2 data-i18n="contacts_hero_title2">Informações Úteis</h2>
 
                     <div class="info-item">
-                        <i class="fas fa-phone-alt icon-secondary"></i>
+                        <i class="bi bi-telephone-fill icon-secondary"></i>
                         <div>
                             <h4 data-i18n="contacts_phone_title">Telefone de Apoio</h4>
                             <p>(+351) 992 345 678</p>
@@ -159,7 +163,7 @@
                     </div>
 
                     <div class="info-item">
-                        <i class="fas fa-envelope icon-secondary"></i>
+                        <i class="bi bi-envelope-fill icon-secondary"></i>
                         <div>
                             <h4 data-i18n="contacts_email_title">Email Geral</h4>
                             <p>geral@petbond.pt</p>
@@ -168,7 +172,7 @@
                     </div>
 
                     <div class="info-item">
-                        <i class="fas fa-map-marker-alt icon-secondary"></i>
+                        <i class="bi bi-geo-alt-fill icon-secondary"></i>
                         <div>
                             <h4 data-i18n="contacts_office_title">Escritório Principal</h4>
                             <p>Rua da Adoção Responsável, 10</p>
@@ -178,39 +182,15 @@
 
                     <h4 class="social-title" data-i18n="contacts_social_title">Siga-nos nas Redes Sociais</h4>
                     <div class="social-links">
-                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
                     </div>
                 </div>
 
                 <div class="contact-form-block">
                     <h2 data-i18n="contacts_form_title">Envie-nos uma Mensagem</h2>
-                    <form action="#" method="POST" class="contact-form">
-                        <div class="form-group">
-                            <label for="name" data-i18n="contacts_form_label_name">Nome Completo</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" data-i18n="contacts_form_label_email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject" data-i18n="contacts_form_label_subject">Assunto</label>
-                            <select id="subject" name="subject" required>
-                                <option value="" disabled selected data-i18n="contacts_form_select_placeholder">Selecione um Assunto</option>
-                                <option value="adocao" data-i18n="contacts_form_option_adocao">Questão sobre Adoção</option>
-                                <option value="voluntariado" data-i18n="contacts_form_option_voluntariado">Candidatura a Voluntário</option>
-                                <option value="parceria" data-i18n="contacts_form_option_parceria">Proposta de Parceria</option>
-                                <option value="geral" data-i18n="contacts_form_option_geral">Outro Assunto / Geral</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message" data-i18n="contacts_form_label_message">Mensagem</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary-cta" data-i18n="contacts_form_button_send">Enviar Mensagem</button>
-                    </form>
+                    <div id="contact-form-root"></div>
                 </div>
 
             </div>
@@ -220,7 +200,7 @@
             <div class="container">
                 <h2 data-i18n="contacts_map_title">Onde Estamos</h2>
                 <div class="map-placeholder">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12450.728956973347!2d-9.135245199999999!3d38.722252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1933c16260f81d%3A0xf639a036c841804b!2sLisboa!5e0!3m2!1spt-PT!4spt!5e0!3m2!1sen!2sus!4v1703000000000!5m2!1spt-PT!2spt" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps?q=40.643904,-7.920309&z=15&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização PetBond - Viseu"></iframe>
                 </div>
             </div>
         </section>
@@ -286,6 +266,6 @@
     <script src="/static/js/translations.js"></script>
     <script src="/static/js/scripts.js"></script>
     <!-- Additional scripts -->
-
+    <script type="text/babel" src="/static/js/contacts.js"></script>
     </body>
 </html>

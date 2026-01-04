@@ -106,3 +106,60 @@ summary i {
     background-color: var(--primary-color);
     transform: translateY(-2px);
 }
+
+/* ========================================
+   RESPONSIVE STYLES
+   ======================================== */
+
+@media (max-width: 768px) {
+    .faq-page {
+        padding: 40px 15px;
+    }
+    
+    .faq-header h1 {
+        font-size: 2rem;
+    }
+    
+    summary {
+        padding: 15px;
+        font-size: 0.95rem;
+    }
+    
+    .faq-content {
+        padding: 0 15px 15px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .faq-cta {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-page {
+        padding: 30px 10px;
+    }
+    
+    .faq-header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .faq-header {
+        margin-bottom: 30px;
+    }
+    
+    summary {
+        padding: 12px;
+        font-size: 0.9rem;
+        gap: 10px;
+    }
+    
+    .faq-content {
+        padding: 0 12px 12px 12px;
+    }
+    
+    .btn-faq {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+}
