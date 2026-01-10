@@ -1,4 +1,4 @@
-/* --- ESTILOS ESPECÍFICOS FAQ --- */
+/* --- FAQ SPECIFIC STYLES --- */
 
 .faq-page {
     background-color: var(--background-color);
@@ -34,9 +34,9 @@
     gap: 15px;
 }
 
-/* O "Cartão" da pergunta */
+/* The Question "Card" */
 .faq-item {
-    background-color: var(--surface-color); /* Azul ligeiramente mais claro/cinza */
+    background-color: var(--surface-color); /* Slightly lighter blue/gray */
     border-radius: 8px;
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
@@ -58,7 +58,7 @@ summary {
     color: var(--text-color);
 }
 
-/* Remove a seta padrão do navegador */
+/* Remove browser default arrow */
 summary::-webkit-details-marker {
     display: none;
 }
@@ -68,10 +68,10 @@ summary i {
     transition: transform 0.3s ease;
 }
 
-/* Roda o ícone quando aberto */
+/* Rotate icon when open */
 .faq-item[open] summary i {
     transform: rotate(45deg);
-    color: var(--accent-color); /* Muda para coral ao abrir para dar feedback */
+    color: var(--accent-color); /* Changes to coral when open for feedback */
 }
 
 .faq-content {
@@ -82,7 +82,7 @@ summary i {
     padding-top: 15px;
 }
 
-/* Botão de Contacto no fundo */
+/* Contact Button at bottom */
 .faq-cta {
     margin-top: 50px;
     text-align: center;

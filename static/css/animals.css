@@ -1,23 +1,21 @@
-/* --- Estilos para as Listas (Gatos/Cães) --- */
+/* --- Styles for Animal Lists (Cats/Dogs) --- */
 
 .lista-animais-container {
     max-width: 1200px;
     margin: 40px auto;
-    padding: 0 40px; /* Alinhado com o padding do header */
+    padding: 0 40px; /* Aligned with header padding */
 }
 
 .titulo-pagina {
     font-size: 2.5rem;
-    /* Alterado de var(--text-alt) para var(--text-color) para garantir contraste no modo claro */
     color: var(--text-color); 
     margin-bottom: 30px;
     text-align: left;
-    /* Alterado de #e6e6e6 para a variável de borda */
     border-bottom: 2px solid var(--border-color); 
     padding-bottom: 10px;
 }
 
-/* Container Flex da Grelha */
+/* Grid Flex Container */
 .grelha-animais {
     display: flex;
     flex-wrap: wrap;
@@ -25,31 +23,37 @@
     justify-content: flex-start;
 }
 
-/* Cartão Individual */
+/* Individual Card */
 .animal-card {
-    /* Alterado de white para surface-color (suporta Dark Mode) */
     background: var(--surface-color); 
     border-radius: 10px;
     overflow: hidden;
-    /* Alterado para usar a variável RGB de sombra */
     box-shadow: 0 4px 10px rgba(var(--box-shadowRGB), 0.1); 
     transition: transform 0.3s ease;
     
-    /* Lógica para 3 por linha */
+    /* Logic for 3 per row */
     flex: 1 1 300px; 
     max-width: 32%;
 }
 
-/* Responsividade */
+/* Responsiveness */
 @media (max-width: 900px) {
     .animal-card {
-        max-width: 48%; /* 2 por linha em tablets */
+        max-width: 48%; /* 2 per row on tablets */
     }
 }
 
 @media (max-width: 600px) {
     .animal-card {
-        max-width: 100%; /* 1 por linha em telemóveis */
+        max-width: 100%; /* 1 per row on mobile */
+    }
+    
+    .lista-animais-container {
+        padding: 0 15px; /* Reduce padding on mobile */
+    }
+    
+    .grelha-animais {
+        justify-content: center; /* Center cards on mobile */
     }
 }
 
@@ -60,14 +64,19 @@
 .card-img {
     height: 250px;
     width: 100%;
-    /* Alterado de #ddd para variável */
-    background-color: var(--gray-300); 
+    background-color: var(--gray-300);
+    overflow: hidden; /* Prevent image overflow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center; /* Center the image */
+    max-width: 100%; /* Prevent overflow */
 }
 
 .card-info {
@@ -77,29 +86,24 @@
 
 .card-info h3 {
     margin: 0 0 10px 0;
-    /* Alterado de #1d2a52 para primary-color */
     color: var(--primary-color); 
 }
 
-/* Ajuste para Dark Mode específico para títulos se necessário, 
-   mas var(--primary-color) deve funcionar se configurado corretamente no root */
 @media (prefers-color-scheme: dark) {
     .card-info h3 {
-        color: var(--text-color); /* Garante leitura no fundo escuro */
+        color: var(--text-color); /* Ensures readability on dark background */
     }
 }
 
 .card-info p {
-    /* Alterado de #666 para text-color com opacidade ou var(--gray-*) */
     color: var(--text-color);
-    opacity: 0.8; /* Ligeiramente mais suave que o título */
+    opacity: 0.8; /* Slightly softer than the title */
     margin-bottom: 20px;
 }
 
 .btn-detalhes {
     display: inline-block;
     padding: 8px 20px;
-    /* Alterado de #d46c53 para accent-color */
     border: 1px solid var(--accent-color);
     color: var(--accent-color);
     text-decoration: none;
@@ -109,9 +113,8 @@
 }
 
 .btn-detalhes:hover {
-    /* Alterado de #d46c53 para accent-color */
     background-color: var(--accent-color);
-    color: var(--text-light); /* Garante texto branco no hover */
+    color: var(--text-light); /* Ensures white text on hover */
 }
 
 .featured-section {
@@ -378,7 +381,7 @@
     }
 }
 
-/* --- PAGINAÇÃO --- */
+/* --- PAGINATION --- */
 .pagination {
     display: flex;
     justify-content: center;
@@ -402,7 +405,7 @@
     border: 1px solid var(--border-color);
     background-color: var(--surface-color);
     color: var(--text-color);
-    border-radius: 8px; /* Cantos arredondados */
+    border-radius: 8px; /* Rounded corners */
     cursor: pointer;
     font-size: 1rem;
     font-weight: 600;
@@ -428,7 +431,7 @@
     background-color: var(--gray-200);
 }
 
-/* Ajuste para Dark Mode */
+/* Dark Mode adjustment */
 @media (prefers-color-scheme: dark) {
     .page-btn:disabled {
         background-color: var(--gray-300);

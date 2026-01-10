@@ -1,4 +1,4 @@
-/* Secção Hero/Título */
+/* Hero/Title Section */
 .about-hero {
     background-color: var(--background-soft);
     padding: 80px 0;
@@ -17,7 +17,7 @@
     margin: 0 auto;
 }
 
-/* Layout de Duas Colunas (Missão e História) */
+/* Two Column Layout (Mission and History) */
 .mission-story {
     padding: 40px 0 60px 0;
 }
@@ -41,7 +41,7 @@
     box-shadow: 0 10px 30px rgba(var(--box-shadowRGB), 0.15);
 }
 
-/* Secção Pilares/Valores */
+/* Pillars/Values Section */
 .pillars-section {
     background-color: var(--background-soft-2);
     padding: 60px 0;
@@ -82,7 +82,7 @@
     font-size: 1.4em;
 }
 
-/* Secção CTA de Fundo */
+/* Bottom CTA Section */
 .cta-section-bottom {
     background-color: var(--primary-color);
     color: var(--text-light);

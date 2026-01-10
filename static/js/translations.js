@@ -70,9 +70,13 @@ const translations = {
         badge_dog: "Cão",
         badge_cat: "Gato",
         badge_other: "Outro",
+        badge_others: "Outro",
+        badge_goat: "Cabra",
+        badge_monkey: "Macaco",
         gender_male: "Macho",
         gender_female: "Fêmea",
         unit_years: "Anos",
+        unit_year: "Ano",
         unit_months: "Meses",
 
         ft_pet_1_desc: "Buddy é muito energético e adora jogar ao 'busca'. É ótimo com crianças!",
@@ -84,6 +88,17 @@ const translations = {
     
         ft_pet_4_race: "Misturado",
         ft_pet_4_desc: "Energia de cachorrinho. A Daisy precisa de treinamento mas tem muito amor para dar!",
+
+        ft_pet_5_race: "Pastor Alemão",
+        ft_pet_6_race: "Cinzento",
+        ft_pet_7_race: "Persa",
+        ft_pet_8_race: "Pinscher",
+        ft_pet_9_race: "Porquinho da Índia",
+        ft_pet_10_race: "Boxer",
+        ft_pet_11_race: "Misturado",
+        ft_pet_12_race: "Cabra",
+        ft_pet_13_race: "Siamês",
+        ft_pet_14_race: "Macaco",
 
         // See more
         see_more_title: "Ver todos os animais",
@@ -100,6 +115,19 @@ const translations = {
         contacts_email_note: "Respostas num prazo médio de 48 horas.",
         contacts_office_title: "Escritório Principal",
         contacts_social_title: "Siga-nos nas Redes Sociais",
+
+        // Schedule table
+        contacts_schedule_title: "Horários",
+        contacts_schedule_day: "Dia",
+        contacts_schedule_hours: "Horário",
+        contacts_schedule_mon: "Segunda-feira",
+        contacts_schedule_tue: "Terça-feira",
+        contacts_schedule_wed: "Quarta-feira",
+        contacts_schedule_thu: "Quinta-feira",
+        contacts_schedule_fri: "Sexta-feira",
+        contacts_schedule_sat: "Sábado",
+        contacts_schedule_sun: "Domingo",
+        contacts_schedule_closed: "Encerrado",
 
         contacts_form_title: "Envie-nos uma Mensagem",
         contacts_form_label_name: "Nome Completo",
@@ -277,9 +305,13 @@ const translations = {
         badge_dog: "Dog",
         badge_cat: "Cat",
         badge_other: "Other",
+        badge_others: "Other",
+        badge_goat: "Goat",
+        badge_monkey: "Monkey",
         gender_male: "Male",
         gender_female: "Female",
         unit_years: "Years",
+        unit_year: "Year",
         unit_months: "Months",
 
         ft_pet_1_desc: "Buddy is very energetic and loves playing fetch. He's great with children!",
@@ -291,6 +323,17 @@ const translations = {
 
         ft_pet_4_race: "Mixed",
         ft_pet_4_desc: "Puppy energy. Daisy needs training but has lots of love to give!",
+
+        ft_pet_5_race: "German Shepherd",
+        ft_pet_6_race: "Grey",
+        ft_pet_7_race: "Persian",
+        ft_pet_8_race: "Pinscher",
+        ft_pet_9_race: "Guinea Pig",
+        ft_pet_10_race: "Boxer",
+        ft_pet_11_race: "Mixed",
+        ft_pet_12_race: "Goat",
+        ft_pet_13_race: "Siamese",
+        ft_pet_14_race: "Monkey",
 
         // See more
         see_more_title: "See all animals",
@@ -306,6 +349,19 @@ const translations = {
         contacts_email_note: "Responses within an average of 48 hours.",
         contacts_office_title: "Main Office",
         contacts_social_title: "Follow us on Social Media",
+
+        // Schedule table
+        contacts_schedule_title: "Opening Hours",
+        contacts_schedule_day: "Day",
+        contacts_schedule_hours: "Hours",
+        contacts_schedule_mon: "Monday",
+        contacts_schedule_tue: "Tuesday",
+        contacts_schedule_wed: "Wednesday",
+        contacts_schedule_thu: "Thursday",
+        contacts_schedule_fri: "Friday",
+        contacts_schedule_sat: "Saturday",
+        contacts_schedule_sun: "Sunday",
+        contacts_schedule_closed: "Closed",
 
         contacts_form_title: "Send us a Message",
         contacts_form_label_name: "Full Name",
@@ -483,12 +539,16 @@ const translations = {
         badge_dog: "Perro",
         badge_cat: "Gato",
         badge_other: "Otro",
+        badge_others: "Otro",
+        badge_goat: "Cabra",
+        badge_monkey: "Mono",
         gender_male: "Macho",
         gender_female: "Hembra",
         unit_years: "Años",
+        unit_year: "Año",
         unit_months: "Meses",
 
-        ft_pet_1_desc: "Buddy es muy enérgico y le encanta jugar a buscar. ¡Es genial con niños!",
+        ft_pet_1_desc: "Buddy es muy energético y le encanta jugar a buscar. ¡Es genial con niños!",
 
         ft_pet_2_race: "Naranja",
         ft_pet_2_desc: "Imenso adora la comida y las siestas largas en regazos cálidos.",
@@ -497,6 +557,17 @@ const translations = {
 
         ft_pet_4_race: "Mezclado",
         ft_pet_4_desc: "Energía de cachorro. Daisy necesita entrenamiento pero tiene mucho amor para dar.",
+
+        ft_pet_5_race: "Pastor Alemán",
+        ft_pet_6_race: "Gris",
+        ft_pet_7_race: "Persa",
+        ft_pet_8_race: "Pinscher",
+        ft_pet_9_race: "Conejillo de Indias",
+        ft_pet_10_race: "Boxer",
+        ft_pet_11_race: "Mezclado",
+        ft_pet_12_race: "Cabra",
+        ft_pet_13_race: "Siamés",
+        ft_pet_14_race: "Mono",
         
         // See more
         see_more_title: "Ver todos los animales",
@@ -512,6 +583,19 @@ const translations = {
         contacts_email_note: "Respuestas en un plazo medio de 48 horas.",
         contacts_office_title: "Oficina principal",
         contacts_social_title: "Síguenos en las redes sociales",
+
+        // Schedule table
+        contacts_schedule_title: "Horarios",
+        contacts_schedule_day: "Día",
+        contacts_schedule_hours: "Horario",
+        contacts_schedule_mon: "Lunes",
+        contacts_schedule_tue: "Martes",
+        contacts_schedule_wed: "Miércoles",
+        contacts_schedule_thu: "Jueves",
+        contacts_schedule_fri: "Viernes",
+        contacts_schedule_sat: "Sábado",
+        contacts_schedule_sun: "Domingo",
+        contacts_schedule_closed: "Cerrado",
 
         contacts_form_title: "Envíanos un mensaje",
         contacts_form_label_name: "Nombre completo",

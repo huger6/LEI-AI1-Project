@@ -1,7 +1,16 @@
 const { useState, useEffect } = React;
 
+// Helper function to get translation
+const getTranslation = (key) => {
+    const lang = localStorage.getItem('petbond_lang') || 'pt';
+    if (typeof translations !== 'undefined' && translations[lang] && translations[lang][key]) {
+        return translations[lang][key];
+    }
+    return key;
+};
+
 const ContactForm = () => {
-    // 1. STATEFUL COMPONENT
+    // 1. State management
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -11,23 +20,43 @@ const ContactForm = () => {
 
     const [errors, setErrors] = useState({});
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [currentLang, setCurrentLang] = useState(localStorage.getItem('petbond_lang') || 'pt');
 
-    // 2. LOAD FROM LOCAL STORAGE ON MOUNT
+    // 2. Load saved draft from local storage on mount
     useEffect(() => {
         const savedData = localStorage.getItem('contact_draft');
         if (savedData) {
             setFormData(JSON.parse(savedData));
         }
-    }, []);
 
-    // 3. HANDLE INPUT CHANGE
+        // Listen for language changes
+        const handleStorageChange = () => {
+            setCurrentLang(localStorage.getItem('petbond_lang') || 'pt');
+        };
+        window.addEventListener('storage', handleStorageChange);
+        
+        // Check for language changes periodically (for same-tab updates)
+        const langCheck = setInterval(() => {
+            const newLang = localStorage.getItem('petbond_lang') || 'pt';
+            if (newLang !== currentLang) {
+                setCurrentLang(newLang);
+            }
+        }, 100);
+
+        return () => {
+            window.removeEventListener('storage', handleStorageChange);
+            clearInterval(langCheck);
+        };
+    }, [currentLang]);
+
+    // 3. Handle input changes
     const handleChange = (e) => {
         const { name, value } = e.target;
         const updatedData = { ...formData, [name]: value };
         
         setFormData(updatedData);
         
-        // Save draft to local storage instantly as user types (User convenience)
+        // Save draft to local storage as user types
         localStorage.setItem('contact_draft', JSON.stringify(updatedData));
         
         // Clear error when user types
@@ -36,7 +65,7 @@ const ContactForm = () => {
         }
     };
 
-    // 4. VALIDATION LOGIC
+    // 4. Form validation
     const validate = () => {
         let tempErrors = {};
         let isValid = true;
@@ -46,7 +75,7 @@ const ContactForm = () => {
             isValid = false;
         }
 
-        // Email Regex
+        // Email validation regex
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!formData.email) {
             tempErrors.email = "O email é obrigatório.";
@@ -70,18 +99,18 @@ const ContactForm = () => {
         return isValid;
     };
 
-    // 5. HANDLE SUBMIT
+    // 5. Handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
 
         if (validate()) {
-            // Save FINAL submission to Local Storage
+            // Save submission to local storage
             const submission = {
                 ...formData,
                 date: new Date().toISOString()
             };
             
-            // Store submitted forms in an array, preserving history
+            // Store submitted forms in an array
             const previousSubmissions = JSON.parse(localStorage.getItem('contact_submissions') || "[]");
             previousSubmissions.push(submission);
             localStorage.setItem('contact_submissions', JSON.stringify(previousSubmissions));
@@ -132,7 +161,7 @@ const ContactForm = () => {
             
             {/* Name Field */}
             <div className="form-group">
-                <label htmlFor="name" data-i18n="contacts_form_label_name">Nome Completo *</label>
+                <label htmlFor="name">{getTranslation('contacts_form_label_name')} *</label>
                 <input 
                     type="text" 
                     id="name" 
@@ -147,7 +176,7 @@ const ContactForm = () => {
 
             {/* Email Field */}
             <div className="form-group">
-                <label htmlFor="email" data-i18n="contacts_form_label_email">Email *</label>
+                <label htmlFor="email">{getTranslation('contacts_form_label_email')} *</label>
                 <input 
                     type="email" 
                     id="email" 
@@ -162,7 +191,7 @@ const ContactForm = () => {
 
             {/* Subject Select */}
             <div className="form-group">
-                <label htmlFor="subject" data-i18n="contacts_form_label_subject">Assunto *</label>
+                <label htmlFor="subject">{getTranslation('contacts_form_label_subject')} *</label>
                 <select 
                     id="subject" 
                     name="subject" 
@@ -170,18 +199,18 @@ const ContactForm = () => {
                     onChange={handleChange}
                     className={errors.subject ? 'input-error' : ''}
                 >
-                    <option value="" disabled>Selecione um Assunto</option>
-                    <option value="adocao">Questão sobre Adoção</option>
-                    <option value="voluntariado">Candidatura a Voluntário</option>
-                    <option value="parceria">Proposta de Parceria</option>
-                    <option value="geral">Outro Assunto / Geral</option>
+                    <option value="" disabled>{getTranslation('contacts_form_select_placeholder')}</option>
+                    <option value="adocao">{getTranslation('contacts_form_option_adocao')}</option>
+                    <option value="voluntariado">{getTranslation('contacts_form_option_voluntariado')}</option>
+                    <option value="parceria">{getTranslation('contacts_form_option_parceria')}</option>
+                    <option value="geral">{getTranslation('contacts_form_option_geral')}</option>
                 </select>
                 {errors.subject && <span className="error-msg">{errors.subject}</span>}
             </div>
 
             {/* Message Field */}
             <div className="form-group">
-                <label htmlFor="message" data-i18n="contacts_form_label_message">Mensagem *</label>
+                <label htmlFor="message">{getTranslation('contacts_form_label_message')} *</label>
                 <textarea 
                     id="message" 
                     name="message" 
@@ -194,9 +223,9 @@ const ContactForm = () => {
                 {errors.message && <span className="error-msg">{errors.message}</span>}
             </div>
 
-            <button type="submit" className="btn btn-primary-cta" data-i18n="contacts_form_button_send">
+            <button type="submit" className="btn btn-primary-cta">
                 <i className="bi bi-send"></i>
-                <span>Enviar Mensagem</span>
+                <span>{getTranslation('contacts_form_button_send')}</span>
             </button>
         </form>
     );

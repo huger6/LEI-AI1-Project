@@ -10,7 +10,7 @@
     margin: 0 auto 3rem;
 }
 
-.vol-intro h2 { color: var(--primary-color); margin-bottom: 1rem; }
+.vol-intro h2 { color: var(--secondary-color); margin-bottom: 1rem; }
 
 .benefits-flex {
     display: flex;
@@ -28,6 +28,11 @@
     border-radius: 12px;
     border: 1px solid var(--border-color);
     transition: transform 0.3s;
+}
+
+.benefit-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
 }
 
 .benefit-card:hover { transform: translateY(-5px); }
@@ -72,7 +77,7 @@
     align-items: center;
     gap: 10px;
     margin-bottom: 1rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .role-header i { font-size: 1.5rem; }
@@ -104,7 +109,7 @@
 }
 
 .form-text { text-align: center; margin-bottom: 2rem; }
-.form-text h2 { color: var(--primary-color); }
+.form-text h2 { color: var(--secondary-color); }
 
 /* Styles for React Elements */
 .react-form {
@@ -158,4 +163,84 @@
     border-radius: 6px;
     text-align: center;
     border: 1px solid #c3e6cb;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero-content h1 {
+    color: var(--secondary-color);
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--text-color);
+}
+
+/* --- RESPONSIVE STYLES --- */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .vol-benefits-section,
+    .vol-roles-section {
+        padding: 2.5rem 0;
+    }
+
+    .vol-intro {
+        padding: 0 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .benefit-card {
+        max-width: 100%;
+        padding: 1.5rem;
+    }
+
+    .role-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .benefits-flex,
+    .roles-flex {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 1.75rem;
+    }
+
+    .icon-circle {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .benefit-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .role-header h3 {
+        font-size: 1rem;
+    }
 }

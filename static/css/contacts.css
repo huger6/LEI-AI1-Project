@@ -1,12 +1,12 @@
-/* Secção Hero/Título */
+/* Hero/Title Section */
 .contact-hero {
-    background-color: var(--background-soft); /* Fundo suave */
+    background-color: var(--background-soft); /* Soft background */
     padding: 60px 0;
     text-align: center;
     margin-bottom: 40px;
 }
 .contact-hero h1 {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-size: 3em;
 }
 .contact-hero .subtitle {
@@ -14,13 +14,13 @@
     color: var(--text-color);
 }
 
-/* Layout Principal (Informação + Formulário) */
+/* Main Layout (Information + Form) */
 .contact-section {
     padding: 40px 0 60px 0;
 }
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* Coluna de info mais estreita, formulário mais largo */
+    grid-template-columns: 1fr 2fr; /* Narrower info column, wider form */
     gap: 50px;
 }
 
@@ -36,7 +36,7 @@
 .contact-info-block h2 {
     color: var(--secondary-color);
     margin-bottom: 25px;
-    border-bottom: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
     padding-bottom: 10px;
 }
 
@@ -47,12 +47,12 @@
 }
 .info-item i {
     font-size: 1.8em;
-    color: var(--secondary-color); /* Ícones com a cor secundária */
+    color: var(--secondary-color); /* Icons with secondary color */
     margin-right: 15px;
     padding-top: 5px;
 }
 .info-item h4 {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 0;
     font-size: 1.1em;
 }
@@ -65,9 +65,9 @@
     color: #666;
 }
 
-/* Redes Sociais */
+/* Social Networks */
 .social-title {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-top: 20px;
     margin-bottom: 15px;
     font-size: 1.1em;
@@ -82,7 +82,70 @@
     color: var(--primary-color);
 }
 
-/* Estilo Base para todos os Botões */
+/* Schedule Table Section */
+.schedule-section {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.schedule-title {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(var(--box-shadowRGB), 0.08);
+}
+
+.schedule-table thead {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 0.95em;
+}
+
+.schedule-table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
+}
+
+.schedule-table tbody tr {
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s ease;
+}
+
+.schedule-table tbody tr:hover {
+    background-color: var(--background-soft);
+}
+
+.schedule-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.schedule-table tbody tr.closed-row {
+    background-color: var(--background-soft-3);
+}
+
+.schedule-table tbody tr.closed-row td {
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+/* Base Style for all Buttons */
 .btn {
     display: inline-block;
     padding: 12px 25px;
@@ -91,21 +154,21 @@
     font-weight: bold;
     transition: background-color 0.3s, transform 0.2s;
     text-align: center;
-    border: none; /* Garante que não há borda indesejada */
+    border: none; /* Ensures no unwanted border */
     cursor: pointer;
 }
 
-/* Estilo para o Botão Principal de Ação (Enviar Mensagem) */
+/* Style for Primary Action Button (Send Message) */
 .btn-primary-cta {
-    /* Cor de Fundo: Secondary Color (Teal) */
+    /* Background Color: Secondary Color (Teal) */
     background-color: var(--secondary-color);
-    /* Cor do Texto: Light Text (Branco) */
+    /* Text Color: Light Text (White) */
     color: var(--text-light);
-    border: 2px solid var(--secondary-color); /* Borda da mesma cor */
+    border: 2px solid var(--secondary-color); /* Border same color */
 }
 
 .btn-primary-cta:hover {
-    /* Mudar para uma cor ligeiramente mais escura ou Primary Color no hover */
+    /* Change to slightly darker or Primary Color on hover */
     background-color: var(--primary-color);
     border-color: var(--primary-color);
     color: var(--text-light);
@@ -113,9 +176,9 @@
 }
 
 
-/* Formulário de Contacto */
+/* Contact Form */
 .contact-form-block h2 {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 30px;
 }
 
@@ -147,13 +210,13 @@
 }
 
 .contact-form select {
-    appearance: none; /* Remove estilo nativo para melhor consistência */
+    appearance: none; /* Remove native styling for better consistency */
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%2330bfbd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
     background-repeat: no-repeat;
     background-position: right 10px center;
 }
 
-/* Secção do Mapa */
+/* Map Section */
 .map-section {
     padding: 40px 0 80px 0;
 }
@@ -168,7 +231,7 @@
     box-shadow: 0 10px 30px rgba(var(--box-shadowRGB), 0.1);
 }
 .map-placeholder iframe {
-    display: block; /* Remove o espaço extra debaixo do iframe */
+    display: block; /* Removes extra space below iframe */
 }
 
 /* ========================================
@@ -331,7 +394,7 @@
         grid-template-columns: 1fr;
     }
     .contact-info-block {
-        order: -1; /* Coloca a informação de contacto no topo no mobile */
+        order: -1; /* Places contact info at top on mobile */
         margin-bottom: 30px;
     }
     
@@ -373,6 +436,7 @@
     
     .info-item {
         flex-direction: column;
+        align-items: center;
         text-align: center;
     }
     
