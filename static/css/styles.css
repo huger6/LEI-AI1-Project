@@ -1,4 +1,5 @@
 /* --- VARIABLES --- */
+/* Light mode (default) */
 :root {
     /* Primary colors */
     --primary-color: #0b354b;
@@ -41,8 +42,39 @@
     --form-success-border: #c3e6cb;
 }
 
+/* Dark mode variables */
+:root.dark-mode {
+    --primary-color: #0b354b;
+    --secondary-color: #30bfbd;
+    --accent-color: #d46c53;
+    --background-color: #0e111e;
+    --background-color-alt: #c9c9c9;
+    --background-3: #1a3b40;
+    --background-soft: #0a1a24;
+    --background-soft-2: #16222f;
+    --background-soft-3: #422a28;
+    --surface-color: #1a2238;
+    --surface-alt: #2a3250;
+    --text-color: #ffffff;
+    --text-alt: #1d2a52;
+    --text-light: #ffffff;
+    --border-color: #2d2d2d;
+    --hover-bg: #2b2f3c;
+    --gray-100: #1a1a1a;
+    --gray-200: #2a2a2a;
+    --gray-300: #3a3a3a;
+    --box-shadowRGB: 255, 255, 255;
+    --box-shadow-accentRGB: 255,155,122;
+    --box-shadow-secondaryRGB: 48, 192, 189;
+    --form-error-text: #c62828;
+    --form-success-text: #155724;
+    --form-success-bg: #d4edda;
+    --form-success-border: #c3e6cb;
+}
+
+/* System preference fallback (when no user preference is stored) */
 @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not(.light-mode):not(.dark-mode) {
         --primary-color: #0b354b;
         --secondary-color: #30bfbd;
         --accent-color: #d46c53;
@@ -69,6 +101,130 @@
         --form-success-text: #155724;
         --form-success-bg: #d4edda;
         --form-success-border: #c3e6cb;
+    }
+}
+
+/* --- THEME TOGGLE SWITCH --- */
+.theme-switch {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.theme-switch-label {
+    position: relative;
+    display: inline-block;
+    width: 56px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.theme-switch-input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.theme-switch-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--secondary-color);
+    border-radius: 28px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--border-color);
+}
+
+.theme-switch-slider::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Icons inside the switch */
+.theme-switch-slider .bi {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    transition: opacity 0.3s ease;
+}
+
+.theme-switch-slider .bi-moon-fill {
+    right: 6px;
+    color: #1d2a52;
+    opacity: 1;
+}
+
+.theme-switch-slider .bi-sun-fill {
+    left: 6px;
+    color: #ffd700;
+    opacity: 0;
+}
+
+/* When checked (dark mode) - move slider to right */
+.theme-switch-input:checked + .theme-switch-slider::before {
+    transform: translateX(28px);
+}
+
+.theme-switch-input:checked + .theme-switch-slider {
+    background-color: var(--primary-color);
+}
+
+.theme-switch-input:checked + .theme-switch-slider .bi-moon-fill {
+    opacity: 0;
+}
+
+.theme-switch-input:checked + .theme-switch-slider .bi-sun-fill {
+    opacity: 1;
+}
+
+/* Focus state for accessibility */
+.theme-switch-input:focus + .theme-switch-slider {
+    box-shadow: 0 0 0 2px var(--secondary-color);
+}
+
+/* Hover effect */
+.theme-switch-label:hover .theme-switch-slider {
+    border-color: var(--secondary-color);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .theme-switch-label {
+        width: 50px;
+        height: 26px;
+    }
+    
+    .theme-switch-slider::before {
+        height: 18px;
+        width: 18px;
+    }
+    
+    .theme-switch-input:checked + .theme-switch-slider::before {
+        transform: translateX(24px);
+    }
+    
+    .theme-switch-slider .bi {
+        font-size: 12px;
+    }
+    
+    .theme-switch-slider .bi-moon-fill {
+        right: 5px;
+    }
+    
+    .theme-switch-slider .bi-sun-fill {
+        left: 5px;
     }
 }
 

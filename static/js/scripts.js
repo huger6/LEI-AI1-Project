@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize theme toggle first (to avoid flash of wrong theme)
+    initTheme();
+    
     // Get saved language from localStorage (persists across sessions)
     currentLang = localStorage.getItem('petbond_lang') || "pt";
     
@@ -13,7 +16,69 @@ document.addEventListener('DOMContentLoaded', () => {
     langSelector();
     startLiveClock();
     scrollTopBtn();
+    themeSwitch();
 });
+
+/**
+ * Check if dark mode is currently active (from saved preference or system)
+ */
+function isDarkModeActive() {
+    const savedTheme = localStorage.getItem('petbond_theme');
+    if (savedTheme) {
+        return savedTheme === 'dark-mode';
+    }
+    // No saved preference - use system preference
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+}
+
+/**
+ * Initialize theme based on localStorage or system preference
+ */
+function initTheme() {
+    const savedTheme = localStorage.getItem('petbond_theme');
+    const htmlElement = document.documentElement;
+    
+    if (savedTheme) {
+        // User has a saved preference
+        htmlElement.classList.remove('light-mode', 'dark-mode');
+        htmlElement.classList.add(savedTheme);
+    }
+    // If no saved theme, CSS media query handles it based on system preference
+}
+
+/**
+ * Handle theme switch toggle
+ */
+function themeSwitch() {
+    const themeCheckbox = document.getElementById('theme-switch-input');
+    if (!themeCheckbox) return;
+    
+    // Set initial state based on current theme
+    themeCheckbox.checked = isDarkModeActive();
+    
+    // Handle change event
+    themeCheckbox.addEventListener('change', () => {
+        const htmlElement = document.documentElement;
+        htmlElement.classList.remove('light-mode', 'dark-mode');
+        
+        if (themeCheckbox.checked) {
+            htmlElement.classList.add('dark-mode');
+            localStorage.setItem('petbond_theme', 'dark-mode');
+        } else {
+            htmlElement.classList.add('light-mode');
+            localStorage.setItem('petbond_theme', 'light-mode');
+        }
+    });
+    
+    // Listen for system theme changes (when no saved preference)
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        const savedTheme = localStorage.getItem('petbond_theme');
+        if (!savedTheme) {
+            // No saved preference, follow system
+            themeCheckbox.checked = e.matches;
+        }
+    });
+}
 
 /**
  * Update the language selector dropdown to show the correct flag/text
