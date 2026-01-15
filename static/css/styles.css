@@ -289,7 +289,6 @@ img {
 
 .dropdown-menu li:last-child a {
     border-bottom: none;
-    padding-bottom: 0;
 }
 
 .dropdown-menu li a:hover {
@@ -556,6 +555,10 @@ footer {
 
 /* --- MOBILE RESPONSIVE --- */
 @media (max-width: 900px) {
+    .dropdown-menu li:last-child a {
+        padding-bottom: 0;
+    }
+
     .hamburger {
         display: block;
         z-index: 1002;
