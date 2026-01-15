@@ -48,12 +48,10 @@ function navbarHamburguer() {
         navMenu.classList.toggle('active');
     });
 
-    // Close menu when a link is clicked (unless it's the dropdown toggle)
+    // Close menu when a link is clicked (including dropdown toggle since submenu is always visible on mobile)
     document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', (e) => {
-        if(!n.classList.contains('dropdown-toggle')) {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        }
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
     }));
 
     // Mobile Dropdown Click Handler

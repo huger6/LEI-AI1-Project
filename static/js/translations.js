@@ -79,6 +79,8 @@ const translations = {
         unit_year: "Ano",
         unit_months: "Meses",
 
+        breed_st_bernard: "São Bernardo",
+
         ft_pet_1_desc: "Buddy é muito energético e adora jogar ao 'busca'. É ótimo com crianças!",
         
         ft_pet_2_race: "Laranja",
@@ -314,6 +316,8 @@ const translations = {
         unit_year: "Year",
         unit_months: "Months",
 
+        breed_st_bernard: "Saint Bernard",
+
         ft_pet_1_desc: "Buddy is very energetic and loves playing fetch. He's great with children!",
 
         ft_pet_2_race: "Orange",
@@ -547,6 +551,8 @@ const translations = {
         unit_years: "Años",
         unit_year: "Año",
         unit_months: "Meses",
+
+        breed_st_bernard: "San Bernardo",
 
         ft_pet_1_desc: "Buddy es muy energético y le encanta jugar a buscar. ¡Es genial con niños!",
 

@@ -289,6 +289,7 @@ img {
 
 .dropdown-menu li:last-child a {
     border-bottom: none;
+    padding-bottom: 0;
 }
 
 .dropdown-menu li a:hover {
@@ -618,18 +619,54 @@ footer {
         height: auto;
         display: block;
     }
+
+    /* Hide the dropdown arrow on mobile since menu is always open */
+    .dropdown .arrow {
+        display: none;
+    }
     
     .dropdown-menu {
         position: static;
-        display: none;
+        display: block !important; /* Always show on mobile */
+        opacity: 1 !important;
+        visibility: visible !important;
         transform: none;
         text-align: center;
         border: none;
-        width: fit-content;
-        background-color: var(--surface-color);
+        width: 100%;
+        background-color: transparent;
         box-shadow: none;
+        margin-top: 0.5rem;
     }
 
+    /* Submenu items styling with indentation */
+    .dropdown-menu li {
+        margin: 0;
+    }
+
+    .dropdown-menu li a {
+        padding: 10px 16px 10px 2rem; /* Left padding for indentation */
+        font-size: 0.9rem;
+        color: var(--text-color);
+        opacity: 0.85;
+        border-bottom: none;
+        position: relative;
+    }
+
+    .dropdown-menu li a::before {
+        content: '—';
+        position: absolute;
+        left: 0.8rem;
+        color: var(--secondary-color);
+        font-weight: normal;
+    }
+
+    .dropdown-menu li a:hover {
+        opacity: 1;
+        background-color: transparent;
+    }
+
+    /* Remove the active state requirement since always open */
     .dropdown.active .dropdown-menu {
         display: block;
         transform: none;
