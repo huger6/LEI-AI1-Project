@@ -443,8 +443,15 @@ img {
     text-align: center; 
 }
 
+.dropdown-menu li:first-child a {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
 .dropdown-menu li:last-child a {
     border-bottom: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 .dropdown-menu li a:hover {
@@ -539,7 +546,14 @@ img {
     border-bottom: 1px solid var(--border-color);
 }
 
+.options-list li:first-child {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
 .options-list li:last-child {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
     border-bottom: none;
 }
 
