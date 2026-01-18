@@ -272,8 +272,17 @@
 .contact-react-form .form-group input.input-error,
 .contact-react-form .form-group select.input-error,
 .contact-react-form .form-group textarea.input-error {
-    border-color: var(--accent-color);
-    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+    border-color: #e74c3c;
+    border-width: 2px;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.15);
+    background-color: rgba(231, 76, 60, 0.03);
+}
+
+.contact-react-form .form-group input.input-error:focus,
+.contact-react-form .form-group select.input-error:focus,
+.contact-react-form .form-group textarea.input-error:focus {
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.25);
 }
 
 .contact-react-form .form-group select {
@@ -291,11 +300,21 @@
 
 /* Error Messages */
 .contact-react-form .error-msg {
-    color: var(--accent-color);
+    color: #e74c3c;
     font-size: 0.85rem;
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
+    margin-top: 6px;
+    padding: 4px 8px;
+    background-color: rgba(231, 76, 60, 0.08);
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.contact-react-form .error-msg::before {
+    content: "⚠";
+    font-size: 0.9rem;
 }
 
 /* Submit Button */

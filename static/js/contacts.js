@@ -1,4 +1,4 @@
-const { useState, useEffect } = React;
+const { useState, useEffect, createElement: h } = React;
 
 // Helper function to get translation
 const getTranslation = (key) => {
@@ -134,103 +134,109 @@ const ContactForm = () => {
         return subjects[value] || value;
     };
 
+    // Success message (after form submission)
     if (isSubmitted) {
-        return (
-            <div className="success-message">
-                <div className="success-icon">
-                    <i className="bi bi-check-circle-fill"></i>
-                </div>
-                <h3>Obrigado, {formData.name}!</h3>
-                <p>A sua mensagem sobre "<strong>{getSubjectLabel(formData.subject)}</strong>" foi enviada com sucesso.</p>
-                <p className="success-note">Responderemos para <strong>{formData.email}</strong> num prazo de 48 horas.</p>
-                <button 
-                    className="btn btn-outline" 
-                    onClick={() => {
-                        setFormData({ name: '', email: '', subject: '', message: '' });
-                        setIsSubmitted(false);
-                    }}
-                >
-                    Enviar nova mensagem
-                </button>
-            </div>
+        return h('div', { className: 'success-message' },
+            h('div', { className: 'success-icon' },
+                h('i', { className: 'bi bi-check-circle-fill' })
+            ),
+            h('h3', null, 'Obrigado, ', formData.name, '!'),
+            h('p', null, 
+                'A sua mensagem sobre "',
+                h('strong', null, getSubjectLabel(formData.subject)),
+                '" foi enviada com sucesso.'
+            ),
+            h('p', { className: 'success-note' },
+                'Responderemos para ',
+                h('strong', null, formData.email),
+                ' num prazo de 48 horas.'
+            ),
+            h('button', {
+                className: 'btn btn-outline',
+                onClick: () => {
+                    setFormData({ name: '', email: '', subject: '', message: '' });
+                    setIsSubmitted(false);
+                }
+            }, 'Enviar nova mensagem')
         );
     }
 
-    return (
-        <form onSubmit={handleSubmit} className="react-form contact-react-form">
-            
-            {/* Name Field */}
-            <div className="form-group">
-                <label htmlFor="name">{getTranslation('contacts_form_label_name')} *</label>
-                <input 
-                    type="text" 
-                    id="name" 
-                    name="name" 
-                    value={formData.name} 
-                    onChange={handleChange} 
-                    placeholder="O seu nome completo"
-                    className={errors.name ? 'input-error' : ''}
-                />
-                {errors.name && <span className="error-msg">{errors.name}</span>}
-            </div>
+    // Main form
+    return h('form', { onSubmit: handleSubmit, className: 'react-form contact-react-form', noValidate: true },
+        
+        // Name Field
+        h('div', { className: 'form-group' },
+            h('label', { htmlFor: 'name' }, getTranslation('contacts_form_label_name'), ' *'),
+            h('input', {
+                type: 'text',
+                id: 'name',
+                name: 'name',
+                value: formData.name,
+                onChange: handleChange,
+                placeholder: 'O seu nome completo',
+                className: errors.name ? 'input-error' : ''
+            }),
+            errors.name && h('span', { className: 'error-msg' }, errors.name)
+        ),
 
-            {/* Email Field */}
-            <div className="form-group">
-                <label htmlFor="email">{getTranslation('contacts_form_label_email')} *</label>
-                <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
-                    value={formData.email} 
-                    onChange={handleChange} 
-                    placeholder="exemplo@email.com"
-                    className={errors.email ? 'input-error' : ''}
-                />
-                {errors.email && <span className="error-msg">{errors.email}</span>}
-            </div>
+        // Email Field
+        h('div', { className: 'form-group' },
+            h('label', { htmlFor: 'email' }, getTranslation('contacts_form_label_email'), ' *'),
+            h('input', {
+                type: 'text',
+                id: 'email',
+                name: 'email',
+                value: formData.email,
+                onChange: handleChange,
+                placeholder: 'exemplo@email.com',
+                className: errors.email ? 'input-error' : '',
+                autoComplete: 'email'
+            }),
+            errors.email && h('span', { className: 'error-msg' }, errors.email)
+        ),
 
-            {/* Subject Select */}
-            <div className="form-group">
-                <label htmlFor="subject">{getTranslation('contacts_form_label_subject')} *</label>
-                <select 
-                    id="subject" 
-                    name="subject" 
-                    value={formData.subject} 
-                    onChange={handleChange}
-                    className={errors.subject ? 'input-error' : ''}
-                >
-                    <option value="" disabled>{getTranslation('contacts_form_select_placeholder')}</option>
-                    <option value="adocao">{getTranslation('contacts_form_option_adocao')}</option>
-                    <option value="voluntariado">{getTranslation('contacts_form_option_voluntariado')}</option>
-                    <option value="parceria">{getTranslation('contacts_form_option_parceria')}</option>
-                    <option value="geral">{getTranslation('contacts_form_option_geral')}</option>
-                </select>
-                {errors.subject && <span className="error-msg">{errors.subject}</span>}
-            </div>
+        // Subject Select
+        h('div', { className: 'form-group' },
+            h('label', { htmlFor: 'subject' }, getTranslation('contacts_form_label_subject'), ' *'),
+            h('select', {
+                id: 'subject',
+                name: 'subject',
+                value: formData.subject,
+                onChange: handleChange,
+                className: errors.subject ? 'input-error' : ''
+            },
+                h('option', { value: '', disabled: true }, getTranslation('contacts_form_select_placeholder')),
+                h('option', { value: 'adocao' }, getTranslation('contacts_form_option_adocao')),
+                h('option', { value: 'voluntariado' }, getTranslation('contacts_form_option_voluntariado')),
+                h('option', { value: 'parceria' }, getTranslation('contacts_form_option_parceria')),
+                h('option', { value: 'geral' }, getTranslation('contacts_form_option_geral'))
+            ),
+            errors.subject && h('span', { className: 'error-msg' }, errors.subject)
+        ),
 
-            {/* Message Field */}
-            <div className="form-group">
-                <label htmlFor="message">{getTranslation('contacts_form_label_message')} *</label>
-                <textarea 
-                    id="message" 
-                    name="message" 
-                    rows="5" 
-                    value={formData.message} 
-                    onChange={handleChange} 
-                    placeholder="Escreva a sua mensagem aqui..."
-                    className={errors.message ? 'input-error' : ''}
-                ></textarea>
-                {errors.message && <span className="error-msg">{errors.message}</span>}
-            </div>
+        // Message Field
+        h('div', { className: 'form-group' },
+            h('label', { htmlFor: 'message' }, getTranslation('contacts_form_label_message'), ' *'),
+            h('textarea', {
+                id: 'message',
+                name: 'message',
+                rows: '5',
+                value: formData.message,
+                onChange: handleChange,
+                placeholder: 'Escreva a sua mensagem aqui...',
+                className: errors.message ? 'input-error' : ''
+            }),
+            errors.message && h('span', { className: 'error-msg' }, errors.message)
+        ),
 
-            <button type="submit" className="btn btn-primary-cta">
-                <i className="bi bi-send"></i>
-                <span>{getTranslation('contacts_form_button_send')}</span>
-            </button>
-        </form>
+        // Submit Button
+        h('button', { type: 'submit', className: 'btn btn-primary-cta' },
+            h('i', { className: 'bi bi-send' }),
+            h('span', null, getTranslation('contacts_form_button_send'))
+        )
     );
 };
 
 // Mount the component
 const root = ReactDOM.createRoot(document.getElementById('contact-form-root'));
-root.render(<ContactForm />);
+root.render(React.createElement(ContactForm));

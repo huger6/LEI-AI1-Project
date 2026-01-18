@@ -237,6 +237,47 @@ const translations = {
         form_title: "Inscreve-te agora",
         form_desc: "Preenche o formulário e entraremos em contacto brevemente.",
 
+        /* Animal Details Pages */
+        animal_back_to_list: "Voltar à lista de animais",
+        animal_status_available: "Disponível",
+        animal_about: "Sobre",
+        animal_adoption_note: "Processo de adoção simples e rápido.",
+        animal_suggestions_title: "Outros amigos à procura de casa",
+        animal_vaccinated: "Vacinado",
+        animal_adopt_btn: "Adotar",
+
+        // Breeds
+        breed_boxer: "Boxer",
+        breed_mixed: "Misturado",
+        breed_german_shepherd: "Pastor Alemão",
+        breed_pinscher: "Pinscher",
+        breed_bulldog_terrier: "Bulldog Terrier",
+        breed_persian: "Persa",
+        breed_orange: "Laranja",
+        breed_siamese: "Siamês",
+        breed_grey: "Cinzento",
+        breed_goat: "Cabra",
+        breed_monkey: "Macaco",
+        breed_guinea_pig: "Porquinho da Índia",
+        breed_parrot: "Papagaio",
+
+        // Animal descriptions
+        animal_buddy_desc: "O Buddy é um companheiro leal e energético. Adora crianças e longas caminhadas. Está à procura de uma família ativa que lhe dê o amor que ele merece. Já sabe comandos básicos e é muito asseado.",
+        animal_daisy_desc: "A Daisy é uma companheira leal e energética. Adora crianças e longas caminhadas. Está à procura de uma família ativa que lhe dê o amor que ela merece. Já sabe comandos básicos e é muito asseada.",
+        animal_oscar_desc: "O Óscar é um companheiro leal e energético. Adora crianças e longas caminhadas. Está à procura de uma família ativa que lhe dê o amor que ele merece. Já sabe comandos básicos e é muito asseado.",
+        animal_maguie_desc: "A Maguie é uma companheira leal e energética. Adora crianças e longas caminhadas. Está à procura de uma família ativa que lhe dê o amor que ela merece. Já sabe comandos básicos e é muito asseada.",
+        animal_tita_desc: "A Tita é uma companheira leal e energética. Adora crianças e longas caminhadas. Está à procura de uma família ativa que lhe dê o amor que ela merece. Já sabe comandos básicos e é muito asseada.",
+        animal_cuca_desc: "A Cuca é uma companheira leal e energética. Adora crianças e longas caminhadas. Está à procura de uma família ativa que lhe dê o amor que ela merece. Já sabe comandos básicos e é muito asseada.",
+        animal_aboubakar_desc: "O Aboubakar é um companheiro leal e energético. Adora crianças e longas caminhadas. Está à procura de uma família ativa que lhe dê o amor que ele merece. Já sabe comandos básicos e é muito asseado.",
+        animal_luna_desc: "A Luna é uma companheira leal e energética. Adora brincar e longas sestas. Está à procura de uma família ativa que lhe dê o amor que ela merece. Já sabe usar a caixa de areia e é muito asseada.",
+        animal_calhau_desc: "O Calhau é um companheiro leal e calmo. Adora sestas ao sol e festas na barriga. Está à procura de uma família tranquila que lhe dê o amor que ele merece. É muito asseado e independente.",
+        animal_imenso_desc: "O Imenso é um companheiro leal e carinhoso. Adora comida e sestas prolongadas em colos quentes. Está à procura de uma família que lhe dê o amor que ele merece. É muito asseado e brincalhão.",
+        animal_simba_desc: "O Simba é um companheiro leal e curioso. Adora brincar e explorar novos espaços. Está à procura de uma família ativa que lhe dê o amor que ele merece. É muito asseado e brincalhão.",
+        animal_jojo_desc: "O Jójó é um companheiro leal e divertido. Adora brincar e interagir com pessoas. Está à procura de uma família especial que lhe dê o amor e espaço que ele merece. É muito inteligente e curioso.",
+        animal_lulu_desc: "A Lulu é uma companheira leal e dócil. Adora pastar e receber festas. Está à procura de uma família com espaço exterior que lhe dê o amor que ela merece. É muito calma e amigável.",
+        animal_oscarjr_desc: "O Óscar Jr. é um companheiro leal e curioso. Adora comer legumes e explorar o seu espaço. Está à procura de uma família carinhosa que lhe dê o amor que ele merece. É muito asseado e adorável.",
+        animal_tiquinho_desc: "O Tiquinho é um companheiro leal e inteligente. Adora conversar e imitar sons. Está à procura de uma família dedicada que lhe dê o amor e atenção que ele merece. É muito asseado e carismático.",
+
     },
     uk: {
         /* Global */
@@ -473,6 +514,47 @@ const translations = {
         form_title: "Sign up now",
         form_desc: "Fill in the form and we'll get in touch shortly.",
 
+        /* Animal Details Pages */
+        animal_back_to_list: "Back to animal list",
+        animal_status_available: "Available",
+        animal_about: "About",
+        animal_adoption_note: "Simple and fast adoption process.",
+        animal_suggestions_title: "Other friends looking for a home",
+        animal_vaccinated: "Vaccinated",
+        animal_adopt_btn: "Adopt",
+
+        // Breeds
+        breed_boxer: "Boxer",
+        breed_mixed: "Mixed",
+        breed_german_shepherd: "German Shepherd",
+        breed_pinscher: "Pinscher",
+        breed_bulldog_terrier: "Bulldog Terrier",
+        breed_persian: "Persian",
+        breed_orange: "Orange",
+        breed_siamese: "Siamese",
+        breed_grey: "Grey",
+        breed_goat: "Goat",
+        breed_monkey: "Monkey",
+        breed_guinea_pig: "Guinea Pig",
+        breed_parrot: "Parrot",
+
+        // Animal descriptions
+        animal_buddy_desc: "Buddy is a loyal and energetic companion. He loves children and long walks. He's looking for an active family to give him the love he deserves. He already knows basic commands and is very clean.",
+        animal_daisy_desc: "Daisy is a loyal and energetic companion. She loves children and long walks. She's looking for an active family to give her the love she deserves. She already knows basic commands and is very clean.",
+        animal_oscar_desc: "Óscar is a loyal and energetic companion. He loves children and long walks. He's looking for an active family to give him the love he deserves. He already knows basic commands and is very clean.",
+        animal_maguie_desc: "Maguie is a loyal and energetic companion. She loves children and long walks. She's looking for an active family to give her the love she deserves. She already knows basic commands and is very clean.",
+        animal_tita_desc: "Tita is a loyal and energetic companion. She loves children and long walks. She's looking for an active family to give her the love she deserves. She already knows basic commands and is very clean.",
+        animal_cuca_desc: "Cuca is a loyal and energetic companion. She loves children and long walks. She's looking for an active family to give her the love she deserves. She already knows basic commands and is very clean.",
+        animal_aboubakar_desc: "Aboubakar is a loyal and energetic companion. He loves children and long walks. He's looking for an active family to give him the love he deserves. He already knows basic commands and is very clean.",
+        animal_luna_desc: "Luna is a loyal and energetic companion. She loves playing and long naps. She's looking for an active family to give her the love she deserves. She already knows how to use the litter box and is very clean.",
+        animal_calhau_desc: "Calhau is a loyal and calm companion. He loves sunny naps and belly rubs. He's looking for a quiet family to give him the love he deserves. He is very clean and independent.",
+        animal_imenso_desc: "Imenso is a loyal and affectionate companion. He loves food and long naps on warm laps. He's looking for a family to give him the love he deserves. He is very clean and playful.",
+        animal_simba_desc: "Simba is a loyal and curious companion. He loves playing and exploring new spaces. He's looking for an active family to give him the love he deserves. He is very clean and playful.",
+        animal_jojo_desc: "Jójó is a loyal and fun companion. He loves playing and interacting with people. He's looking for a special family to give him the love and space he deserves. He is very intelligent and curious.",
+        animal_lulu_desc: "Lulu is a loyal and gentle companion. She loves grazing and receiving pets. She's looking for a family with outdoor space to give her the love she deserves. She is very calm and friendly.",
+        animal_oscarjr_desc: "Óscar Jr. is a loyal and curious companion. He loves eating vegetables and exploring his space. He's looking for a caring family to give him the love he deserves. He is very clean and adorable.",
+        animal_tiquinho_desc: "Tiquinho is a loyal and intelligent companion. He loves chatting and mimicking sounds. He's looking for a dedicated family to give him the love and attention he deserves. He is very clean and charismatic.",
+
     },
     es: {
         /* Global */
@@ -708,6 +790,47 @@ const translations = {
         
         form_title: "Inscríbete ahora",
         form_desc: "Rellena el formulario y nos pondremos en contacto contigo pronto.",
+
+        /* Animal Details Pages */
+        animal_back_to_list: "Volver a la lista de animales",
+        animal_status_available: "Disponible",
+        animal_about: "Acerca de",
+        animal_adoption_note: "Proceso de adopción simple y rápido.",
+        animal_suggestions_title: "Otros amigos buscando hogar",
+        animal_vaccinated: "Vacunado",
+        animal_adopt_btn: "Adoptar",
+
+        // Breeds
+        breed_boxer: "Boxer",
+        breed_mixed: "Mestizo",
+        breed_german_shepherd: "Pastor Alemán",
+        breed_pinscher: "Pinscher",
+        breed_bulldog_terrier: "Bulldog Terrier",
+        breed_persian: "Persa",
+        breed_orange: "Naranja",
+        breed_siamese: "Siamés",
+        breed_grey: "Gris",
+        breed_goat: "Cabra",
+        breed_monkey: "Mono",
+        breed_guinea_pig: "Conejillo de Indias",
+        breed_parrot: "Loro",
+
+        // Animal descriptions
+        animal_buddy_desc: "Buddy es un compañero leal y enérgico. Adora a los niños y los largos paseos. Está buscando una familia activa que le dé el amor que merece. Ya sabe comandos básicos y es muy limpio.",
+        animal_daisy_desc: "Daisy es una compañera leal y enérgica. Adora a los niños y los largos paseos. Está buscando una familia activa que le dé el amor que merece. Ya sabe comandos básicos y es muy limpia.",
+        animal_oscar_desc: "Óscar es un compañero leal y enérgico. Adora a los niños y los largos paseos. Está buscando una familia activa que le dé el amor que merece. Ya sabe comandos básicos y es muy limpio.",
+        animal_maguie_desc: "Maguie es una compañera leal y enérgica. Adora a los niños y los largos paseos. Está buscando una familia activa que le dé el amor que merece. Ya sabe comandos básicos y es muy limpia.",
+        animal_tita_desc: "Tita es una compañera leal y enérgica. Adora a los niños y los largos paseos. Está buscando una familia activa que le dé el amor que merece. Ya sabe comandos básicos y es muy limpia.",
+        animal_cuca_desc: "Cuca es una compañera leal y enérgica. Adora a los niños y los largos paseos. Está buscando una familia activa que le dé el amor que merece. Ya sabe comandos básicos y es muy limpia.",
+        animal_aboubakar_desc: "Aboubakar es un compañero leal y enérgico. Adora a los niños y los largos paseos. Está buscando una familia activa que le dé el amor que merece. Ya sabe comandos básicos y es muy limpio.",
+        animal_luna_desc: "Luna es una compañera leal y enérgica. Adora jugar y las largas siestas. Está buscando una familia activa que le dé el amor que merece. Ya sabe usar el arenero y es muy limpia.",
+        animal_calhau_desc: "Calhau es un compañero leal y tranquilo. Adora las siestas al sol y las caricias en la barriga. Está buscando una familia tranquila que le dé el amor que merece. Es muy limpio e independiente.",
+        animal_imenso_desc: "Imenso es un compañero leal y cariñoso. Adora la comida y las largas siestas en regazos cálidos. Está buscando una familia que le dé el amor que merece. Es muy limpio y juguetón.",
+        animal_simba_desc: "Simba es un compañero leal y curioso. Adora jugar y explorar nuevos espacios. Está buscando una familia activa que le dé el amor que merece. Es muy limpio y juguetón.",
+        animal_jojo_desc: "Jójó es un compañero leal y divertido. Adora jugar e interactuar con personas. Está buscando una familia especial que le dé el amor y espacio que merece. Es muy inteligente y curioso.",
+        animal_lulu_desc: "Lulu es una compañera leal y dócil. Adora pastar y recibir caricias. Está buscando una familia con espacio exterior que le dé el amor que merece. Es muy tranquila y amigable.",
+        animal_oscarjr_desc: "Óscar Jr. es un compañero leal y curioso. Adora comer verduras y explorar su espacio. Está buscando una familia cariñosa que le dé el amor que merece. Es muy limpio y adorable.",
+        animal_tiquinho_desc: "Tiquinho es un compañero leal e inteligente. Adora conversar e imitar sonidos. Está buscando una familia dedicada que le dé el amor y atención que merece. Es muy limpio y carismático.",
 
     }
 }
