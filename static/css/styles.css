@@ -636,6 +636,12 @@ footer {
     border-radius: 4px;
 }
 
+/* Light mode clock adjustment for better visibility */
+:root:not(.dark-mode) .live-clock {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
 /* Mobile Adjustment */
 @media (max-width: 600px) {
     .bottom-flex {
